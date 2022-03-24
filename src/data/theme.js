@@ -13,6 +13,9 @@ import error from '../app/images/icon-error.svg'
 import feature1 from '../app/images/illustration-features-tab-1.svg'
 import feature2 from '../app/images/illustration-features-tab-2.svg'
 import feature3 from '../app/images/illustration-features-tab-3.svg'
+import background from '../app/images/background.jpg'
+import buttonBg from '../app/images/buttonBg.png'
+import child from '../app/images/child.png'
 import hero from '../app/images/illustration-hero.svg'
 import rectangleLeft from '../app/images/rectangleLeft.svg'
 import rectangleRight from '../app/images/rectangleRight.svg'
@@ -23,8 +26,8 @@ import arrowUp from '../app/images/icon-arrow-up.svg'
 const theme = {
 	colors: {
 		pryBlue: 'hsl(231, 69%, 60%)',
-		pryStemBlue: '#013261',
-		pryStemYellow: '#FFC100',
+		blue: '#013261',
+		yellow: '#FFC100',
 		pryRed: 'hsl(0, 94%, 66%)',
 		// neuBlue: 'hsl(229, 8%, 60%)',
 		neuBlue: '#013261',
@@ -63,7 +66,10 @@ const theme = {
 		close: close,
 	},
 	btnNav: 'REGISTER',
-	btn2Nav: 'LOGIN',
+	btn2Nav: 'REGISTER',
+	background: background,
+	buttonBg: buttonBg,
+	child: child,
 	rectangleLeft: rectangleLeft,
 	rectangleRight: rectangleRight,
 	bgDot: bgDot,
@@ -82,10 +88,10 @@ const theme = {
 		error: error,
 	},
 	heroData: {
-		title: 'A Brighter Future for your Kids',
+		title: 'A Brighter Future',
+		subTitle: 'for your Kids',
 		text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus felis ac tortor accumsan venenatis.',
 		btnRegister: 'Register',
-		// btnFirefox: 'Get it on Firefox',
 		illustration: hero,
 	},
 	ctaData: {
@@ -107,28 +113,22 @@ const theme = {
 				imageAlt: 'games',
 				title: 'Outdoor Games',
 				description: 'Neque porro quisquam est qui dolorem ipsum quia, >Neque porro quisquam est qui dolorem ipsum quia',
-				link: '/',
-				buttonText: 'Add & Install Extension',
 				margin: '0px',
 			},
 			{
 				id: 2,
 				image: sport,
-				imageAlt: 'firefox logo',
+				imageAlt: 'sports',
 				title: 'Sport Activities',
 				description: 'Neque porro quisquam est qui dolorem ipsum quia, >Neque porro quisquam est qui dolorem ipsum quia',
-				link: '/',
-				buttonText: 'Add & Install Extension',
 				margin: '0px',
 			},
 			{
 				id: 3,
 				image: toy,
-				imageAlt: 'opera logo',
+				imageAlt: 'toys',
 				title: 'Table/Floor Toys',
 				description: 'Neque porro quisquam est qui dolorem ipsum quia, >Neque porro quisquam est qui dolorem ipsum quia',
-				link: '/',
-				buttonText: 'Add & Install Extension',
 				margin: '0px',
 			},
 		],
@@ -143,81 +143,24 @@ const theme = {
 		},
 		faqs: [
 			{
-				question: 'What is Bookmark?',
+				question: '',
 				answer:
-					'Bookmark is the best bookmarking app on the market that boosts of a clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. ',
+					' ',
 			},
 			{
-				question: 'How can I request a new browser?',
+				question: '',
 				answer:
-					'You can request a new browser through our dedicated App store. Visit our store of Google Play or Apple Store. Contact our support team if you encounter any troubles installing the application on your device.',
+					'',
 			},
 			{
-				question: 'Is there a mobile app?',
+				question: '',
 				answer:
-					'Yes! We recently launched a mobile app version for android and iOS. You can proceed to your respective App stores to download Bookmark.',
+					'',
 			},
 			{
-				question: 'What about other Chromium browsers?',
+				question: '',
 				answer:
-					'Chromium browsers are currently in development and scheduled to be released in due time. Our developers are working round the clock to push the final app into production.',
-			},
-		],
-	},
-	featureData: {
-		title: 'Features',
-		subtitle:
-			'Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.',
-		headers: [
-			{
-				text: 'Simple Bookmarking',
-				ariaSelect: 'true',
-				tabIndex: '0',
-				ariaControls: 'panel-1',
-			},
-			{
-				text: 'Speedy Searching',
-				ariaSelect: 'false',
-				tabIndex: '-1',
-				ariaControls: 'panel-2',
-			},
-			{
-				text: 'Easy Sharing',
-				ariaSelect: 'false',
-				tabIndex: '-1',
-				ariaControls: 'panel-3',
-			},
-		],
-		content: [
-			{
-				image: feature1,
-				imageAlt: 'an illustration of an item being clicked on a smart device',
-				title: 'Bookmark in one click',
-				description:
-					'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.',
-				btnText: 'More Info',
-				bntLink: '/',
-				id: 'panel-1',
-			},
-			{
-				image: feature2,
-				imageAlt: 'an illustration depicting a search action on a smart device',
-				title: 'Share your bookmarks',
-				description:
-					'Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.',
-				btnText: 'More Info',
-				bntLink: '/',
-				id: 'panel-2',
-			},
-			{
-				image: feature3,
-				imageAlt: 'an illustration showing people sharing items online',
-				title: 'Bookmark in one click',
-				description:
-					'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.',
-				btnText: 'More Info',
-				bntLink: '/',
-				id: 'panel-3',
+					'',
 			},
 		],
 	},

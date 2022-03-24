@@ -9,9 +9,6 @@ const Card = ({ logo, alt, title, description, buttonText, margin }) => {
             <img src={logo} alt={alt} />
             <h3> {title} </h3>
             <p> {description} </p>
-
-            {/* <Button bgcolor={theme.colors.pryStemBlue} color={theme.colors.white}> {buttonText} </Button> */}
-
         </CardStyle>
     )
 }

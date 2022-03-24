@@ -20,9 +20,12 @@ export const StyledHero = styled.section`
     gap:65px;
     padding: 50px 30px 100px 100px;
     align-items: center;
-    background: url(${({ feature, theme }) => feature ? theme.rectangleLeft : theme.rectangleRight});
+    background: url(${({ theme }) => theme.background});
+    //  background: url(${({ feature, theme }) => feature ? theme.rectangleLeft : theme.rectangleRight});
     background-repeat: no-repeat;
-    background-position:  ${({ feature }) => feature ? 'left bottom' : 'right bottom'} ;
+    background-size: cover;
+    background-attachment: fixed;
+    // background-position:  ${({ feature }) => feature ? 'left bottom' : 'right bottom'} ;
 
 
     &>*{
@@ -78,7 +81,34 @@ export const HeroLeft = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+`
 
+export const HeroIntroTitle = styled.p`
+font-size: 12px;
+padding: 0px 3px;
+border-radius: 3px;
+width: 150px;
+margin: auto;
+background-color:  ${({ theme }) => theme.colors.yellow};
+color:  ${({ theme }) => theme.colors.white};
+`
+
+export const HeroTitle = styled.h1`
+color:  ${({ theme }) => theme.colors.white};
+font-weight: 300;
+margin-top: -20px;
+`
+
+export const HeroSubTitle = styled.h1`
+color:  ${({ theme }) => theme.colors.yellow};
+font-weight: 500;
+margin-top: -30px;
+
+`
+
+export const HeroParagraph = styled.p`
+color:  ${({ theme }) => theme.colors.white};
+margin-top: -15px;
 `
 
 export const HeroRight = styled.div`
@@ -89,14 +119,15 @@ export const HeroRight = styled.div`
 export const HeroCta = styled.div`
     display: flex;
     gap: 1rem;
-
+    margin-top: -10px;
     @media (max-width: ${({ theme }) => theme.queries.deskMid}){
         justify-content: center;
     }
 
 `
 export const HeroImage = styled.img`
-    
+    height: 400px;
+    width: 400px;
 
 `
 

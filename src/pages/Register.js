@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
-import { ErrorMessage, FormInput, FormChildInput, FormSelect, FormLabel, FormCheckLabel, ModalCloseButton, ModalContainer, ModalContent, ModalHeader, ModalWrapper, FormCheckInput, FormSubmitButton } from '../components/RegistrationModal/RegistrationModalComponent'
-import { Formik, Form, useField } from 'formik';
+import { ErrorMessage, FormInput, FormLabel, ModalContainer, ModalWrapper } from '../components/RegistrationModal/RegistrationModalComponent'
+import { useField } from 'formik';
 import * as Yup from 'yup';
-import { IoAdd, IoBalloonSharp } from "react-icons/io5";
+// import { IoAdd, IoBalloonSharp } from "react-icons/io5";
 
 import {
     FormikStepper,
     FormikStep,
-    InputField,
-    CheckBoxField,
     RadioField,
-    SelectField,
-    FormikHelpers,
 } from "formik-stepper";
 
 
@@ -48,18 +44,18 @@ const MyTextInput = ({ label, ...props }) => {
     );
 };
 
-const MyChildInput = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-    return (
-        <>
-            <FormLabel htmlFor={props.id || props.name}>{label}</FormLabel>
-            <FormChildInput  {...field} {...props} />
-            {meta.touched && meta.error ? (
-                <ErrorMessage>{meta.error}</ErrorMessage>
-            ) : null}
-        </>
-    );
-};
+// const MyChildInput = ({ label, ...props }) => {
+//     const [field, meta] = useField(props);
+//     return (
+//         <>
+//             <FormLabel htmlFor={props.id || props.name}>{label}</FormLabel>
+//             <FormChildInput  {...field} {...props} />
+//             {meta.touched && meta.error ? (
+//                 <ErrorMessage>{meta.error}</ErrorMessage>
+//             ) : null}
+//         </>
+//     );
+// };
 
 const MyNumberInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
@@ -74,34 +70,34 @@ const MyNumberInput = ({ label, ...props }) => {
     );
 };
 
-const MyCheckbox = ({ children, ...props }) => {
-    const [field, meta] = useField({ ...props, type: 'checkbox' });
-    return (
-        <div>
-            <FormCheckLabel>
-                <FormCheckInput type="checkbox" {...field} {...props} />
-                {children}
-            </FormCheckLabel>
+// const MyCheckbox = ({ children, ...props }) => {
+//     const [field, meta] = useField({ ...props, type: 'checkbox' });
+//     return (
+//         <div>
+//             <FormCheckLabel>
+//                 <FormCheckInput type="checkbox" {...field} {...props} />
+//                 {children}
+//             </FormCheckLabel>
 
-            {meta.touched && meta.error ? (
-                <ErrorMessage>{meta.error}</ErrorMessage>
-            ) : null}
-        </div>
-    );
-};
+//             {meta.touched && meta.error ? (
+//                 <ErrorMessage>{meta.error}</ErrorMessage>
+//             ) : null}
+//         </div>
+//     );
+// };
 
-const MySelect = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-    return (
-        <div>
-            <FormLabel htmlFor={props.id || props.name}>{label}</FormLabel>
-            <FormSelect {...field} {...props} />
-            {meta.touched && meta.error ? (
-                <ErrorMessage>{meta.error}</ErrorMessage>
-            ) : null}
-        </div>
-    );
-};
+// const MySelect = ({ label, ...props }) => {
+//     const [field, meta] = useField(props);
+//     return (
+//         <div>
+//             <FormLabel htmlFor={props.id || props.name}>{label}</FormLabel>
+//             <FormSelect {...field} {...props} />
+//             {meta.touched && meta.error ? (
+//                 <ErrorMessage>{meta.error}</ErrorMessage>
+//             ) : null}
+//         </div>
+//     );
+// };
 
 const Register = () => {
     const onSubmit = async (values, { setSubmitting }) => {
@@ -236,7 +232,7 @@ const Register = () => {
                                         {kidsList.length !== 1 && <button style={{
                                             background: "#013261", padding: "5px;", color: "#fff", marginRight: "10px"
                                         }} onClick={() => handleRemoveClick(i)}>Remove</button>}
-                                        {(kidsList.length - 1 === i && kidsList.length != 6) && <button style={{ background: "#013261", borderRadius: "2px", padding: "4px", color: "#fff" }} onClick={handleAddClick}>Add</button>}
+                                        {(kidsList.length - 1 === i && kidsList.length !== 6) && <button style={{ background: "#013261", borderRadius: "2px", padding: "4px", color: "#fff" }} onClick={handleAddClick}>Add</button>}
                                     </div>
                                 </div>
                             );

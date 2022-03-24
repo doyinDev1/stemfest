@@ -47,10 +47,10 @@ export const SponsorsContent = styled.div`
   align-items: center;
   padding: 1.5rem;
   /* background: linear-gradient(45deg,  #013261, #ffc100); */
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  // border-top-left-radius: 50px;
+  // border-bottom-right-radius: 50px;
   display: flex;
-  filter: drop-shadow(0 0 1.75rem #ffc100);
+  // filter: drop-shadow(0 0 1.75rem #ffc100);
 
   /* @media screen and (max-width: 768px) {
     padding: 50px 50px;

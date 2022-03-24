@@ -6,20 +6,20 @@ export const IntroStyle = styled.div`
     display: grid;
     place-content: center;
     place-items: center;
-   
     
-
     &>h2{
-        margin-bottom: 10px;
+        margin-top: -50px;
+        margin-bottom: 40px;
         background: #ffc100;
         border-radius: 5px;
         color: #fff;
-        padding: 0px 8px;
+        padding: 0px 3px;
         font-size: 15px;
     }
 
     &>p{
-        width: 60%;
+        width: 100%;
+        color: white;
 
         @media (max-width: ${({ theme }) => theme.queries.mobile}){
             width: 100%;

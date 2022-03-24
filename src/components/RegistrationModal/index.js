@@ -127,7 +127,7 @@ const RegistrationModal = ({ showModal, setShowModal }) => {
                                 acceptedTerms: true
                             }}
                             validationSchema={validationSchema}
-                            labelsColor="secondary"
+                            labelsColor="primary"
                             withStepperLine
                             nextBtnLabel="next"
                             prevBtnLabel="return"

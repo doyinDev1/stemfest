@@ -10,7 +10,7 @@ export const StyledHeader = styled.header`
 
 
 
-export const Nav  = styled.nav`
+export const Nav = styled.nav`
     display: flex;
     align-items: center;
     gap: 3rem;

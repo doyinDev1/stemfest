@@ -1,26 +1,22 @@
-import React, { useState } from 'react'
-import { Button, NavLink } from './style/Button.style'
-import { HeroCta, HeroImage, HeroLeft, HeroRight, StyledHero } from './style/Hero.style'
+import React from 'react'
+import { HeroLink, NavLink } from './style/Button.style'
+import { HeroCta, HeroImage, HeroLeft, HeroRight, HeroTitle, HeroIntroTitle, StyledHero, HeroSubTitle, HeroParagraph } from './style/Hero.style'
 
 const Hero = ({ theme, showModal, setShowModal }) => {
     return (
-        // <Container>
-
         <StyledHero>
             <HeroLeft>
-
-                <h1> {theme.heroData.title} </h1>
-                <p> {theme.heroData.text} </p>
-
+                <HeroIntroTitle>Welcome to our School</HeroIntroTitle>
+                <HeroTitle> {theme.heroData.title}</HeroTitle>
+                <HeroSubTitle>{theme.heroData.subTitle}</HeroSubTitle>
+                <HeroParagraph> {theme.heroData.text} </HeroParagraph>
                 <HeroCta>
-                    <NavLink bgcolor={theme.colors.pryStemBlue} color={theme.colors.white} to="/register">Enroll Now</NavLink>
-                    <NavLink bgcolor={theme.colors.pryStemYellow} color={theme.colors.white} to="/login">Login</NavLink>
+                    <HeroLink to="/register">Enroll Now</HeroLink>
+                    <HeroLink to="/login">Login</HeroLink>
                 </HeroCta>
-
             </HeroLeft>
-
             <HeroRight>
-                <HeroImage src={theme.heroData.illustration} />
+                <HeroImage src={theme.child} />
             </HeroRight>
         </StyledHero>
 

@@ -17,21 +17,17 @@ export const MenuStyle = styled.div`
 
 export const MenuText = styled(Link)`
     text-decoration: none;
-    
-    
-    
-   
-    
+        
     p{
         text-transform: uppercase;
-        color: ${({ header, theme }) => header ? theme.colors.neuBlue : theme.colors.white};
+        color: ${({ header, theme }) => header ? theme.colors.white : theme.colors.white};
         font-size: 0.8125rem;
         letter-spacing: 1.5px;
         border-top: ${({ border, theme }) => border && `1px solid  #979797`} ;
         padding: ${({ border }) => border && '20px 0'} ;
-
+        font-weight: 600;
         &:hover{
-        color: ${({ theme }) => theme.colors.pryStemYellow};
+        color: ${({ theme }) => theme.colors.yellow};
         };
 
 

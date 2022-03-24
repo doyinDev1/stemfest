@@ -6,11 +6,8 @@ import { DownloadSection } from './style/Download.style'
 const Download = ({ theme }) => {
     return (
         <DownloadSection>
-
             <SectionIntro header={theme.downloadData.title} text={theme.downloadData.subtitle} />
-
             <Cards data={theme.downloadData.cardData} />
-
         </DownloadSection>
     )
 }

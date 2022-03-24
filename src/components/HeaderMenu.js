@@ -1,17 +1,9 @@
 import Menu from "./Menu"
-import RegistrationModal from "./RegistrationModal";
-import { Button, NavLink } from "./style/Button.style"
-import React, { useState } from 'react';
-
+import { NavLink } from "./style/Button.style"
+import React from 'react';
 import { NavMenu } from "./style/NavMenu.style"
 
 const HeaderMenu = ({ theme }) => {
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        console.log("Registration button clicked");
-        setShowModal(prev => !prev);
-    }
 
     const header = true
 
@@ -20,14 +12,9 @@ const HeaderMenu = ({ theme }) => {
             <NavMenu>
 
                 <Menu header={header} />
-
-                {/* <Button to="/register" onClick={() => openModal()} bgcolor={theme.colors.pryStemBlue} color={theme.colors.white}>{theme.btnNav}</Button> */}
-
-                <NavLink to="/register" bgcolor={theme.colors.pryStemBlue} color={theme.colors.white}>REGISTER</NavLink>
-                <NavLink to="/login" bgcolor={theme.colors.pryStemYellow} color={theme.colors.white}>LOGIN</NavLink>
+                <NavLink to="/register" bgcolor={theme.colors.yellow} color={theme.colors.white}>Sign Up</NavLink>
+                <NavLink to="/login" bgcolor={theme.colors.yellow} color={theme.colors.white}>Log In</NavLink>
             </NavMenu>
-            <RegistrationModal showModal={showModal} setShowModal={setShowModal} />
-
         </>
     )
 }
