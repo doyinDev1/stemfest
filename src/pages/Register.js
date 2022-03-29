@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import MaterialLayout from '../components/Layout/MaterialLayout';
+import RegisterPage from '../components/RegisterPage';
 
-const Register = () => {
+function Register() {
   return (
-    <div>Register</div>
-  )
+    <div>
+      <MaterialLayout>
+        <RegisterPage />
+      </MaterialLayout>
+    </div>
+  );
 }
 
-export default Register
+export default Register;

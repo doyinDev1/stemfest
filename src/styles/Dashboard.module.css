@@ -1,0 +1,15 @@
+.ContentWrapper {
+	min-height: 100vh;
+}
+
+@media screen and (min-width: 1024px) {
+	.ContentWrapper {
+		padding-left: 260px;
+		min-height: 100vh;
+		background-color: whitesmoke;
+	}
+
+	.CloseSidebar {
+		padding-left: 0;
+	}
+}
