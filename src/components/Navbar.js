@@ -11,19 +11,19 @@ export default (props) => {
         <Navbar.Collapse>
           <Nav className="mx-auto">
             <Nav.Link
-              href="#blog"
+              href="#speaker"
               className="mx-5 text-white font-bold text-[22px] px-0"
             >
               Speakers
             </Nav.Link>
             <Nav.Link
-              href="#about-us"
+              href="#about"
               className="mx-5 text-white font-bold text-[22px] px-0 "
             >
               Agenda
             </Nav.Link>
             <Nav.Link
-              href="#about-us"
+              href="#services"
               className="mx-5 text-white font-bold text-[22px]"
             >
               Sponsor
@@ -37,13 +37,13 @@ export default (props) => {
           </Nav>
           <Nav className=" mx-auto">
             <Nav.Link
-              href="#blog"
+              href="/login"
               className="mx-5 text-white font-bold text-[22px] px-0"
             >
               Login
             </Nav.Link>
             <Nav.Link
-              href="#about-us"
+              href="/register"
               className="mx-5 text-white font-bold text-[22px] px-4 rounded-[10px] bg-yellow"
             >
               Register
