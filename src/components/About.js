@@ -4,7 +4,10 @@ import img1 from "../images/assets/children.png";
 
 function About({ title, about, header, linkText, link }) {
   return (
-    <div className="about  md:flex items-center justify-center p-20 pr-0">
+    <div
+      id="about"
+      className="about  md:flex items-center justify-center p-20 pr-0"
+    >
       <div className="about__Left lg:pl-24 w-[100%]">
         <Details
           title={title}

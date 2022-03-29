@@ -7,7 +7,7 @@ import kidImage from "../images/assets/children.png";
 
 function Speakers({ header, title, about }) {
   return (
-    <div className="speakers lg:flex p-6 py-[84px]">
+    <div id="speaker" className="speakers lg:flex p-6 py-[84px]">
       <div className="speakers__Left flex-[0.45]">
         <Details2 header={header} title={title} about={about} />
       </div>

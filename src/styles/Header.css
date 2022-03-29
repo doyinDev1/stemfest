@@ -1,7 +1,13 @@
 .header {
   background: url("../images/assets/bg-1.jpg") no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: cover;
+  padding-top: 250px;
+  /* padding-bottom: 150px; */
+  /* min-height: 120vh; */
+}
+.header p {
+  color: white;
 }
 
 .header__Link a {

@@ -12,7 +12,7 @@ function Services({ title, about, header }) {
       <div className="services__Left flex-[0.45] px-6">
         <Details2 title={title} about={about} header={header} />
       </div>
-      <div className="services__Right flex-[0.55] flex flex-wrap md:flex-nowrap justify-center">
+      <div className="services__Right flex-[0.55] flex  md:flex-nowrap justify-center">
         <ServiceOption
           icon={<SportsCricketIcon />}
           title="Outdoor Games"
