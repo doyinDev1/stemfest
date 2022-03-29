@@ -1,0 +1,40 @@
+.about {
+  background: url("../images/assets/bg-3-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about__Image img {
+  border: 14px solid rgb(221, 210, 210);
+  border: 14px solid white;
+  border-radius: 20px;
+  transform: rotate(10deg);
+}
+.about__Image:nth-child(2) img {
+  transform: rotate(-10deg);
+  margin-top: 24px;
+  margin-left: 40px;
+}
+.about .details__Link a {
+  background-color: orange;
+}
+@media screen and (max-width: 500px) {
+  .about {
+    background: url("../images/assets/bg-mobile-2.png") no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about__Right {
+    margin: 50px auto;
+    /* padding: 0px 30px; */
+  }
+  .about__Right img {
+    display: block;
+    margin: 0 auto !important;
+    max-width: 200px;
+  }
+  .about .details {
+    padding: 0%;
+  }
+}

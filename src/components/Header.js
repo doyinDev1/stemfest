@@ -7,38 +7,44 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-
+import Details from "./Details";
 function Header({ image, title, about, header, linkText, link }) {
   return (
-    <div className="header md:min-h-[100vh] md:flex items-center justify-center p-20 pr-0">
-      <div className="header__Left  w-[100%] pl-24">
-        <h4 className="text-center max-w-fit md:text-left mb-10 bg-yellow px-8 py-3 rounded-full ">
-          {header}
-        </h4>
-        <h1
-          className="text-bold mb-6 lg:text-[76px] lg:leading-[80px]"
-          dangerouslySetInnerHTML={{ __html: title }}
-        ></h1>
-        <p className="leading-10  lg:text-[22px]">{about}</p>
-        <div className="header__Link relative mt-6">
-          <Link to={link} className=" text-yellow bg-white p-4">
-            {linkText}
-          </Link>
-          <div className="">
-            <img src={arrowIcon} alt="" className="absolute top-0 " />
-          </div>
-        </div>
+    <div className="header  md:flex items-center justify-center md:p-20 md:pr-0 md:pb-0">
+      <div className="header__Left  w-[100%] lg:pl-24">
+        <Details
+          title={title}
+          about={about}
+          header={header}
+          link={link}
+          linkText={linkText}
+        />
       </div>
-      <div className="header__Right flex  items-center  w-[100%] justify-between">
-        <img src={image} alt="" className="max-w-[560px] " />
-        <div className="header__Social bg-yellow">
-          <ul className="">
-            <li className="">
+      <div className="header__Right md:flex  items-center  w-[100%] justify-between">
+        <img src={image} alt="" className="md:max-w-[560px]  " />
+        <div className="header__Social bg-yellow ">
+          <ul className="text-white flex  justify-center md:block">
+            <li className="m-4">
               <a href="">
                 <TwitterIcon />
               </a>
             </li>
-            <li className="">
+            <li className="m-4">
+              <a href="">
+                <FacebookIcon />
+              </a>
+            </li>
+            <li className="m-4">
+              <a href="">
+                <YouTubeIcon />
+              </a>
+            </li>
+            <li className="m-4">
+              <a href="">
+                <InstagramIcon />
+              </a>
+            </li>
+            {/* <li className="">
               <a href="">
                 <FacebookIcon />
               </a>
@@ -53,7 +59,7 @@ function Header({ image, title, about, header, linkText, link }) {
               <a href="">
                 <YouTubeIcon />
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
