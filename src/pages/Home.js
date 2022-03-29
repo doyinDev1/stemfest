@@ -3,13 +3,13 @@ import Agenda from "../components/Agenda";
 import Header from "../components/Header";
 import Services from "../components/Services";
 import Speakers from "../components/Speakers";
-
+import Navbar from "../components/Navbar";
 import homeImg from "../images/assets/Supergirls.png";
 
 const Home = () => {
   return (
     <div className="home">
-      {/* <NavBar /> */}
+      <Navbar />
       <Header
         header="Welcome to our school"
         title="A brighter Future <h2 class='text-yellow'>for your kids</h2>"

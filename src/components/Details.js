@@ -11,7 +11,7 @@ function Details({ title, about, header, linkText, link }) {
         className="details__Title text-bold mb-6 text-white lg:text-[50px] lg:leading-[80px]"
         dangerouslySetInnerHTML={{ __html: title }}
       ></h1>
-      <p className="details__About text-white leading-10 md:px-0 md:min-w-0 md:pr-4 lg:pr-0 lg:text-[22px]">
+      <p className="details__About  leading-10 md:px-0 md:min-w-0 md:pr-4 lg:pr-0 lg:text-[22px]">
         {about}
       </p>
       <div className="details__Link header__Link relative mt-10">
