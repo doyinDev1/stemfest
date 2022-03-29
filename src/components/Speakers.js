@@ -17,8 +17,8 @@ function Speakers({ header, title, about }) {
           image={kidImage}
           about="
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, commodi aliasus dolor obcaecati atque?"
-          title="<h4 class='bg-yellow rounded-full py-1'>Baby Kidoo</h4>"
-          age="<h4 class='text-yellow'> Age 2 to 4 </h4>"
+          title="<h4 class='bg-red rounded-full py-1'>Baby Kidoo</h4>"
+          age="<h4 class='text-red'> Age 2 to 4 </h4>"
         />
         <Card
           image={kidImage}
@@ -31,8 +31,8 @@ function Speakers({ header, title, about }) {
           image={kidImage}
           about="
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, commodi aliasus dolor obcaecati atque?"
-          title="<h4 class='bg-yellow rounded-full py-1'>Baby Kidoo</h4>"
-          age="<h4 class='text-yellow'> Age 2 to 4 </h4>"
+          title="<h4 class='bg-green rounded-full py-1'>Baby Kidoo</h4>"
+          age="<h4 class='text-green'> Age 2 to 4 </h4>"
         />
       </div>
     </div>

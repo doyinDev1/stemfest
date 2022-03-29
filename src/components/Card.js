@@ -8,7 +8,9 @@ function Card({ image, title, about, age }) {
         className="text-center  mx-3 -mt-4"
         dangerouslySetInnerHTML={{ __html: title }}
       ></h4>
-      <p className="p-3 pt-4 text-center h-[150px]">{about}</p>
+      <p className="p-3 pt-4 text-center h-[180px] leading-8 font-[600]">
+        {about}
+      </p>
       <h4
         className="text-center py-2"
         dangerouslySetInnerHTML={{ __html: age }}
