@@ -1,0 +1,32 @@
+.header {
+  background: url("../images/assets/bg-1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__Link a {
+  /* border-radius: 30% 38% 33% 28% / 35% 35% 29% 18%; */
+  border-radius: 20px;
+}
+.header__Link div {
+  position: absolute;
+  top: -1200%;
+  left: 10%;
+  width: 100%;
+}
+
+.header__Social {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    background: url("../images/assets/background.png") no-repeat;
+  }
+
+  .header img {
+    margin: 10px auto;
+    max-width: 70vw;
+  }
+}
