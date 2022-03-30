@@ -17,5 +17,8 @@
   border-radius: 50%;
   padding: 14px;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 500px) {
+  .services__Right {
+    flex-wrap: wrap;
+  }
 }

@@ -8,7 +8,7 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <AppBar position="absolute" style={{color: '#ffc000'}} className={classes.appBar}>
+    <AppBar position="absolute" color="default" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" color="inherit" noWrap>
           STEM FEST

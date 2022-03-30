@@ -1,10 +1,13 @@
 import AdminSidebar from '../components/AdminSidebar/AdminSidebar';
-import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+// import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import { useEffect, useState } from 'react';
 import classes from '../styles/Dashboard.module.css';
-import SummarizeOutlinedIcon from '@mui/icons-material/SummarizeOutlined';
+// import SummarizeOutlinedIcon from '@mui/icons-material/SummarizeOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+// import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+import SchoolIcon from '@mui/icons-material/School';
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 
 import AdminHeader from '../components/AdminHeader/AdminHeader';
 import { AdminReports } from '../components/AdminReports/AdminReports';
@@ -34,20 +37,20 @@ const AdminDashboard = () => {
 		},
 		{
 			id: 1,
-			icon: <SummarizeOutlinedIcon />,
-			title: 'Reports',
-			page: <AdminReports />,
+			icon: <SchoolIcon/>,
+			title: 'School',
+			page: < AdminReports />,
 		},
 		{
 			id: 2,
-			icon: <ManageAccountsOutlinedIcon />,
-			title: 'User Management',
+			icon: <SupervisedUserCircleIcon />,
+			title: 'Teachers',
 			page: < AdminReports />,
 		},
 		{
 			id: 3,
-			icon: <MenuBookOutlinedIcon />,
-			title: 'Course Management',
+			icon: <FamilyRestroomIcon />,
+			title: 'Parents',
 			page: < AdminReports />,
 		},
 	];

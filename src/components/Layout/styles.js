@@ -4,7 +4,7 @@ import {
   makeStyles
 } from '@material-ui/core/styles';
 import { cyan } from '@material-ui/core/colors';
-// import { yellow } from '@material-ui/core/colors';
+
 let theme = createMuiTheme({
   palette: {
     type: 'dark',

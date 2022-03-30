@@ -1,12 +1,13 @@
 import React from 'react';
-import MaterialLayout from '../components/Layout/MaterialLayout';
-import RegisterPage from '../components/RegisterPage';
+import MaterialLayout from "../components/Layout/MaterialLayout";
+import CheckoutPage from '../components/CheckoutPage/index';
+
 
 function Register() {
   return (
     <div>
-      <MaterialLayout>
-        <RegisterPage />
+        <MaterialLayout>
+        <CheckoutPage />
       </MaterialLayout>
     </div>
   );

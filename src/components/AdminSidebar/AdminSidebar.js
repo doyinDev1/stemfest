@@ -70,7 +70,7 @@ const AdminSidebar = ({ isOpen, setIsOpen, setCurrentPage, setHeading, pages }) 
 				<div className={classes.brand_logo}>
 					<a href="/">
 						<img
-							src="https://fifthchukker.com/wp-content/uploads/2018/06/Access-bank.png"
+							src="https://res.cloudinary.com/naijakids/image/upload/v1648457537/IMG_20220328_094349_mfqcg3.jpg"
 							alt="Access Bank"
 							className={classes.Logo}
 						/>

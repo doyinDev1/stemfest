@@ -8,22 +8,20 @@ import {
   CircularProgress
 } from '@material-ui/core';
 import { Formik, Form } from 'formik';
-
 import AddressForm from './Forms/AddressForm';
 import PaymentForm from './Forms/PaymentForm';
 import ReviewOrder from './ReviewOrder';
 import CheckoutSuccess from './CheckoutSuccess';
-
 import validationSchema from './FormModel/validationSchema';
 import checkoutFormModel from './FormModel/checkoutFormModel';
 import formInitialValues from './FormModel/formInitialValues';
 
 import useStyles from './styles';
 
-const steps = ['Sign Up', 'Children Details', 'Review your selection'];
+const steps = ['Sign Up', 'Children Details', 'Submit your selection'];
 const { formId, formField } = checkoutFormModel;
 
-export default function RegisterPage() {
+export default function CheckoutPage() {
   const [formFinal, setFormFinal] = useState([]);
   const [getKid, setGetKid] = useState([]);
 
@@ -78,8 +76,8 @@ export default function RegisterPage() {
   };
   return (
     <React.Fragment>
-      {console.log(formFinal, 'formfinal')}
-      {console.log(getKid, 'getKid')}
+      {/* {console.log(formFinal, 'formfinal')}
+      {console.log(getKid, 'getKid')} */}
       {console.log(FinalFinaldata, 'papatata')}
       <Typography component="h1" variant="h4" align="center">
         Register
@@ -118,11 +116,10 @@ export default function RegisterPage() {
                       color="primary"
                       className={classes.button}
                     >
-                      {/* {isLastStep ? 'Place order' : 'Next'} */}
                       {isLastStep ? (
                         <>
                           {' '}
-                          <Button onClick={FinalSubmit}> final </Button>{' '}
+                          <Button onClick={FinalSubmit}> SUBMIT </Button>{' '}
                         </>
                       ) : (
                         'Next'
