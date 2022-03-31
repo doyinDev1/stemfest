@@ -1,16 +1,20 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import {
-  InputField,
-  CheckboxField,
-  RadioButtonField,
-  SelectField
+  InputField
 } from '../../FormFields';
+import { useState } from 'react';
+
 
 export default function AddressForm(props) {
   const {
-    formField: { name, email, phoneNumber, parent, school, teacher }
-  } = props;
+    formField: { name, email, phoneNumber }  ,  setGenderform} = props;
+ 
+  const [gender, setGender] = useState("Parent");
+  function onChangeValue(event) {
+    setGender(event.target.value);
+    // console.log(event.target.value)
+  }
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -30,30 +34,20 @@ export default function AddressForm(props) {
             fullWidth
           />
         </Grid>
-        <Grid item xs={12} sm={3}>
-          <CheckboxField name={parent.name} label={parent.label} />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <CheckboxField name={school.name} label={school.label} />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <CheckboxField name={teacher.name} label={teacher.label} />
-        </Grid>
-        {/* <Grid item xs={12}>
-          <CheckboxField
-            name={useAddressForPaymentDetails.name}
-            label={useAddressForPaymentDetails.label}
-          />
-          <CheckboxField
-            name={chooseLabelType.name}
-            label={chooseLabelType.label}
-          />
-           <CheckboxField
-            name={chooseLabelType.name}
-            label={chooseLabelType.label}
-          />
-        </Grid> */}
-        {/* {console.log(props)} */}
+        <Grid item xs={12}>
+
+<div onChange={onChangeValue} style={{fontSize: '19px'}}>
+
+<input type="radio" value="Parent" name="gender" checked={gender === "Parent"}/> Parent {''}{''}{''}
+    
+<input  type="radio" value="School" name="gender" checked={gender === "School"}/> School {''}{''}{''}
+    
+<input type="radio" value="Teacher" name="gender" checked={gender === "Teacher"}/> Teacher {''}{''}{''}
+
+</div>
+</Grid>
+{setGenderform(gender)}
+
       </Grid>
     </React.Fragment>
   );

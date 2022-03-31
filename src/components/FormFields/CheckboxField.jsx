@@ -5,7 +5,8 @@ import {
   Checkbox,
   FormControl,
   FormControlLabel,
-  FormHelperText
+  FormHelperText,
+  Radio
 } from '@material-ui/core';
 
 export default function CheckboxField(props) {
@@ -22,6 +23,7 @@ export default function CheckboxField(props) {
 
   function _onChange(e) {
     setValue(e.target.checked);
+    
   }
 
   return (

@@ -24,13 +24,13 @@ const { formId, formField } = checkoutFormModel;
 export default function CheckoutPage() {
   const [formFinal, setFormFinal] = useState([]);
   const [getKid, setGetKid] = useState([]);
-
+const [genderform, setGenderform] = useState([]);
   function _renderStepContent(step) {
     switch (step) {
       case 0:
-        return <AddressForm formField={formField} />;
+        return <AddressForm formField={formField} setGenderform={setGenderform} />;
       case 1:
-        return <PaymentForm setGetKid={setGetKid} />;
+        return <PaymentForm setGetKid={setGetKid}  />;
       case 2:
         return <ReviewOrder setFormFinal={setFormFinal} />;
       default:
@@ -76,8 +76,10 @@ export default function CheckoutPage() {
   };
   return (
     <React.Fragment>
-      {/* {console.log(formFinal, 'formfinal')}
-      {console.log(getKid, 'getKid')} */}
+      {console.log(formFinal, 'formfinal')}
+      {console.log(getKid, 'getKid')}
+      {console.log(genderform, 'genderform')}
+
       {console.log(FinalFinaldata, 'papatata')}
       <Typography component="h1" variant="h4" align="center">
         Register

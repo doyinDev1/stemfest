@@ -15,21 +15,6 @@ export default {
       name: 'phoneNumber',
       label: 'Phone Number*',
       requiredErrorMsg: 'Phone Number is required'
-    },
-    parent: {
-      name: 'Parent',
-      label: 'Parent',
-      requiredErrorMsg: 'Country is required'
-    },
-    school: {
-      name: 'School',
-      label: 'School',
-      requiredErrorMsg: 'Country is required'
-    },
-    teacher: {
-      name: 'Teacher',
-      label: 'Teacher',
-      requiredErrorMsg: 'Country is required'
     }
   }
 };

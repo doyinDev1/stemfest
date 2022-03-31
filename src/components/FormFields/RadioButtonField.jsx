@@ -2,12 +2,13 @@ import React from 'react';
 import { at } from 'lodash';
 import { useField } from 'formik';
 import {
-  Checkbox,
+  // Checkbox,
   FormControl,
   FormControlLabel,
   FormHelperText,
   Radio,
-  FormLabel
+  FormLabel,
+  RadioGroup
 } from '@material-ui/core';
 
 export default function RadioButtonField(props) {
@@ -28,14 +29,26 @@ export default function RadioButtonField(props) {
 
   return (
     <FormControl {...rest}>
-      {/* <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel> */}
+      <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+      <RadioGroup
+      row
+    aria-labelledby="gender"
+    defaultValue="parent"
+    name="gender1"
+    onChange={_onChange}
+  >
       <FormControlLabel
         value={field.checked}
         checked={field.checked}
-        control={<Radio {...field} onChange={_onChange} />}
+        control={<Radio {...field}  />}
         label={label}
       />
+       </RadioGroup>
       {_renderHelperText()}
     </FormControl>
+
+
+
+
   );
 }

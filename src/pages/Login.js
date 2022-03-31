@@ -69,14 +69,14 @@ function Login() {
               <section className={classes.login} id="login">
                 <div className={classes.Lorem}>
                   <img
-                    src="https://res.cloudinary.com/naijakids/image/upload/v1648457537/IMG_20220328_094349_mfqcg3.jpg"
+                    src="https://res.cloudinary.com/naijakids/image/upload/v1648719539/9ijakids_f4hwlq.webp"
                     alt="Acesss"
-                    width={360}
-                    height={100}
+                    width={200}
+                    height={200}
                   />
                 </div>
                 <div className={classes.head}>
-                  <h1 className={classes.company}>Login</h1>
+                  <h1 className={classes.company}>STEMFEST</h1>
                 </div>
                 <div className={classes.form}>
                   <form
@@ -92,32 +92,6 @@ function Login() {
                       required
                     />
                     <br />
-
-                    {/* <div className={classes.RadioDiv}>
-							<div className={classes.radioLeft}>
-								<input
-									id="common"
-									onClick={handleUserButton}
-									style={{ backgroundColor: activeForm === 'common' ? 'var(--color-orange)' : '' }}
-									type="radio"
-									value="Male"
-									name="gender"
-								/>{' '}
-								Candidate
-							</div>
-							<div className={classes.radioRight}>
-								<input
-									id="common"
-									checked
-									onClick={handleUserButton}
-									style={{ backgroundColor: activeForm === 'common' ? 'var(--color-orange)' : '' }}
-									type="radio"
-									value="Male"
-									name="gender"
-								/>{' '}
-								Admin
-							</div>
-						</div> */}
                     <div className={classes.sign}>
                       {/* {!loading ? ( */}
                         <button
