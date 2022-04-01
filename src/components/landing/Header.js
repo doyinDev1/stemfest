@@ -23,10 +23,10 @@ function Header({ image, title, about, header, linkText, link }) {
       <div className="header__Right md:flex  items-center  w-[100%] justify-between">
         <img src={image} alt="" className="md:max-w-[560px]  " />
         <div className="header__Social bg-yellow ">
-          <ul className="text-white flex  justify-center md:block">
+          <ul className="!text-white flex  justify-center md:block">
             <li className="m-4">
-              <a href="">
-                <TwitterIcon />
+              <a href="" className="!text-white">
+                <TwitterIcon className="text-white" />
               </a>
             </li>
             <li className="m-4">

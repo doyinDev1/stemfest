@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Card.css";
 function Card({ image, title, about, age }) {
   return (
-    <div className="card relative z-10 bg-white rounded-[40px] max-w-[250px] m-4">
+    <div className="card relative z-10 bg-white !rounded-[40px] max-w-[250px] m-4">
       <img src={image} alt="" className="rounded-y[40px]" />
       <h4
         className="text-center  mx-3 -mt-4"

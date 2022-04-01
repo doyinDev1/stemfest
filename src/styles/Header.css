@@ -35,6 +35,12 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+.header__Social ul {
+  padding-left: 0% !important;
+}
+.header__Social svg {
+  color: white;
+}
 @media screen and (max-width: 1000px) {
   .header h1 {
     text-transform: capitalize;
