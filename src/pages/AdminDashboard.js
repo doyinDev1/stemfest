@@ -1,23 +1,20 @@
 import AdminSidebar from '../components/AdminSidebar/AdminSidebar';
-// import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import { useEffect, useState } from 'react';
 import classes from '../styles/Dashboard.module.css';
-// import SummarizeOutlinedIcon from '@mui/icons-material/SummarizeOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-// import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import SchoolIcon from '@mui/icons-material/School';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
-import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
-
+import HomeIcon from '@mui/icons-material/Home';
+import ManIcon from '@mui/icons-material/Man';
+import QrCodeIcon from '@mui/icons-material/QrCode';
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import SettingsIcon from '@mui/icons-material/Settings';
 import AdminHeader from '../components/AdminHeader/AdminHeader';
 import { AdminReports } from '../components/AdminReports/AdminReports';
 const AdminDashboard = () => {
 	const [isOpen, setIsOpen] = useState(true);
-	// const [currentPage, setCurrentPage] = useState(
-	// 	sessionStorage.getItem('currentPage') ? Number(sessionStorage.getItem('currentPage')) : 0
-	// );
+
 	const [currentPage, setCurrentPage] = useState(0);
-	// console.log(currentPage);
 
 	useEffect(() => {
 		setCurrentPage(
@@ -31,33 +28,55 @@ const AdminDashboard = () => {
 	const pages = [
 		{
 			id: 0,
-			title: 'Summary',
-			icon: <HomeOutlinedIcon />,
+			title: 'Home',
+			icon: <HomeIcon />,
 			page: < AdminReports />,
 		},
 		{
 			id: 1,
 			icon: <SchoolIcon/>,
-			title: 'School',
+			title: 'Registration',
 			page: < AdminReports />,
 		},
 		{
 			id: 2,
-			icon: <SupervisedUserCircleIcon />,
-			title: 'Teachers',
+			icon: <ManIcon />,
+			title: 'Adults',
 			page: < AdminReports />,
 		},
 		{
 			id: 3,
 			icon: <FamilyRestroomIcon />,
-			title: 'Parents',
+			title: 'Children',
+			page: < AdminReports />,
+		},
+		{
+			id: 4,
+			icon: <QrCodeIcon />,
+			title: 'QR Codes',
+			page: < AdminReports />,
+		},
+		{
+			id: 5,
+			icon: <AdminPanelSettingsIcon/>,
+			title: 'Event Attendance',
+			page: < AdminReports />,
+		},
+		{
+			id: 6,
+			icon: <EventNoteIcon />,
+			title: 'Admin',
+			page: < AdminReports />,
+		},
+		{
+			id: 7,
+			icon: <SettingsIcon />,
+			title: 'Settings',
 			page: < AdminReports />,
 		},
 	];
 	return (
 		<>
-		
-
 			<>
 				<AdminSidebar
 					isOpen={isOpen}
@@ -71,7 +90,6 @@ const AdminDashboard = () => {
 						<div key={index}> {currentPage === index && page.page} </div>
 					))}
 				</div>
-				{/* <Toaster /> */}
 			</>
 		</>
 	);

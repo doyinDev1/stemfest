@@ -10,7 +10,7 @@ export default function AddressForm(props) {
   const {
     formField: { name, email, phoneNumber }  ,  setGenderform} = props;
  
-  const [gender, setGender] = useState("Parent");
+  const [gender, setGender] = useState("Paren");
   function onChangeValue(event) {
     setGender(event.target.value);
     // console.log(event.target.value)
