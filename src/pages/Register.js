@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import MaterialLayout from "../components/Layout/MaterialLayout";
-import CheckoutPage from '../components/CheckoutPage/index';
-
+import CheckoutPage from "../components/CheckoutPage/index";
 
 function Register() {
   return (
     <div>
-        <MaterialLayout>
-        <CheckoutPage />
-      </MaterialLayout>
+      {/* <MaterialLayout> */}
+      <CheckoutPage />
+      {/* </MaterialLayout> */}
     </div>
   );
 }
