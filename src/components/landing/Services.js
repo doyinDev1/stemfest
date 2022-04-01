@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/Service.css";
+import "../../styles/Service.css";
 import Details2 from "./Details2";
 import ServiceOption from "./ServiceOption";
 import SportsCricketIcon from "@mui/icons-material/SportsCricket";

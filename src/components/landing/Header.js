@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "../styles/Header.css";
+import "../../styles/Header.css";
 
-import arrowIcon from "../images/assets/arrow.png";
+import arrowIcon from "../../images/assets/arrow.png";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";

@@ -5,9 +5,9 @@ import CheckoutPage from "../components/CheckoutPage/index";
 function Register() {
   return (
     <div>
-      {/* <MaterialLayout> */}
-      <CheckoutPage />
-      {/* </MaterialLayout> */}
+      <MaterialLayout>
+        <CheckoutPage />
+      </MaterialLayout>
     </div>
   );
 }

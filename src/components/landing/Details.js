@@ -1,4 +1,4 @@
-import "../styles/Details.css";
+import "../../styles/Details.css";
 import { Link } from "react-router-dom";
 
 function Details({ title, about, header, linkText, link }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Sponsors.css";
+import "../../styles/Sponsors.css";
 function Sponsors({ title, email, images }) {
   return (
     <div className="sponsors min-h-[40vh] flex flex-col items-center text-center">

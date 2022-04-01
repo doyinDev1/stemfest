@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/Speaker.css";
+import "../../styles/Speaker.css";
 import Card from "./Card";
 import Details2 from "./Details2";
 
-import kidImage from "../images/assets/children.png";
+import kidImage from "../../images/assets/children.png";
 
 function Speakers({ header, title, about }) {
   return (

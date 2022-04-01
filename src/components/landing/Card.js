@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Card.css";
+import "../../styles/Card.css";
 function Card({ image, title, about, age }) {
   return (
     <div className="card relative z-10 bg-white rounded-[40px] max-w-[250px] m-4">

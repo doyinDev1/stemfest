@@ -1,12 +1,12 @@
 import "../styles/Home.css";
 
-import About from "../components/About";
-import Agenda from "../components/Agenda";
-import Header from "../components/Header";
-import Services from "../components/Services";
-import Speakers from "../components/Speakers";
-import Navbar from "../components/Navbar";
-import Sponsors from "../components/Sponsors";
+import About from "../components/landing/About";
+import Agenda from "../components/landing/Agenda";
+import Header from "../components/landing/Header";
+import Services from "../components/landing/Services";
+import Speakers from "../components/landing/Speakers";
+import Navbar from "../components/landing/Navbar";
+import Sponsors from "../components/landing/Sponsors";
 
 import homeImg from "../images/assets/Supergirls.png";
 import awsImg from "../images/assets/amazon.png";

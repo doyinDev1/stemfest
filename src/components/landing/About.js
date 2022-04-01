@@ -1,6 +1,6 @@
-import "../styles/About.css";
+import "../../styles/About.css";
 import Details from "./Details";
-import img1 from "../images/assets/children.png";
+import img1 from "../../images/assets/children.png";
 
 function About({ title, about, header, linkText, link }) {
   return (
