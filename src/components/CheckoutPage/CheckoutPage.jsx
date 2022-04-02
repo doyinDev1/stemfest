@@ -70,17 +70,15 @@ const [genderform, setGenderform] = useState([]);
     setActiveStep(activeStep - 1);
   }
 
-  const FinalFinaldata = [formFinal, { ...getKid }];
   const FinalSubmit = () => {
     // console.log('e submit');
+    
   };
   return (
     <React.Fragment>
       {console.log(formFinal, 'formfinal')}
       {console.log(getKid, 'getKid')}
       {console.log(genderform, 'genderform')}
-
-      {console.log(FinalFinaldata, 'papatata')}
       <Typography component="h1" variant="h4" align="center">
         Register
       </Typography>

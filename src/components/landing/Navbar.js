@@ -37,7 +37,7 @@ export default (props) => {
           </Nav>
           <Nav className=" mx-auto relative z-10">
             <Nav.Link
-              href="/login"
+              href="/adult-login"
               className="mx-5 text-white font-bold text-[22px] px-0"
             >
               Login
