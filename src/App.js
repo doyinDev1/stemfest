@@ -5,7 +5,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import AdultLogin from './pages/AdultLogin'
-import { Toaster } from 'react-hot-toast';
+// import { Toaster } from 'react-hot-toast';
 import AdultDashboard from './pages/AdultDashboard';
 
 function App() {
