@@ -1,0 +1,185 @@
+.LoginContainer {
+    display: grid;
+    gap: 70px;
+  }
+  
+  .overlay {
+      width: 100vw;
+      height: 100vh;
+      background-color: #01408699;
+    }
+    .image {
+      width: 100vw;
+      height: 100vh;
+      background-image: url("https://res.cloudinary.com/naijakids/image/upload/v1648718801/STEMFEST_Page_1_jcjgau.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+  .FormWidth {
+    width: 25vw;
+  }
+  
+  .body {
+    display: flex;
+    min-height: 90vh;
+    
+  }
+  .Lorem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Lorem > img{
+    border-radius: 5px;
+  }
+    
+  .RadioDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -50px;
+  }
+  
+  .radioRight{
+    padding-left: 10px;
+  }
+  
+  .login {
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px 50px 50px 50px;
+    font-family: "Rubik";
+    font-weight: 500;
+  }
+  .login .head {
+    padding-bottom: 0px;
+  }
+  .login .head .company {
+    font-size: 2.2em;
+    color: #fff;
+    padding-top: 9px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+   input[type="number"].password {
+    background: #fff;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 10px 10px;
+    font-family: "Rubik";
+    font-weight: 300;
+  
+  }
+  .loginLoading{
+    padding-left: 80px;
+  }
+  label{
+    color: #fff;
+  }
+   input[type="text"] {
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    outline: none;
+    border-radius: 6px;
+    font-family: "Rubik";
+    font-weight: 300;
+    padding: 10px;
+    width: inherit;
+    border-radius: 5px;
+  }
+
+  .login .form .btn_login {
+    background: blue;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 0px 2px white;
+    border-radius: 3px;
+    padding: 5px 2em;
+    transition: 0.5s;
+    border: 0;
+    outline: none;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 20px;
+    width: 100%;
+  }
+  .login .form .btn_login:hover {
+    background: #000000;
+    color: white;
+    transition: 0.5s;
+  }
+  .sign {
+    padding-top: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .LoginContainer {
+      gap: 0;
+      grid-template-columns: repeat(2, 1fr);
+      display: unset;
+    }
+    .login {
+      padding: 50px;
+    }
+  }
+  
+
+  
+  @media screen and (min-width: 768px) {
+    .LoginContainer {
+      gap: 0;
+      grid-template-columns: repeat(2, 1fr);
+      height: 100vh;
+    }
+  
+    .LoginTypes > h1 {
+      font-size: 45px;
+    }
+  
+    .LoginTypes > p {
+      font-size: 22px;
+    }
+  
+    .UserButtonsDiv > button {
+      padding: 15px 10px;
+      width: 55%;
+      font-size: 15px;
+    }
+  
+    .LoginTypesdown > p {
+      font-size: 22px;
+    }
+  
+    .LoginTypesdown > h1 {
+      font-size: 45px;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .FormWidth {
+      width: 70vw;
+    }
+  }
+  
+  @media screen and (max-width: 280px) {
+    .login {
+      max-width: 280px;
+    }
+  }
+  
+
+
+  

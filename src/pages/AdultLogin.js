@@ -10,25 +10,33 @@ import { useNavigate } from "react-router-dom";
 // import { Config } from '../../Config/Config';
 // import Loader from '../Loader/Loader';
 // import SpinnerCustom from '../CommonForm/SpinnerCustom/SpinnerCustom';
-const adminValidationSchema = Yup.object().shape({
-  access_code: Yup.string().required("Access code is required"),
+
+
+const validationSchema = Yup.object().shape({
+	email: Yup.string().required('Your Email is required').email('Please enter a valid email'),
+	access_code: Yup.string().required('Access Code is required'),
+	// access_code: Yup.string().required('Access code is required'),
 });
 
-function Login() {
+function AdultLogin() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const {
-    register: adminRegister,
-    handleSubmit: adminHandleSubmit,
-    formState: adminFormState,
-  } = useForm({
-    resolver: yupResolver(adminValidationSchema),
-    mode: "onSubmit",
-  });
+    register,
+    handleSubmit,
+    formState: { errors },
+} = useForm({
+    resolver: yupResolver(validationSchema),
+    mode: 'onSubmit',
+});
 
-  const onAdminFormSubmit = (data) => {
-    const myFormData = data;
+  const onUserFormSubmit = (data) => {
+    const myFormData = {
+        email: data.email,
+        employee_id: data.employee_id,
+        // firstLogin: data.employee_id,
+    };
     setLoading(true);
 
     // axios
@@ -79,21 +87,39 @@ function Login() {
                   <h1 className={classes.company}>STEMFEST</h1>
                 </div>
                 <div className={classes.form}>
-                  <form
-                    onSubmit={adminHandleSubmit(onAdminFormSubmit)}
+                <form
+                    onSubmit={handleSubmit(onUserFormSubmit)}
                     className={classes.FormWidth}
                   >
-                    <label htmlFor="access_code">Access Code:</label>
+                      	<label htmlFor="email">Email:</label>
 						<br />
-                    <input
-                      type="number"
-                      placeholder="Access Code"
-                      className={classes.password}
-                      id="access_code"
-                      {...adminRegister("access_code")}
-                      required
-                    />
+                 	<input
+							type="text"
+							placeholder="Email"
+                            className={classes.password}
+							id="email"
+							{...register('email')}
+							required
+						/>
                     <br />
+                    {errors.email && (
+							<p className={classes.ErrorMsg}>{errors.email?.message}</p>
+						)}
+                        <br/>
+                        <label htmlFor="access_code">Access Code:</label>
+						<br />
+                        <input
+							type="text"
+							id="access_code"
+							placeholder="Your Access Code"
+                            className={classes.password}
+							{...register('access_code')}
+							required
+						/>
+						<br />
+                        {errors.access_code && (
+							<p className={classes.ErrorMsg}>{errors.access_code?.message}</p>
+						)}
                     <div className={classes.sign}>
                       {/* {!loading ? ( */}
                         <button
@@ -123,4 +149,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default AdultLogin;

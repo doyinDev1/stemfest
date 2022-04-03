@@ -1,19 +1,14 @@
-import { ThemeProvider } from 'styled-components'
-import GlobalStyles from './components/style/Global';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import theme from './data/theme';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme} >
-      <GlobalStyles />
-      <App />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
