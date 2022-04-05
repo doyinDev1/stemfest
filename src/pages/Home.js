@@ -26,7 +26,7 @@ const Home = () => {
         />
         <About
           header="About our school"
-          title="<h2 class='text-blue'>Guide The Young </h2> <h2 class='text-yellow'>Generation to Success</h2>"
+          title="<h2 class='text-deep'>Guide The Young </h2> <h2 class='text-yellow'>Generation to Success</h2>"
           image={homeImg}
           about="
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
