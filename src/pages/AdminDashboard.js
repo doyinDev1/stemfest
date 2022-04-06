@@ -11,6 +11,7 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AdminHeader from '../components/AdminHeader/AdminHeader';
 import { AdminReports } from '../components/AdminReports/AdminReports';
+import AdminSummary from '../components/AdminSummary/AdminSummary'
 const AdminDashboard = () => {
 	const [isOpen, setIsOpen] = useState(true);
 
@@ -30,49 +31,49 @@ const AdminDashboard = () => {
 			id: 0,
 			title: 'Home',
 			icon: <HomeIcon />,
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 		{
 			id: 1,
 			icon: <SchoolIcon/>,
 			title: 'Registration',
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 		{
 			id: 2,
 			icon: <ManIcon />,
 			title: 'Adults',
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 		{
 			id: 3,
 			icon: <FamilyRestroomIcon />,
 			title: 'Children',
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 		{
 			id: 4,
 			icon: <QrCodeIcon />,
 			title: 'QR Codes',
-			page: < AdminReports />,
+			page: <AdminSummary />,
 		},
 		{
 			id: 5,
 			icon: <AdminPanelSettingsIcon/>,
 			title: 'Event Attendance',
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 		{
 			id: 6,
 			icon: <EventNoteIcon />,
 			title: 'Admin',
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 		{
 			id: 7,
 			icon: <SettingsIcon />,
 			title: 'Settings',
-			page: < AdminReports />,
+			page: < AdminSummary />,
 		},
 	];
 	return (
