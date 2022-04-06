@@ -10,6 +10,12 @@
   margin-bottom: 70px;
   box-shadow: 10px 15px 10px rgba(37, 37, 37, 0.5),
     -1px -1px 30px rgba(255, 255, 255, 0.5);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navigation__Landing {
+  max-width: 40vw !important;
 }
 
 .home .agenda {
@@ -22,5 +28,17 @@
 @media screen and (max-width: 1000px) {
   .home__Top {
     padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .agendas {
+    display: flex;
+  }
+  .agenda h3 {
+    font-size: 20px;
+  }
+  .agenda p {
+    font-size: 12px;
   }
 }

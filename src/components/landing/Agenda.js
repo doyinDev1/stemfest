@@ -1,10 +1,9 @@
-import React from "react";
-
+import "../../styles/Agenda.css";
 function Agenda({ date, title, about, image, name, job, work, role }) {
   return (
-    <div className="agenda md:flex p-6">
+    <div className="agenda md:flex p-6 lg:p-4">
       <div className="agenda__Time md:mx-6 ">
-        <p className="p-2 px-4 bg-red text-white mt-4 md:rounded-[10px] ">
+        <p className="p-2 px-4 bg-deep text-white mt-4 md:rounded-[10px] ">
           {" "}
           1:45pm
         </p>
@@ -15,9 +14,9 @@ function Agenda({ date, title, about, image, name, job, work, role }) {
         <p className="mb-6 leading-6 text-justify">{about.slice(0, 250)}</p>
 
         <div className="agenda__Author flex items-center">
-          <img src={image} alt="" className="w-[120px] h-[120px] border" />
-          <div className="agenda__AuthorDetails ml-4">
-            <h4>{name}</h4>
+          <img src={image} alt="" className="w-[120px] h-[120px]" />
+          <div className="agenda__AuthorDetails ml-4 lg:text-xs ">
+            <h4 className="text-black lg:text-xs">{name}</h4>
             <p className="">{job}</p>
             <p className=""> {work}</p>
             <p className="">{role}</p>

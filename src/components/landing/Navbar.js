@@ -5,7 +5,11 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 
 export default (props) => {
   return (
-    <Navbar className="!absolute  mt-[20px]" expand="sm" collapseOnSelect>
+    <Navbar
+      className="navigation__Landing !absolute  mt-[20px]"
+      expand="sm"
+      collapseOnSelect
+    >
       <Container className="text-white min-w-[95vw]">
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>

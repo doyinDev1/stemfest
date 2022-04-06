@@ -34,7 +34,7 @@ const Home = () => {
           linkText="<a class='bg-yellow text-white p-4'>Subscribe Now</a>"
         />
         <Services
-          title="We Provide The <h1 class='text-yellow'> Main Kids Activities </h1> "
+          title="We Provide The <h1 class='text-yellow text-[32px]'> Main Kids Activities </h1> "
           header="Why choose us"
           about="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
         />
@@ -46,36 +46,38 @@ const Home = () => {
         />
       </div>
 
-      <Agenda
-        date="1:45 PM - 2:15 PM"
-        title="Grow Better: AN Overview of HubSpot's Marketing Hub"
-        about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
-        name="Christine Georghiou"
-        job="Snr Prodduct Marketing Manager"
-        work="Hubspot"
-        role="Speaker"
-        image={homeImg}
-      />
-      <Agenda
-        date="1:45 PM - 2:15 PM"
-        title="Grow Better: AN Overview of HubSpot's Marketing Hub"
-        about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
-        name="Christine Georghiou"
-        job="Snr Prodduct Marketing Manager"
-        work="Hubspot"
-        role="Speaker"
-        image={homeImg}
-      />
-      <Agenda
-        date="1:45 PM - 2:15 PM"
-        title="Grow Better: AN Overview of HubSpot's Marketing Hub"
-        about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
-        name="Christine Georghiou"
-        job="Snr Prodduct Marketing Manager"
-        work="Hubspot"
-        role="Speaker"
-        image={homeImg}
-      />
+      <div className="agendas">
+        <Agenda
+          date="1:45 PM - 2:15 PM"
+          title="Grow Better: AN Overview of HubSpot's Marketing Hub"
+          about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
+          name="Christine Georghiou"
+          job="Snr Prodduct Marketing Manager"
+          work="Hubspot"
+          role="Speaker"
+          image={homeImg}
+        />
+        <Agenda
+          date="1:45 PM - 2:15 PM"
+          title="Grow Better: AN Overview of HubSpot's Marketing Hub"
+          about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
+          name="Christine Georghiou"
+          job="Snr Prodduct Marketing Manager"
+          work="Hubspot"
+          role="Speaker"
+          image={homeImg}
+        />
+        <Agenda
+          date="1:45 PM - 2:15 PM"
+          title="Grow Better: AN Overview of HubSpot's Marketing Hub"
+          about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
+          name="Christine Georghiou"
+          job="Snr Prodduct Marketing Manager"
+          work="Hubspot"
+          role="Speaker"
+          image={homeImg}
+        />
+      </div>
       <Sponsors
         title="2021 Sponsors"
         email="Please get in touch with growevents@gmail.com"
