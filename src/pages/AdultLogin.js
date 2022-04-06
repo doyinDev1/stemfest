@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 
 
 const validationSchema = Yup.object().shape({
-	email: Yup.string().required('Your Email is required').email('Please enter a valid email'),
 	access_code: Yup.string().required('Access Code is required'),
 	// access_code: Yup.string().required('Access code is required'),
 });
@@ -91,22 +90,9 @@ function AdultLogin() {
                     onSubmit={handleSubmit(onUserFormSubmit)}
                     className={classes.FormWidth}
                   >
-                      	<label htmlFor="email">Email:</label>
-						<br />
-                 	<input
-							type="text"
-							placeholder="Email"
-                            className={classes.password}
-							id="email"
-							{...register('email')}
-							required
-						/>
-                    <br />
-                    {errors.email && (
-							<p className={classes.ErrorMsg}>{errors.email?.message}</p>
-						)}
+                      	
                         <br/>
-                        <label htmlFor="access_code">Access Code:</label>
+                        <label htmlFor="access_code">Adult Access Code:</label>
 						<br />
                         <input
 							type="text"

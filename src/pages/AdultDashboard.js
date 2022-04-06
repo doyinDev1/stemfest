@@ -40,7 +40,7 @@ const AdultDashboard = () => {
                       coming to the event. Dont forget to put on your nose mask
                       for entry too.
                     </p>
-                    <Button variant="primary">Download QR Code Pass</Button>
+                    <Button variant="primary" style={{color:  "red"}}>Download QR Code Pass</Button>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@ const AdultDashboard = () => {
                       <Card
                         image={kidImage}
                         about="Dwayne Johnson"
-                        title="<h4 class='bg-green rounded-full py-1'>Super Kidoo</h4>"
+                        title="<h4 class='bg-green rounded-full py-1'>Dwayne Johnson</h4>"
                         age="<h4 class='text-green'> Age 13-15 </h4>"
                       />
                     </div>
