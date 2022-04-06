@@ -3,7 +3,7 @@ import classes from "../styles/AdultDashboard.module.css";
 import "../styles/AdultDashboard.css";
 import { FiCheckCircle } from "react-icons/fi";
 import { Button } from "react-bootstrap";
-import Card from "../components/AdminDashboard/Card";
+import Card from "../components/AdultDashboard/Card";
 
 import kidImage from "../images/assets/qr-code.png";
 
@@ -40,7 +40,13 @@ const AdultDashboard = () => {
                       coming to the event. Dont forget to put on your nose mask
                       for entry too.
                     </p>
-                    <Button variant="primary" style={{ color: "red" }}>
+                    <Button
+                      variant="primary"
+                      style={{
+                        color: "#AAB0BB",
+                        backgroundColor: "#134C72",
+                      }}
+                    >
                       Download QR Code Pass
                     </Button>
                   </div>

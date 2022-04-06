@@ -4,6 +4,9 @@
 
 :root {
   --yellow: rgb(209, 209, 81);
+  --blue: #134c72;
+  --black: #030000;
+  --light-grey: #aab0bb;
 }
 
 *,

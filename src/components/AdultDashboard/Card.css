@@ -10,8 +10,7 @@
   border-radius: 10px !important;
 }
 .adultDashboard .card__Image {
-  --ash: #707070;
-  background-color: var(--ash);
+  background-color: var(--light-grey);
   height: 100px !important;
   border-radius: 10px 10px 0px 0px;
   display: flex;
@@ -32,18 +31,18 @@
 .adultDashboard .card__About h4 {
   font-size: 14px !important;
   min-width: fit-content;
-  color: black;
+  color: var(--black);
 }
 
 .adultDashboard .card p {
   border: none;
 }
 .adultDashboard .card button {
-  --blue: blue;
   background-color: var(--blue);
   color: #aab0bb;
-  padding: 5px;
+  padding: 5px 7px;
   font-size: 12px;
   display: block;
   margin: 0px auto;
+  border-radius: 5px;
 }
