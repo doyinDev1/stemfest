@@ -1,14 +1,15 @@
 import React from "react";
 import classes from "../styles/AdultDashboard.module.css";
+import "../styles/AdultDashboard.css";
 import { FiCheckCircle } from "react-icons/fi";
 import { Button } from "react-bootstrap";
-import Card from "../components/landing/Card";
+import Card from "../components/AdminDashboard/Card";
 
-import kidImage from "../images/assets/children.png";
+import kidImage from "../images/assets/qr-code.png";
 
 const AdultDashboard = () => {
   return (
-    <>
+    <div className="adultDashboard">
       <div className={classes.image}>
         <div className={classes.overlay}>
           <>
@@ -18,8 +19,7 @@ const AdultDashboard = () => {
                   <div className={classes.TopLeftCard}>
                     <div className={classes.TopText}>
                       <h1 className={classes.RegText}>
-                      
-                        <FiCheckCircle />  Registration Completed !!
+                        <FiCheckCircle /> Registration Completed !!
                       </h1>
                     </div>
                   </div>
@@ -40,7 +40,9 @@ const AdultDashboard = () => {
                       coming to the event. Dont forget to put on your nose mask
                       for entry too.
                     </p>
-                    <Button variant="primary" style={{color:  "red"}}>Download QR Code Pass</Button>
+                    <Button variant="primary" style={{ color: "red" }}>
+                      Download QR Code Pass
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -58,43 +60,14 @@ const AdultDashboard = () => {
                       your junk/spam folder and add this to your safe sender's
                       list.
                     </p>
-                    <div className={classes.KidCards}>
-                      <Card
-                        image={kidImage}
-                        about="Samuel Jackson"
-                        title="<h4 class='bg-green rounded-full py-1'>Baby Kidoo</h4>"
-                        age="<h4 class='text-green'> Age 5-7 </h4>"
-                      />
-                      <Card
-                        image={kidImage}
-                        about="Jason Statham"
-                        title="<h4 class='bg-green rounded-full py-1'>Mini Kidoo</h4>"
-                        age="<h4 class='text-green'> Age 8-12 </h4>"
-                      />
-                      <Card
-                        image={kidImage}
-                        about="Dwayne Johnson"
-                        title="<h4 class='bg-green rounded-full py-1'>Super Kidoo</h4>"
-                        age="<h4 class='text-green'> Age 13-15 </h4>"
-                      />
-                      <Card
-                        image={kidImage}
-                        about="Dwayne Johnson"
-                        title="<h4 class='bg-green rounded-full py-1'>Super Kidoo</h4>"
-                        age="<h4 class='text-green'> Age 13-15 </h4>"
-                      />
-                      <Card
-                        image={kidImage}
-                        about="Dwayne Johnson"
-                        title="<h4 class='bg-green rounded-full py-1'>Super Kidoo</h4>"
-                        age="<h4 class='text-green'> Age 13-15 </h4>"
-                      />
-                      <Card
-                        image={kidImage}
-                        about="Dwayne Johnson"
-                        title="<h4 class='bg-green rounded-full py-1'>Dwayne Johnson</h4>"
-                        age="<h4 class='text-green'> Age 13-15 </h4>"
-                      />
+
+                    <div className="adultDashboard__Cards">
+                      <Card image={kidImage} name="Adult Name" age="5-7" />
+                      <Card image={kidImage} name="Child Name" age="5-7" />
+                      <Card image={kidImage} name="Child Name" age="5-7" />
+                      <Card image={kidImage} name="Child Name" age="5-7" />
+                      <Card image={kidImage} name="Child Name" age="5-7" />
+                      <Card image={kidImage} name="Child Name" age="5-7" />
                     </div>
                   </div>
                 </div>
@@ -103,7 +76,7 @@ const AdultDashboard = () => {
           </>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
