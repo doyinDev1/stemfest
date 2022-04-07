@@ -4,15 +4,15 @@ import checkoutFormModel from './checkoutFormModel';
 const {
   formField: {
     name,
-    phoneNumber,
+    phone,
     email
   }
 } = checkoutFormModel;
 
 export default [
   Yup.object().shape({
-    [phoneNumber.name]: Yup.number().required(
-      `${phoneNumber.requiredErrorMsg}`
+    [phone.name]: Yup.number().required(
+      `${phone.requiredErrorMsg}`
     ),
     [email.name]: Yup.string().required(`${email.requiredErrorMsg}`),
     [name.name]: Yup.string().required(`${name.requiredErrorMsg}`)

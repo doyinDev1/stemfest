@@ -15,24 +15,29 @@ import CheckoutSuccess from './CheckoutSuccess';
 import validationSchema from './FormModel/validationSchema';
 import checkoutFormModel from './FormModel/checkoutFormModel';
 import formInitialValues from './FormModel/formInitialValues';
-
+import axios from 'axios'
 import useStyles from './styles';
-
+import { Config } from '../../Config/Config'
+import toast, { Toaster } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 const steps = ['Sign Up', 'Children Details', 'Submit your selection'];
 const { formId, formField } = checkoutFormModel;
 
 export default function CheckoutPage() {
-  const [formFinal, setFormFinal] = useState([]);
-  const [getKid, setGetKid] = useState([]);
-const [genderform, setGenderform] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [adultDetails, setAdultDetails] = useState([]);
+  const [child, setChild] = useState([]);
+  const router = useNavigate();
+
+const [type, setType] = useState([]);
   function _renderStepContent(step) {
     switch (step) {
       case 0:
-        return <AddressForm formField={formField} setGenderform={setGenderform} />;
+        return <AddressForm formField={formField} setType={setType} />;
       case 1:
-        return <PaymentForm setGetKid={setGetKid}  />;
+        return <PaymentForm setChild={setChild}  />;
       case 2:
-        return <ReviewOrder setFormFinal={setFormFinal} />;
+        return <ReviewOrder setAdultDetails={setAdultDetails} />;
       default:
         return <div>Not Found</div>;
     }
@@ -51,7 +56,6 @@ const [genderform, setGenderform] = useState([]);
     await _sleep(1000);
     alert('Registration Completed');
     actions.setSubmitting(false);
-
     setActiveStep(activeStep + 1);
   }
 
@@ -69,16 +73,40 @@ const [genderform, setGenderform] = useState([]);
   function _handleBack() {
     setActiveStep(activeStep - 1);
   }
-
+const myObj = {
+    ...adultDetails,
+    type,
+    child
+}
   const FinalSubmit = () => {
-    // console.log('e submit');
-    
+    console.log(myObj,'post values');
+
+
+    axios
+			.post(`${Config.url.API_URL}/user/registration`, myObj)
+			.then((res) => {
+				const userData = JSON.stringify({
+					name: res.data
+				          
+				});
+        console.log(userData);
+				toast.success('Registered Successfully');
+				// console.log(userData)
+				router('/');
+			})
+			.catch((err) => {
+				const errMsg = err?.response?.data?.message
+					? err?.response?.data?.message
+					: 'Failed to Register!';
+				toast.error(errMsg);
+				setLoading(false);
+			});
   };
   return (
     <React.Fragment>
-      {console.log(formFinal, 'formfinal')}
-      {console.log(getKid, 'getKid')}
-      {console.log(genderform, 'genderform')}
+      {console.log(adultDetails, 'adultDetails')}
+      {console.log(child, 'child')}
+      {console.log(type, 'type')}
       <Typography component="h1" variant="h4" align="center">
         Register
       </Typography>

@@ -5,13 +5,14 @@ import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 // import toast, { Toaster } from 'react-hot-toast';
 import { useState } from "react";
-// import axios from 'axios';
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 // import { Config } from '../../Config/Config';
 // import Loader from '../Loader/Loader';
 // import SpinnerCustom from '../CommonForm/SpinnerCustom/SpinnerCustom';
-
-
+import { Config } from '../Config/Config'
+import toast, { Toast } from 'react-hot-toast'
+import { Spinner, Button } from 'react-bootstrap'
 const validationSchema = Yup.object().shape({
 	access_code: Yup.string().required('Access Code is required'),
 	// access_code: Yup.string().required('Access code is required'),
@@ -19,7 +20,7 @@ const validationSchema = Yup.object().shape({
 
 function AdultLogin() {
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const router = useNavigate();
 
   const {
     register,
@@ -32,40 +33,35 @@ function AdultLogin() {
 
   const onUserFormSubmit = (data) => {
     const myFormData = {
-        email: data.email,
-        employee_id: data.employee_id,
-        // firstLogin: data.employee_id,
+        access_code: data.access_code,
     };
     setLoading(true);
+    		console.log(data, "data")
 
-    // axios
-    // 	.post(`${Config.url.API_URL}/admin/login`, myFormData)
-    // 	.then((res) => {
-    // 		const userData = JSON.stringify({
-    // 			token: res.data.data.token,
-    // 		});
-
-    // 		if (typeof sessionStorage !== undefined) {
-    // 			sessionStorage.setItem('cpAdmin', userData);
-    // 		}
-
-    // 		toast.success('Login Successfully');
-
-    // 		if (res.data.facilitator) {
-    // 			return router.replace('/facilitator');
-    // 		}
-    // 		router.replace('/admindashboard');
-    // 		// console.log(res.data.data.token);
-    // 	})
-    // 	.catch((err) => {
-    // 		const errMsg = err?.response?.data?.message
-    // 			? err?.response?.data?.message
-    // 			: 'Failed to Login!';
-    // 		toast.error(errMsg);
-    // 		setLoading(false);
-    // 	});
+    axios
+    	.post(`${Config.url.API_URL}/user/login`, myFormData)
+    	.then((res) => {
+    		const userData = JSON.stringify({
+    			data: res.data,
+          token: res.data.token,
+          name: res.data.token,
+          children_no: res.data.children_no,
+          email: res.data.email,
+          phone: res.data.phone
+    		});
+        sessionStorage.setItem('spAdmin', userData);
+        toast.success('Login Successfully');
+    		router('/adult-dashboard');
+    	})
+    	.catch((err) => {
+        console.log(err)
+    		const errMsg = err?.response?.data?.message
+    			? err?.data?.error
+    			: 'Failed to Login!';
+    		toast.error(errMsg);
+    		setLoading(false);
+    	});
   };
-  // console.log("hj");
 
   return (
     <>
@@ -101,11 +97,11 @@ function AdultLogin() {
                             className={classes.password}
 							{...register('access_code')}
 							required
-						/>
+              />
+              {errors.access_code && (
+    <p className={classes.ErrorMsg}>{errors.access_code?.message}</p>
+  )}
 						<br />
-                        {errors.access_code && (
-							<p className={classes.ErrorMsg}>{errors.access_code?.message}</p>
-						)}
                     <div className={classes.sign}>
                       {/* {!loading ? ( */}
                         <button
@@ -118,11 +114,19 @@ function AdultLogin() {
                       {/* ) : ( */}
                         {/* <> */}
                           {/* <div className={classes.loginLoading}> */}
-                            {/* <SpinnerCustom /> */}
-                            {/* {""} */}
-                          {/* </div> */}
-                        {/* </> */}
-                      {/* )} */}
+                          {/* <Button variant="primary" disabled> */}
+    {/* <Spinner
+      as="span"
+      animation="grow"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+    />
+    Loading...
+  </Button> */}
+                          {/* </div>
+                        </>
+                      )} */}
                     </div>
                   </form>
                 </div>

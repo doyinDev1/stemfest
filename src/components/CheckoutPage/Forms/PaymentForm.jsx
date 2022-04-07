@@ -8,9 +8,9 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 
-export default function PaymentForm({ setGetKid }) {
+export default function PaymentForm({ setChild }) {
   const [kidsList, setKidsList] = useState([
-    { childName: "", gender: "", ageRange: "" },
+    { child_name: "", gender: "", age_range: "" },
   ]);
 
   const handleInputChange = (e, index) => {
@@ -31,7 +31,7 @@ export default function PaymentForm({ setGetKid }) {
 
   // handle click event of the Add button
   const handleAddClick = () => {
-    setKidsList([...kidsList, { childName: "", gender: "", ageRange: "" }]);
+    setKidsList([...kidsList, { child_name: "", gender: "", age_range: "" }]);
   };
   return (
     <React.Fragment>
@@ -58,13 +58,13 @@ export default function PaymentForm({ setGetKid }) {
 
                 <div className="textField" style={{ paddingBottom: "20px" }}>
                   <TextField
-                    label="ChildName"
+                    label="Child Name"
                     fullWidth
                     id="fullWidth"
                     placeholder="Enter child name"
                     onChange={(e) => handleInputChange(e, i)}
                     value={x.name}
-                    name="childName"
+                    name="child_name"
                     type="text"
                     required
                     variant="standard"
@@ -80,8 +80,8 @@ export default function PaymentForm({ setGetKid }) {
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
                       labelId="demo-simple-select-label"
-                      name="ageRange"
-                      id="ageRange"
+                      name="age_range"
+                      id="age_range"
                       // value='age'
                       label="Age"
                       // name="Age"
@@ -157,7 +157,7 @@ export default function PaymentForm({ setGetKid }) {
         <Grid item xs={12} md={6}></Grid>
         <Grid item xs={12} md={6}></Grid>
       </Grid>
-      {setGetKid(kidsList)}
+      {setChild(kidsList)}
     </React.Fragment>
   );
 }

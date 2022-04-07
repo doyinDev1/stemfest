@@ -5,23 +5,25 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import AdultLogin from './pages/AdultLogin'
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import AdultDashboard from './pages/AdultDashboard';
 
 function App() {
   return (
+    <>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/admin-login" element={<Login />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/adult-login" element={<AdultLogin />} />
         <Route path="/adult-dashboard" element={<AdultDashboard />} />
 
-{/* <Toaster/> */}
       </Routes>
     </Router >
+        <div><Toaster/></div>
+    </>
   );
 }
 
