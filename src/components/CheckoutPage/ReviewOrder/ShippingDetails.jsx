@@ -5,14 +5,14 @@ import useStyles from './styles';
 function PaymentDetails(props) {
   const { formValues } = props;
   const classes = useStyles();
-  const { name, email, phoneNumber, parent, school, teacher } = formValues;
+  const { name, email, phone, parent, school, teacher } = formValues;
   return (
     <Grid item xs={12} sm={6}>
       <Typography variant="h6" gutterBottom className={classes.title}>
         Shipping
       </Typography>
       <Typography gutterBottom>{`${name}`}</Typography>
-      <Typography gutterBottom>{`${phoneNumber}`}</Typography>
+      <Typography gutterBottom>{`${phone}`}</Typography>
       <Typography gutterBottom>{`${email}`}</Typography>
       <Typography gutterBottom>{`${parent}`}</Typography>
       <Typography gutterBottom>{`${school}`}</Typography>

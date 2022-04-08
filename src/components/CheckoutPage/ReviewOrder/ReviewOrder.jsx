@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormikContext } from 'formik';
 import { Typography, Grid } from '@material-ui/core';
 
-export default function ReviewOrder({ setFormFinal }) {
+export default function ReviewOrder({ setAdultDetails }) {
   const { values: formValues } = useFormikContext();
   return (
     <React.Fragment>
@@ -12,7 +12,7 @@ export default function ReviewOrder({ setFormFinal }) {
       <Grid container spacing={2}>
         {/* <ShippingDetails formValues={formValues} />
         <PaymentDetails formValues={formValues} /> */}
-        {setFormFinal(formValues)}
+        {setAdultDetails(formValues)}
         {/* {console.log(formValues, 'fv')} */}
       </Grid>
     </React.Fragment>

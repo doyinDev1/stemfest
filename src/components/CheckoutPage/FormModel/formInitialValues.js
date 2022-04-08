@@ -1,11 +1,11 @@
 import checkoutFormModel from './checkoutFormModel';
 const {
-  formField: { name, phoneNumber, email }
+  formField: { name, phone, email }
 } = checkoutFormModel;
 
 export default {
   [name.name]: '',
-  [phoneNumber.name]: '',
+  [phone.name]: '',
   [email.name]: '',
   
 };

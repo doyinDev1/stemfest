@@ -8,7 +8,10 @@ import { useState } from 'react';
 
 export default function AddressForm(props) {
   const {
-    formField: { name, email, phoneNumber }  ,  setGenderform} = props;
+    formField: { name, email, phone }  ,  setType
+  
+  
+  } = props;
  
   const [gender, setGender] = useState("Paren");
   function onChangeValue(event) {
@@ -29,8 +32,8 @@ export default function AddressForm(props) {
         </Grid>
         <Grid item xs={12}>
           <InputField
-            name={phoneNumber.name}
-            label={phoneNumber.label}
+            name={phone.name}
+            label={phone.label}
             fullWidth
           />
         </Grid>
@@ -46,7 +49,7 @@ export default function AddressForm(props) {
 
 </div>
 </Grid>
-{setGenderform(gender)}
+{setType(gender)}
 
       </Grid>
     </React.Fragment>

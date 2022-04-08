@@ -11,8 +11,8 @@ export default {
       label: 'Email*',
       requiredErrorMsg: 'Email is required'
     },
-    phoneNumber: {
-      name: 'phoneNumber',
+    phone: {
+      name: 'phone',
       label: 'Phone Number*',
       requiredErrorMsg: 'Phone Number is required'
     }
