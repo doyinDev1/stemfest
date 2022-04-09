@@ -53,8 +53,8 @@ const [type, setType] = useState([]);
   }
 
   async function _submitForm(values, actions) {
-    await _sleep(1000);
-    alert('Registration Completed');
+    await _sleep(3000);
+    // alert('Details Submitted');
     actions.setSubmitting(false);
     setActiveStep(activeStep + 1);
   }
@@ -62,7 +62,8 @@ const [type, setType] = useState([]);
   function _handleSubmit(values, actions) {
     if (isLastStep) {
       _submitForm(values, actions);
-      console.log(values);
+      // console.log(values);
+      
     } else {
       setActiveStep(activeStep + 1);
       actions.setTouched({});
@@ -79,7 +80,7 @@ const myObj = {
     child
 }
   const FinalSubmit = () => {
-    console.log(myObj,'post values');
+    // console.log(myObj,'post values');
 
 
     axios
@@ -104,9 +105,6 @@ const myObj = {
   };
   return (
     <React.Fragment>
-      {console.log(adultDetails, 'adultDetails')}
-      {console.log(child, 'child')}
-      {console.log(type, 'type')}
       <Typography component="h1" variant="h4" align="center">
         Register
       </Typography>

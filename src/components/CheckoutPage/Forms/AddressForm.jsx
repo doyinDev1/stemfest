@@ -23,6 +23,9 @@ export default function AddressForm(props) {
       <Typography variant="h6" gutterBottom>
         Register Details
       </Typography>
+      <Typography variant="subtitle1">
+        Please complete all the details on the form and submit
+      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <InputField name={name.name} label={name.label} fullWidth />

@@ -7,7 +7,9 @@ export default function ReviewOrder({ setAdultDetails }) {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Check Your Email After Submission for your Access and QR Code
+        Check Your Email After Successful Submission for your Access and QR Code,
+        <br/>
+       
       </Typography>
       <Grid container spacing={2}>
         {/* <ShippingDetails formValues={formValues} />
