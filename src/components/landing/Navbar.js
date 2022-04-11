@@ -48,7 +48,7 @@ export default (props) => {
             </Nav.Link>
             <Nav.Link
               href="/register"
-              className="mx-5 text-white font-bold text-[22px] px-4 rounded-[10px] bg-yellow"
+              className="navigation__Register mx-5 text-white font-bold text-[22px] lg:px-4 rounded-[10px] bg-yellow"
             >
               Register
             </Nav.Link>

@@ -42,3 +42,15 @@
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .navigation__Landing {
+    position: relative !important;
+    margin: 0 !important;
+  }
+  .navigation__Register {
+    padding: 0% !important;
+    margin: 0% !important;
+    background-color: transparent;
+  }
+}
