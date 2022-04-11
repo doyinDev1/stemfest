@@ -19,6 +19,9 @@
   padding: 14px;
 }
 @media screen and (max-width: 500px) {
+  .services {
+    background-position: center;
+  }
   .services__Right {
     flex-wrap: wrap;
   }

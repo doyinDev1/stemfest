@@ -37,6 +37,7 @@
   .about {
     background: url("../images/assets/bg-mobile-2.png") no-repeat;
     background-size: cover;
+    background-position: center;
     background-color: aliceblue;
     padding: 20px;
     display: flex;
