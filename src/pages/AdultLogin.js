@@ -10,7 +10,9 @@ import { Config } from "../Config/Config";
 import toast from "react-hot-toast";
 import { Spinner, Button } from "react-bootstrap";
 const validationSchema = Yup.object().shape({
-  access_code: Yup.string().required("Access Code is required"),
+  email: Yup.string().required("Email is required"),
+  password: Yup.string().required("Password is required"),
+
 });
 
 function AdultLogin() {
@@ -28,10 +30,11 @@ function AdultLogin() {
 
   const onUserFormSubmit = (data) => {
     const myFormData = {
-      access_code: data.access_code,
+      email: data.email,
+      password: data.password
     };
     setLoading(true);
-
+// console.log(data)
     axios
       .post(`${Config.url.API_URL}/user/login`, myFormData)
       .then((res) => {
@@ -80,19 +83,35 @@ function AdultLogin() {
                     className={classes.FormWidth}
                   >
                     <br />
-                    <label htmlFor="access_code">Adult Access Code:</label>
+                    <label htmlFor="email">Email:</label>
                     <br />
                     <input
-                      type="text"
-                      id="access_code"
-                      placeholder="Your Access Code"
+                      type="email"
+                      id="email"
+                      placeholder="Your Email Address"
                       className={classes.password}
-                      {...register("access_code")}
+                      {...register("email")}
                       required
                     />
-                    {errors.access_code && (
+                    {errors.email && (
                       <p className={classes.ErrorMsg}>
-                        {errors.access_code?.message}
+                        {errors.email?.message}
+                      </p>
+                    )}
+                    <br />
+                    <label htmlFor="password">Password:</label>
+                    <br />
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder="Your Password"
+                      className={classes.password}
+                      {...register("password")}
+                      required
+                    />
+                    {errors.password && (
+                      <p className={classes.ErrorMsg}>
+                        {errors.password?.message}
                       </p>
                     )}
                     <br />

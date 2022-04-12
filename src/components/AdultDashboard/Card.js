@@ -1,4 +1,8 @@
 import "./Card.css";
+import DownloadStemfest from "../DownloadStemfest/DownloadStemfest";
+
+// import { PDFViewer } from '@react-pdf/renderer'
+
 function Card({ name, age, image }) {
   return (
     <div className="card">
@@ -8,7 +12,11 @@ function Card({ name, age, image }) {
       <div className="card__About">
         <h4 className="card__Name">{name}</h4>
         <p className="card__Age"> Age: {age}</p>
-        <button> Download Pass</button>
+        {/* <button> Download Pass</button> */}
+        <DownloadStemfest
+												status={true}
+												
+											/>
       </div>
     </div>
   );
