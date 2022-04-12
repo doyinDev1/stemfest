@@ -18,7 +18,7 @@ const AdultDashboard = () => {
   useEffect(() => {
     // get User info 
     const UserInfo = JSON.parse(sessionStorage.getItem("sfUser"));
-// get token from User info
+// get token from User info here
     const token = UserInfo.data.token;
     // config here for axios authorization
     const config = {
