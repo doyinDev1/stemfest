@@ -1,0 +1,13 @@
+.speakers {
+  background: url("../images/assets/bg-3.png") no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+@media screen and (max-width: 500px) {
+  .speakers {
+    background: url("../images/assets/bg-3-3.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
