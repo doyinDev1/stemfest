@@ -7,12 +7,26 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+// import BulkUploadModal from './BulkUploadModal';
+// import BulkUploadModal from '../../CreateUsers/BulkUploadModal'
 
 export default function PaymentForm({ setChild }) {
+  const [validatingFile, setValidatingFile] = useState(false);
+	const [validationErrors, setValidationErrors] = useState([]);
+	const [showModal, setShowModal] = useState(false);
+	// const userInfo = JSON.parse(localStorage.getItem('rpAdmin'));
+	const [validatedData, setValidatedData] = useState({
+		valid: [],
+		invalid: [],
+	});
+	const onHide = () => {
+		setShowModal(false);
+		setValidatingFile(false);
+		setValidationErrors([]);
+	};
   const [kidsList, setKidsList] = useState([
     { child_name: "", gender: "", age_range: "" },
   ]);
-
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
     const list = [...kidsList];
@@ -154,10 +168,25 @@ export default function PaymentForm({ setChild }) {
           })}
         </Grid>
 
-        <Grid item xs={12} md={6}></Grid>
+        <Grid item xs={12} md={6}>
+        <div className="ImportBtn">
+				<button onClick={() => setShowModal(true)}>Bulk Upload Users</button>
+			</div> 
+        </Grid>
         <Grid item xs={12} md={6}></Grid>
       </Grid>
       {setChild(kidsList)}
+      {/* <BulkUploadModal
+				showModal={showModal}
+				hideModal={onHide}
+				validatingFile={validatingFile}
+				validatedData={validatedData}
+				validationErrors={validationErrors}
+				setValidatingFile={setValidatingFile}
+				setValidatedData={setValidatedData}
+				setValidationErrors={setValidationErrors}
+
+			/> */}
     </React.Fragment>
   );
 }

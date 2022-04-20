@@ -75,7 +75,7 @@ function AdultLogin() {
                   />
                 </div>
                 <div className={classes.head}>
-                  <h1 className={classes.company}>STEMFEST</h1>
+                  <h1 className={classes.company}>STEAMFEST</h1>
                 </div>
                 <div className={classes.form}>
                   <form

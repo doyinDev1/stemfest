@@ -10,13 +10,17 @@ import { useNavigate } from "react-router-dom";
 // import { Config } from '../../Config/Config';
 // import Loader from '../Loader/Loader';
 // import SpinnerCustom from '../CommonForm/SpinnerCustom/SpinnerCustom';
+import toast from "react-hot-toast";
+import { Config } from "../Config/Config";
+import axios from 'axios'
 const adminValidationSchema = Yup.object().shape({
   access_code: Yup.string().required("Access code is required"),
 });
 
 function Login() {
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const router = useNavigate();
 
   const {
     register: adminRegister,
@@ -31,35 +35,29 @@ function Login() {
     const myFormData = data;
     setLoading(true);
 
-    // axios
-    // 	.post(`${Config.url.API_URL}/admin/login`, myFormData)
-    // 	.then((res) => {
-    // 		const userData = JSON.stringify({
-    // 			token: res.data.data.token,
-    // 		});
-
-    // 		if (typeof sessionStorage !== undefined) {
-    // 			sessionStorage.setItem('cpAdmin', userData);
-    // 		}
-
-    // 		toast.success('Login Successfully');
-
-    // 		if (res.data.facilitator) {
-    // 			return router.replace('/facilitator');
-    // 		}
-    // 		router.replace('/admindashboard');
-    // 		// console.log(res.data.data.token);
-    // 	})
-    // 	.catch((err) => {
-    // 		const errMsg = err?.response?.data?.message
-    // 			? err?.response?.data?.message
-    // 			: 'Failed to Login!';
-    // 		toast.error(errMsg);
-    // 		setLoading(false);
-    // 	});
-  };
-  // console.log("hj");
-
+    axios
+    .post(`${Config.url.API_URL}/admin/login`, myFormData)
+    .then((res) => {
+      // check for data length as endpoint returned status code 200 for errors
+      if (res.data?.error?.length) throw new Error(res.data.error[0]);
+      const userData = JSON.stringify({
+        data: res.data,
+        // token: res.data.token,
+        // name: res.data.token,
+        // children_no: res.data.children_no,
+        // email: res.data.email,
+        // phone: res.data.phone,
+      });
+      sessionStorage.setItem("sfAdmin", userData);
+      toast.success("Login Successfully");
+      router("/admin-dashboard");
+    })
+    .catch((err) => {
+      const errMsg = err?.message || "Failed to Login!";
+      toast.error(errMsg);
+      setLoading(false);
+    });
+};
   return (
     <>
       <div className={classes.image}>
@@ -76,7 +74,7 @@ function Login() {
                   />
                 </div>
                 <div className={classes.head}>
-                  <h1 className={classes.company}>STEMFEST</h1>
+                  <h1 className={classes.company}>STEAMFEST</h1>
                 </div>
                 <div className={classes.form}>
                   <form

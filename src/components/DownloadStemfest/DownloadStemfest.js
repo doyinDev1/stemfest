@@ -6,20 +6,14 @@ import { useState } from 'react';
 import classes from './DownloadStemfest.module.css';
 import PDFStemfest from '../PDFStemfest/PDFStemfest';
 
-const DownloadStemfest = ({ status }) => {
+const DownloadStemfest = ({ status, name , qr_code, imgSrc }) => {
 	const [downloading, setDownloading] = useState(false);
-	// const userInfo = JSON.parse(sessionStorage.getItem('rpUser'));
-	// const currentDate = new Date();
 
-	// const userInfo = sessionStorage.getItem('cpUser');
-
-	// console.log(ImageLink);
 
 	const generatePDFDoc = async () => {
 		setDownloading(true);
-		// const blob = await pdf(<PDFCertificate nameData={data.userdata?.name} CertificateDate={CertificateDate} />).toBlob();
-		const blob = await pdf(<PDFStemfest />).toBlob();
-		saveAs(blob, `Stemfest Badge.pdf`); // `${data.userdata?.name}Stemfest Badge.pdf`);
+		const blob = await pdf(<PDFStemfest name={name} qr_code={qr_code} imgSrc={imgSrc}  />).toBlob();
+		saveAs(blob, `${name} Stemfest Badge.pdf`); 
 		setDownloading(false);
 	};
 
@@ -28,10 +22,9 @@ const DownloadStemfest = ({ status }) => {
 			disabled={!(status === true)}
 			onClick={generatePDFDoc}
 			className={classes.DownloadBtn}
-			variant="outlined-success"
+			variant="outline-primary"
 		>
-			{/* {console.log(uinfo)} */}
-			{downloading && <Spinner animation="border" variant="success" size="sm" />}
+			{downloading && <Spinner animation="border" variant="primary" size="sm" />}
 			<CloudDownloadOutlined /> Download Stemfest Invite
 		</Button>
 	);

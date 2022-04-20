@@ -1,6 +1,6 @@
 const prod = {
 	url: {
-		API_URL: `https://stemfest.9ijakids.com/stemfest-backend02/public/api`,
+		API_URL: `https://steamfest.9ijakids.com/backend/public/api`,
 	},
 };
 
@@ -8,7 +8,7 @@ const prod = {
 const dev = {
 	url: {
 		API_URL:
-			'https://afternoon-ridge-35420.herokuapp.com/https://stemfest.9ijakids.com/stemfest-backend02/public/api',
+			'https://afternoon-ridge-35420.herokuapp.com/https://steamfest.9ijakids.com/backend/public/api',
 	},
 };
 

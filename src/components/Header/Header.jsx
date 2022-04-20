@@ -11,7 +11,7 @@ export default function Header() {
     <AppBar position="absolute" color="default" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" color="inherit" noWrap>
-          STEM FEST
+          STEAMFEST
         </Typography>
       </Toolbar>
     </AppBar>

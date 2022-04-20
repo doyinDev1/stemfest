@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import SummaryHeader from './SummaryHeader';
+// import SummaryHeader from './SummaryHeader';
 import classes from '../../styles/AdminSummary.module.css';
 import globals from '../../styles/common.module.css';
-import SummaryChart from './SummaryChart';
+// import SummaryChart from './SummaryChart';
 import { Spinner, Table } from 'react-bootstrap';
 // import PaginatedTable from '../Pagination/PaginatedTable';
 // import { Config } from '../../Config/Config';
@@ -13,40 +13,14 @@ import { Spinner, Table } from 'react-bootstrap';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
-const AdminSummary = () => {
+import QRCode from '../QRCode/QRCode';
+const QRPage = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
 
 
-	useEffect(() => {
-		// get User info 
-		const UserInfo = JSON.parse(sessionStorage.getItem("sfAdmin"));
-	// get token from User info here
-		const token = UserInfo.data.token;
-		// config here for axios authorization
-		// console.log(token)
-		const config = {
-		  headers: {
-			Authorization: `Bearer ${token}`,
-		  },
-		};
-		setLoading(true);
-	
-		axios
-		  .get(`${Config.url.API_URL}/admin/summary`, config)
-		  .then((res) => {
-			if (res.data?.error?.length) throw new Error(res.data.error[0]);
-	
-			setData(res.data);
-			setLoading(false);
-			// console.log(res.data, "data")
-		  })
-		  .catch((err) => {
-			const errMsg = err?.message || "Failed to Load !";
-			toast.error(errMsg);
-		  });
-	  }, []);
+
 	
 
 
@@ -124,42 +98,53 @@ const AdminSummary = () => {
 
 	return (
 		<section className={classes.SummarySection}>
-			<h2>Registration Summary</h2>
-			<SummaryHeader
-				data={data}
+			<h2>QR Codes Summary</h2>
+			<QRCode
+				data={''}
 				error={''}
 				status={''}
 			/>
-			
-			 {/* <div className={classes.AdminCourseSummary}>
-				
-			// 	<div className={classes.CourseSummaryContent}>
-			// 		<h3>Course 1 Summary</h3>
-			// 		<SummaryChart />
-			// 		<h5 className={classes.TableMarker}>User Summary</h5>
-			// 		<div className={classes.TableMarkerDiv}>
-			// 			<h4 className={classes.TableHeadText}>User Summary </h4>
-			// 			<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
-			// 				{' '}
-			// 				Count: {5}
-			// 			</h4>
-			// 		</div>
-			// 		 <div className={classes.TableWrapper}>
-			// 			<div className={classes.TableExtras}>
-			// 				<div className={classes.TableInputs}> */}
-								{/* <input
+			{/* <div className={classes.AdminCourseSummary}> */}
+				{/* <div className={globals.InputField}>
+					<label htmlFor="select-course">Select Course</label>
+					<select name="select-course" id="select-course">
+						<option value="Course 1">Course 1</option>
+						<option value="Course 2">Course 2</option>
+						<option value="Course 3" disabled>
+							Course 3
+						</option>
+						<option value="Course 4" disabled>
+							Course 4
+						</option>
+					</select>
+				</div> */}
+				{/* <div className={classes.CourseSummaryContent}> */}
+					{/* <h3>Course 1 Summary</h3>
+					<SummaryChart /> */}
+					{/* <h5 className={classes.TableMarker}>User Summary</h5> */}
+					{/* <div className={classes.TableMarkerDiv}>
+						<h4 className={classes.TableHeadText}>User Summary </h4>
+						<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
+							{' '}
+							Count: {userSummaryData?.total}
+						</h4>
+					</div> */}
+					{/* <div className={classes.TableWrapper}>
+						<div className={classes.TableExtras}>
+							<div className={classes.TableInputs}>
+								<input
 									type="search"
 									placeholder="Search"
-									 onChange={(e) => setSearchTerm(e.target.value)}
-								/> */}
-								{/* {userSummaryFetching && <Spinner size="sm" animation="border" />} */}
-								{/* <button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
+									onChange={(e) => setSearchTerm(e.target.value)}
+								/>
+								{userSummaryFetching && <Spinner size="sm" animation="border" />}
+								<button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
 									Export to CSV
 								</button>
-							</div> */}
+							</div>
 
-							{/* <div className={classes.TableInputs}></div>  */}
-						 {/* </div>  */}
+							{/* <div className={classes.TableInputs}></div> */}
+						{/* </div> */}
 						{/* <Table hover responsive className={classes.Table}>
 							<thead>
 								<tr>
@@ -180,13 +165,13 @@ const AdminSummary = () => {
 								{(userSummaryStatus === 'loading' || userSummaryFetching) && <Loader />}
 							</tbody>
 						</Table> */}
-						 {/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
+						{/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
 							<PaginationButtons
 								setPage={setPage}
 								lastPage={userSummaryData?.lastPage}
 								currentPage={page}
 							/>
-						)}  */}
+						)} */}
 
 						{/* Paginated Table div */}
 						{/* <PaginatedTable
@@ -197,11 +182,11 @@ const AdminSummary = () => {
 							dataLimit={10}
 							pageLimit={5}
 						/> */}
-				{/* // 	</div>
-				//  </div> 
-			//  </div>  */}
-	</section>
+					{/* </div> */}
+				{/* </div> */}
+			{/* </div> */}
+		</section>
 	);
 };
 
-export default AdminSummary;
+export default QRPage;

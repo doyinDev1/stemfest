@@ -1,9 +1,11 @@
 import "./Card.css";
 import DownloadStemfest from "../DownloadStemfest/DownloadStemfest";
 
-// import { PDFViewer } from '@react-pdf/renderer'
 
-function Card({ name, age, image }) {
+function Card({ name, age, image, qr_code,  }) {
+  // fetch qr code and turn to image on the fly then pass to pdf component
+  const imgSrc = `http://api.qrserver.com/v1/create-qr-code/?data=${qr_code}&size=200x200`
+
   return (
     <div className="card">
       <div className="card__Image">
@@ -15,7 +17,9 @@ function Card({ name, age, image }) {
         {/* <button> Download Pass</button> */}
         <DownloadStemfest
 												status={true}
-												
+												name={name}
+                        qr_code={qr_code}
+                        imgSrc={imgSrc}
 											/>
       </div>
     </div>

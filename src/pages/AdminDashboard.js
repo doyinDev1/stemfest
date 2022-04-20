@@ -12,6 +12,11 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AdminHeader from '../components/AdminHeader/AdminHeader';
 import { AdminReports } from '../components/AdminReports/AdminReports';
 import AdminSummary from '../components/AdminSummary/AdminSummary'
+import QRCode from '../components/QRCode/QRCode'
+import QRPage from '../components/QRPage/QRPage';
+
+
+
 const AdminDashboard = () => {
 	const [isOpen, setIsOpen] = useState(true);
 
@@ -33,29 +38,29 @@ const AdminDashboard = () => {
 			icon: <HomeIcon />,
 			page: < AdminSummary />,
 		},
-		{
-			id: 1,
-			icon: <SchoolIcon/>,
-			title: 'Registration',
-			page: < AdminSummary />,
-		},
-		{
-			id: 2,
-			icon: <ManIcon />,
-			title: 'Adults',
-			page: < AdminSummary />,
-		},
-		{
-			id: 3,
-			icon: <FamilyRestroomIcon />,
-			title: 'Children',
-			page: < AdminSummary />,
-		},
+		// {
+		// 	id: 1,
+		// 	icon: <SchoolIcon/>,
+		// 	title: 'Registration',
+		// 	page: < AdminSummary />,
+		// },
+		// {
+		// 	id: 2,
+		// 	icon: <ManIcon />,
+		// 	title: 'Adults',
+		// 	page: < AdminSummary />,
+		// },
+		// {
+		// 	id: 3,
+		// 	icon: <FamilyRestroomIcon />,
+		// 	title: 'Children',
+		// 	page: < AdminSummary />,
+		// },
 		{
 			id: 4,
 			icon: <QrCodeIcon />,
 			title: 'QR Codes',
-			page: <AdminSummary />,
+			page: <QRPage />,
 		},
 		{
 			id: 5,
@@ -63,18 +68,18 @@ const AdminDashboard = () => {
 			title: 'Event Attendance',
 			page: < AdminSummary />,
 		},
-		{
-			id: 6,
-			icon: <EventNoteIcon />,
-			title: 'Admin',
-			page: < AdminSummary />,
-		},
-		{
-			id: 7,
-			icon: <SettingsIcon />,
-			title: 'Settings',
-			page: < AdminSummary />,
-		},
+		// {
+		// 	id: 6,
+		// 	icon: <EventNoteIcon />,
+		// 	title: 'Admin',
+		// 	page: < AdminSummary />,
+		// },
+		// {
+		// 	id: 7,
+		// 	icon: <SettingsIcon />,
+		// 	title: 'Settings',
+		// 	page: < AdminSummary />,
+		// },
 	];
 	return (
 		<>

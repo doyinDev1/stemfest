@@ -1,7 +1,7 @@
-// import { Document, Page, Text, View, StyleSheet, Font, Image } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Font, Image, Canvas } from '@react-pdf/renderer';
 // import Lato from '../../assets/fonts/Lato-Black.ttf';
 // import LeagueSpartan from '../../assets/fonts/leaguespartan-bold.ttf';
-
+import { QRCodeCanvas } from 'qrcode.react'
 // Font.register({
 // 	family: 'LeagueSpartan',
 // 	format: 'truetype',
@@ -13,119 +13,106 @@
 // 	format: 'truetype',
 // 	fonts: [{ src: Lato, fontWeight: 900 }],
 // });
-// Font.register({
-// 	family: 'Oswald',
-// 	src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
-// });
+Font.register({
+	family: 'Oswald',
+	src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
+});
 
-// const PDFStemfest = (props) => {
-// 	const imageSrc = props?.ImageLink;
+const PDFStemfest = ({name, qr_code, imgSrc}) => {
 
-// 	return (
-// 		<Document>
-// 			<Page size="A4" orientation="landscape">
-// 				<View style={styles.mainView}>
-// 					<Image src={imageSrc} style={styles.image} width="100%" height="100%" />
-// 					<View
-// 						style={{
-// 							width: '270px',
-// 							height: '270px',
-// 							backgroundColor: '#231f1e',
-// 							marginLeft: '700px',
-// 						}}
-// 					>
-// 						<View
-// 							style={{
-// 								display: 'flex',
-// 								textAlign: 'center',
-// 								marginLeft: '-15px',
-// 								paddingTop: '50px',
-// 							}}
-// 						>
-// 							<Text
-// 								style={{
-// 									color: 'white',
-// 									transform: 'rotate(-90deg)',
-// 									paddingTop: '-100px',
-// 									display: 'flex',
-// 									paddingLeft: '-50px',
-// 									fontSize: '10px',
-// 									top: '10px',
-// 									textTransform: 'uppercase',
-// 									justifyContent: 'center',
-// 									family: 'Oswald',
-// 								}}
-// 							>
-// 								{props.nameData}
-// 							</Text>
+	const imgSrc2 = `http://api.qrserver.com/v1/create-qr-code/?data=${qr_code}&size=200x200`
 
-// 							<Text
-// 								style={{
-// 									color: 'white',
-// 									transform: 'rotate(-90deg)',
-// 									paddingTop: '-70px',
-// 									paddingLeft: '-57px',
-// 									fontSize: '10px',
-// 									fontFamily: 'Oswald',
-// 								}}
-// 							>
-// 								{' '}
-// 								COMPLETED ONLINE LEARNING FOR
-// 							</Text>
+	return (
+		<Document>
+		<Page size="A4" orientation="landscape" >
 
-// 							<Text
-// 								style={{
-// 									color: 'white',
-// 									transform: 'rotate(-90deg)',
-// 									paddingTop: '-46px',
-// 									paddingLeft: '-37px',
-// 									fontSize: '12px',
-// 									fontFamily: 'Oswald',
-// 								}}
-// 							>
-// 								{props.courseName.toUpperCase()}
-// 							</Text>
+			<View style={styles.mainView}>
+				<View style={styles.view}>
+					<View style={{ flex: 1 }}>
 
-// 							<Text
-// 								style={{
-// 									color: 'white',
-// 									transform: 'rotate(-90deg)',
-// 									paddingTop: '-23px',
-// 									display: 'flex',
-// 									paddingLeft: '-18px',
-// 									fontFamily: 'Oswald',
-// 								}}
-// 							>{`TICKET NO: #${props?.Ticket}`}</Text>
-// 						</View>
-// 					</View>
-// 					{/* <View style={styles.view}>
-// 						<View style={{ flex: 1 }}></View>
-// 					</View> */}
-// 				</View>
-// 			</Page>
-// 		</Document>
-// 	);
-// };
+					  <Image
+					src={imgSrc2}
+					style={styles.imageT}
+				/>
+					  <View style={{
+						  display: "flex",
+							alignText: 'center',
+							  justifyContent: 'center',
+								width: '100vw'
+						}}>
+					<Text
+							style={{
+								color: '#000',
+								// marginVertical: 20,
+								marginBottom: -140,
+								// marginLeft: 250,
+								fontSize: 50,
+								fontFamily: 'Oswald',
+								textAlign: 'center',
+								fontWeight: '900',
+								display: "flex", 
+								alignSelf: "center",
+                               marginTop: -60,
 
-// export default PDFStemfest;
+							}}
+						>
+{`${name}`}					</Text>  
+					  
+					  </View>
+					  
+						
+					</View>
+				</View>
+				{/* <Text
+					style={{
+						fontFamily: 'Oswald',
+						fontSize: 15,
+						marginTop: -50,
+						marginLeft: 0,
+						position: 'absolute',
+						top: '77%',
+						left: '46%',
+						color: '#000',
+					}}
+				>
+PASS NO: 05678				</Text> */}
+				<Image
+					src="https://res.cloudinary.com/naijakids/image/upload/v1650445787/stemfest_jp3yjx.png"
+					style={styles.image}
+				/>
+			</View>
+		</Page>
+	</Document>
+	);
+};
 
-// const styles = StyleSheet.create({
-// 	mainView: {
-// 		flex: 1,
-// 		justifyContent: 'center',
-// 		// alignItems: 'center',
-// 		// marginHorizontal: 20,
-// 		// marginVertical: 30,
-// 	},
+export default PDFStemfest;
 
-// 	view: {
-// 		position: 'absolute',
-// 	},
-// 	image: {
-// 		position: 'absolute',
-// 		zIndex: 20,
-// 		height: '100vh',
-// 		width: '100vw',
-// 		// marginLeft: '-20px',
-// 	},
-// });
+const styles = StyleSheet.create({
+	mainView: {
+		flex: 1,
+		justifyContent: 'center',
+		// alignItems: 'center',
+		// marginHorizontal: 20,
+		// marginVertical: 30,
+	},
+
+	view: {
+		position: 'absolute',
+	},
+	image: {
+		position: 'absolute',
+		zIndex: 20,
+		height: '100vh',
+		width: '100vw',
+		// marginLeft: '-20px',
+	},
+	imageT: {
+		position: 'absolute',
+		zIndex: 20,
+		height: '200px',
+		width: '200px',	
+		marginTop: -80,
+
+	}
+});

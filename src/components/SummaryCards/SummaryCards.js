@@ -1,4 +1,4 @@
-import classes from '../AdminReports/AdminReports.module.css';
+import classes from '../../styles/AdminSummary.module.css'
 import { Spinner } from 'react-bootstrap';
 
 const SummaryCards = ({ color, icon, title, stats, label, loading }) => {
@@ -7,8 +7,8 @@ const SummaryCards = ({ color, icon, title, stats, label, loading }) => {
 			<div className={classes.SummaryCardContent}>
 				<div>
 					{loading && <Spinner animation="border" variant="primary" size="sm" />}
-					<h6>{stats}stats</h6>
-					<p>{title}title</p>
+					<h6>{stats} {label}</h6>
+					<p>{title}</p>
 				</div>
 				{icon && icon}
 			</div>
