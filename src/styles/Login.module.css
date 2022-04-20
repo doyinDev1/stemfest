@@ -66,7 +66,37 @@
     justify-content: center;
   }
   
-   input[type="number"].password {
+   input[type="email"] {
+    background: #fff;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 10px 10px;
+    font-family: "Rubik";
+    font-weight: 300;
+  
+  }
+  input[type="number"] {
+    background: #fff;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 10px 10px;
+    font-family: "Rubik";
+    font-weight: 300;
+  
+  }
+  input[type="password"] {
     background: #fff;
     box-shadow: 0px 2px 0px 0px white;
     width: 100%;
@@ -100,6 +130,7 @@
     width: inherit;
     border-radius: 5px;
   }
+
 
   .login .form .btn_login {
     background: #013f86d8;

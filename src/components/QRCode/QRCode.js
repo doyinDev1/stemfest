@@ -8,27 +8,21 @@ import ManIcon from '@mui/icons-material/Man';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SchoolIcon from '@mui/icons-material/School';
 
-const SummaryHeader = ({ data, status }) => {
-
-
-
-
-
-
+const QRCode = ({ data, status }) => {
 	return (
 		<div className={classes.SummaryHeader}>
 			<SummaryCards
 				color="#003883"
-				stats={data.parents_count}
-				title="Registered"
-				label="Parents"
+				stats="901"
+				title="Scanned"
+				label="Paents"
 				icon={<FamilyRestroomIcon htmlColor="#003883" style={{ height: '2rem', width: '2rem' }} />}
 				loading={status === 'loading'}
 			/>
 			<SummaryCards
 				color="#003883"
-				stats={data.children_count}
-				title="Registered"
+				stats="3986"
+				title="Scanned"
 				label="Children"
 
 				icon={
@@ -38,8 +32,8 @@ const SummaryHeader = ({ data, status }) => {
 			/>
 			<SummaryCards
 				color="#b5d334"
-				stats={data.schools_count}
-				title="Registered"
+				stats="1000"
+				title="Scanned"
 				label="Schools"
 
 				icon={
@@ -49,8 +43,8 @@ const SummaryHeader = ({ data, status }) => {
 			/>
 			<SummaryCards
 				color="#b5d334"
-				stats={data.teachers_count}
-				title="Registered"
+				stats="25"
+				title="Scanned"
 				label="Teachers"
 
 				icon={
@@ -63,4 +57,4 @@ const SummaryHeader = ({ data, status }) => {
 	);
 };
 
-export default SummaryHeader;
+export default QRCode;

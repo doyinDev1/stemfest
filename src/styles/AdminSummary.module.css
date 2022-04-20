@@ -8,7 +8,7 @@
 }
 
 .SummarySection h2 {
-	background-color: var(--color-orange);
+	background-color: var(--blue);
 	color: #fff;
 	border-radius: 7px;
 	font-weight: 600;
@@ -59,9 +59,9 @@
 .CourseSummaryContent h3,
 .TableHeadText {
 	font-size: 18px;
-	color: var(--color-orange);
+	color: var(--black);
 	/* background-color: var(--color-orange); */
-	border-bottom: 2px solid var(--color-orange);
+	border-bottom: 2px solid var(--black);
 	padding: 5px;
 	font-weight: 700;
 	margin-bottom: 10px;
@@ -76,7 +76,7 @@
 }
 
 .SummaryCard:hover {
-	border: 2px solid var(--color-orange);
+	border: 2px solid var(--black);
 }
 
 .SummaryCard:not(:last-child) {

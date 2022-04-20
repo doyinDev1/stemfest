@@ -10,12 +10,14 @@ import axios from "axios";
 import { Config } from "../Config/Config";
 import toast from "react-hot-toast";
 import SpinnerCustom from "../components/SpinnerCustom/SpinnerCustom";
-
+import DownloadStemfest from '../components/DownloadStemfest/DownloadStemfest'
+// import DownloadStemfest from '../components/DownloadStemfest/DownloadStemfest'
 const AdultDashboard = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({});
-
   useEffect(() => {
+    
+
     // get User info 
     const UserInfo = JSON.parse(sessionStorage.getItem("sfUser"));
 // get token from User info here
@@ -35,12 +37,14 @@ const AdultDashboard = () => {
 
         setData(res.data);
         setLoading(false);
+
       })
       .catch((err) => {
         const errMsg = err?.message || "Failed to Register!";
         toast.error(errMsg);
       });
   }, []);
+
 
   return (
     <>
@@ -52,6 +56,7 @@ const AdultDashboard = () => {
         </>
       ) : (
         <>
+        {console.log(data)}
           <div className="adultDashboard">
             <div className={classes.image}>
               <div className={classes.overlay}>
@@ -68,7 +73,7 @@ const AdultDashboard = () => {
                         </div>
                         <div className={classes.MainTopText}>
                           <p>
-                            Thank you for registering for Stem fest 2022. We're
+                            Thank you for registering for Steam fest 2022. We're
                             looking forward to seeing you on 02-May-2022 at Aso
                             Rock, Abuja. You will soon recieve an email
                             confirming your registration from
@@ -84,7 +89,7 @@ const AdultDashboard = () => {
                             before coming to the event. Dont forget to put on
                             your nose mask for entry too.
                           </p>
-                          <Button
+                          {/* <Button
                             variant="primary"
                             style={{
                               color: "#AAB0BB",
@@ -92,7 +97,13 @@ const AdultDashboard = () => {
                             }}
                           >
                             Download QR Code Pass
-                          </Button>
+                          </Button> */}
+                          <DownloadStemfest
+                          status={true}
+                          name={data?.adultDetails?.name}
+                          qr_code={data?.adultDetails?.qr_code}
+
+                          />
                         </div>
                       </div>
                     </div>
@@ -114,7 +125,7 @@ const AdultDashboard = () => {
                             junk/spam folder and add this to your safe sender's
                             list.
                           </p>
-
+{/* {console.log(data)} */}
                           <div className="adultDashboard__Cards">
                             {data?.children?.map((child, index) => {
                               return (
@@ -124,6 +135,7 @@ const AdultDashboard = () => {
                                     image={kidImage}
                                     name={child.name}
                                     age={child.age_range}
+                                    qr_code={child.qr_code}
                                   />
                                 </>
                               );
