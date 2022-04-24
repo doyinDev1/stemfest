@@ -1,0 +1,19 @@
+.about {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../../../images/assets/bg2.png") round;
+  background-size: cover;
+  background-position: center;
+  padding: 20vh 10vw 0;
+  color: var(--blue);
+}
+.about h2 {
+  max-width: 600px;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+.about p {
+  max-width: 600px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}

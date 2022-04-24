@@ -1,0 +1,41 @@
+.speakers {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url("../../../images/assets/bg7.png") round;
+  background-size: cover;
+  background-position: center;
+  padding: 20vh 10vw 0;
+  color: var(--blue);
+}
+.speakers h2 {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+.speakers .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.speakers .card {
+  margin-right: 30px;
+  padding: 60px;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: yellow;
+  border-radius: 100px;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.speakers .card p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  .speakers .cards {
+    flex-wrap: wrap;
+  }
+}

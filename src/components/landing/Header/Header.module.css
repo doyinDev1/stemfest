@@ -1,0 +1,44 @@
+.header {
+  background: url("../../../images/assets/bg1.png") round;
+  background-position: center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 20vh 10vw 0;
+  color: white;
+}
+.header h2 {
+  max-width: 600px;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+.header p {
+  max-width: 600px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.links {
+  display: flex;
+}
+.header a {
+  color: white;
+  background-color: var(--red);
+  padding: 10px;
+  max-width: 130px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.header a:nth-child(2) {
+  margin-left: 10px;
+  background-color: var(--light-green);
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    background: url("../../../images/assets/bg11-small.png") round;
+
+    background-position: center;
+    background-size: cover;
+  }
+}

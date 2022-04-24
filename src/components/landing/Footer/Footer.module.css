@@ -1,0 +1,34 @@
+.footer {
+  background: url("../../../images/assets/bg6.png") round;
+  padding-top: 150px;
+  color: white;
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cards a {
+  display: block;
+  color: white;
+}
+.news form {
+  display: flex;
+  align-items: center;
+}
+.news input {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.news input[type="submit"] {
+  background-color: white;
+  color: var(--blue);
+  padding: 10px 20px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+}

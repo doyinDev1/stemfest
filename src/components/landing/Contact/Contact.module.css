@@ -1,0 +1,32 @@
+.contact {
+  background: url("../../../images/assets/bg3.png") round;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: cover;
+  background-position: center;
+  padding: 20vh 10vw;
+}
+.form {
+  float: right;
+  max-width: 500px;
+}
+.form input {
+  border-radius: 20px;
+}
+.form input[type="text"] {
+  width: 100%;
+}
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  border-radius: 20px;
+}
+.form input[type="submit"] {
+  width: 100%;
+  max-width: 200px;
+  background-color: var(--light-green);
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+}

@@ -1,0 +1,17 @@
+.navbar {
+  padding: 20px;
+}
+.left {
+  flex: 0.4;
+}
+.right {
+  flex: 0.6;
+}
+.logo {
+  position: absolute;
+  left: 30px;
+}
+.navlinks {
+  width: 100%;
+  justify-content: space-between;
+}
