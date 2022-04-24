@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className={style.footer}>
       <div className={style.cards}>
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className={style.logo} />
         <div className={style.links}>
           <ul>
             <li>

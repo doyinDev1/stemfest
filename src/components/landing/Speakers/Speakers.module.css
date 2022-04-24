@@ -4,38 +4,76 @@
   background: url("../../../images/assets/bg7.png") round;
   background-size: cover;
   background-position: center;
-  padding: 20vh 10vw 0;
+  padding-top: 20vh;
   color: var(--blue);
 }
 .speakers h2 {
   text-align: center;
-
+  font-size: 3rem;
+  line-height: 4.5rem;
   margin-bottom: 20px;
+  color: gold;
 }
 .speakers .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 .speakers .card {
   margin-right: 30px;
-  padding: 60px;
+  padding: 60px 40px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.card img {
+  max-width: 150px;
 }
 .card:hover {
+  background-color: red;
+  border-radius: 100px;
+  position: relative;
+  z-index: 3;
+}
+.card:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: 15px;
+  left: 0;
   background-color: yellow;
   border-radius: 100px;
+  z-index: -1;
 }
+
 .card:hover img {
   transform: scale(1.1);
 }
 .speakers .card p {
   text-align: center;
   margin-top: 20px;
+  color: white;
 }
 
 @media screen and (max-width: 1400px) {
   .speakers .cards {
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .speakers {
+    padding-top: 50px;
+    background-repeat: no-repeat;
+  }
+  .speakers h2 {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+  .speakers .card {
+    padding: 40px 20px;
+    margin-right: 0;
   }
 }

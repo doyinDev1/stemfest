@@ -20,17 +20,16 @@ const Home = () => {
         <Header
           title="Prepare your Kids for the future"
           about="
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
+       It's never too early to introduce your kids to STEAM. This can help pique their curiosity about these areas as they grow older"
         />
         <About
-          title="Guide The Young Generation to Success"
+          title="A day of learning and fun for the kids"
           about="
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
+        STEAM learning is fun! This event promises to give them a chanceto explore, discover and learn"
         />
         <Steam
-          title="We Provide The Main Kids Activities "
-          header="Why choose us"
-          about="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
+          title="With STEAM the possibilities are endless "
+          about="STEAM has been proven to help ddevelop life long skills such as critical thinking, problem solving."
         />
         <Speakers
           title="Our <span class='text-yellow'> Courses</span>"

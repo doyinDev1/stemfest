@@ -1,6 +1,8 @@
 .footer {
   background: url("../../../images/assets/bg6.png") round;
   padding-top: 150px;
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 .cards {
@@ -30,5 +32,35 @@
 @media screen and (max-width: 1400px) {
   .cards {
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    padding: 50px 10vw;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    max-width: 250px;
+    margin: 20px auto;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .cards ul {
+    padding-left: 0;
+  }
+  .news h3 {
+    font-size: 1rem;
+  }
+  .news form {
+    margin: 20px 0;
+  }
+  .news input {
+    margin: 0;
+  }
+  .news input[type="submit"] {
+    margin-left: 5px;
   }
 }

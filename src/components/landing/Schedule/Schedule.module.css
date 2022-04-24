@@ -22,13 +22,49 @@
   margin-top: 20px;
 }
 .time {
-  padding: 10px;
+  padding: 20px;
   margin-right: 10px;
   background-color: var(--light-green);
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 1400px) {
   .flex {
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .schedule {
+    background-repeat: no-repeat;
+  }
+  .schedule h2 {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: var(--gold);
+  }
+  .schedule h3 {
+    color: white;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .right {
+    margin-left: 0px;
+  }
+
+  .schedule li {
+    flex-direction: column;
+  }
+  .flex h3 {
+    text-align: center;
+    margin: 20px 0px;
+  }
+  .time {
+    margin-right: 0;
+  }
+  .flex ul {
+    padding-left: 0;
   }
 }

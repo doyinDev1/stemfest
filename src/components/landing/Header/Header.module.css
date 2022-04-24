@@ -10,6 +10,7 @@
 .header h2 {
   max-width: 600px;
   font-size: 3.5rem;
+  line-height: 4.5rem;
   margin-bottom: 30px;
 }
 .header p {
@@ -23,22 +24,47 @@
 .header a {
   color: white;
   background-color: var(--red);
-  padding: 10px;
-  max-width: 130px;
+  padding: 10px 50px;
+  border-radius: 10px;
+  max-width: 200px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .header a:nth-child(2) {
-  margin-left: 10px;
+  margin-left: 30px;
   background-color: var(--light-green);
 }
-
+.header a:hover {
+  color: inherit;
+  transform: scale(1.1);
+}
 @media screen and (max-width: 500px) {
   .header {
     background: url("../../../images/assets/bg11-small.png") round;
-
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-top: 50px;
+  }
+  .header h2 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+  .header p {
+    text-align: center;
+    font-size: 1rem;
+    min-height: 30vh;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .header a {
+    margin-inline: auto;
+  }
+  .header a:nth-child(2) {
+    margin-top: 20px;
+    margin-inline: auto;
   }
 }
