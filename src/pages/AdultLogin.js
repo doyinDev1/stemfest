@@ -34,7 +34,6 @@ function AdultLogin() {
       password: data.password
     };
     setLoading(true);
-// console.log(data)
     axios
       .post(`${Config.url.API_URL}/user/login`, myFormData)
       .then((res) => {
