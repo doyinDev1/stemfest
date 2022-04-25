@@ -29,9 +29,9 @@ const BulkUploadModal = (props) => {
 		setUploadingFile(true);
 		axios
 			.post(`${Config.url.API_URL}/user/bulk-upload-registration`, options, {
-				headers: {
-					'Content-Type': 'multipart/form-data',
-				},
+				// headers: {
+				// 	'Content-Type': 'multipart/form-data',
+				// },
 			})
 			.then((res) => {
 				console.log(res, "res");
