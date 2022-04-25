@@ -24,35 +24,35 @@ const BulkUploadModal = (props) => {
 	const [userFile, setUserFile] = useState(null);
 
 	const sendFileRequest = (formData) => {
-		console.log(formData.get("type"), "weformData")
+		// console.log(formData.get("type"), "weformData")
 		const options = { content: formData }
 		setUploadingFile(true);
 		axios
-			.post(`${Config.url.API_URL}/user/bulk-upload-registration`, options, {
-				// headers: {
-				// 	'Content-Type': 'multipart/form-data',
-				// },
+			.post(`${Config.url.API_URL}/user/bulk-upload-registration`, formData , {
+				headers: {
+					'Content-Type': 'multipart/form-data',
+				},
 			})
 			.then((res) => {
-				console.log(res, "res");
+				// console.log(res, "res");
 				setUploadingFile(false);
 				Swal.fire('File Uploaded', 'File Uploaded Successfully', 'success');
-				if (res.data.error.length > 0) {
-					const currentTime = currentDateTime();
-					const allErrors = [...res.data.error];
-					const exportErrors = [];
+				// if (res.data.error.length > 0) {
+				// 	const currentTime = currentDateTime();
+				// 	const allErrors = [...res.data.error];
+				// 	const exportErrors = [];
 
-					for (let i = 0; i < allErrors.length; i++) {
-						let tempError = {};
-						tempError.FileErrorLog = allErrors[i];
-						exportErrors.push(tempError);
-					}
-					exportToCSV(exportErrors, `Stemfest-Upload-Error${currentTime}`);
-				}
+				// 	for (let i = 0; i < allErrors.length; i++) {
+				// 		let tempError = {};
+				// 		tempError.FileErrorLog = allErrors[i];
+				// 		exportErrors.push(tempError);
+				// 	}
+				// 	exportToCSV(exportErrors, `Stemfest-Upload-Error${currentTime}`);
+				// }
 				props.hideModal();
 			})
 			.catch((error) => {
-				console.log(error, 'err');
+				// console.log(error, 'err');
 				setUploadingFile(false);
 				Swal.fire('Oops!', 'Something went wrong with file upload!', 'error');
 				props.hideModal();
@@ -90,7 +90,6 @@ const BulkUploadModal = (props) => {
 				const sheetName = workbook.SheetNames[0];
 				const worksheet = workbook.Sheets[sheetName];
 				const json = XLSX.utils.sheet_to_json(worksheet);
-				console.log(json);
 				const templateFields = Object.keys(SampleData[0]);
 				const fieldsArr = Object.keys(json[0]);
 
@@ -161,10 +160,10 @@ const BulkUploadModal = (props) => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		// call function to upload file
-		console.log(props.validatedData.valid, 'vd')
+		// console.log(props.validatedData.valid, 'vd')
 		const csvFile = convertSheetToFile(props.validatedData.valid);
-		console.log(props.validatedData, 'propscsv');
-		console.log(csvFile, 'csv');
+		// console.log(props.validatedData, 'propscsv');
+		// console.log(csvFile, 'csv');
 
 		const formData = new FormData();
 		formData.append('name', props.bulk.name);
@@ -173,7 +172,7 @@ const BulkUploadModal = (props) => {
 		formData.append('phone', props.bulk.phone);
 		formData.append('upload_file', csvFile);
 
-		console.log(formData , props.bulk.name, 'fdr')
+		// console.log(formData , props.bulk.name, 'fdr')
 
 		sendFileRequest(formData);
 	};
@@ -205,8 +204,8 @@ const BulkUploadModal = (props) => {
 		const formData = new FormData();
 		formData.append('upload_file', csvFile);
 		// formData.append('token', userInfo.token);
-		formData.append('data', props.bulk);
-console.log(formData, 'fd')
+// 		formData.append('data', props.bulk);
+// console.log(formData, 'fd')
 		sendFileRequest(formData);
 	};
 
