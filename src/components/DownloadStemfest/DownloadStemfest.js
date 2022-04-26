@@ -6,8 +6,9 @@ import { useState } from 'react';
 import classes from './DownloadStemfest.module.css';
 import PDFStemfest from '../PDFStemfest/PDFStemfest';
 
-const DownloadStemfest = ({ status, name , qr_code, imgSrc }) => {
+const DownloadStemfest = ({ status, name , qr_code }) => {
 	const [downloading, setDownloading] = useState(false);
+	const imgSrc = `http://api.qrserver.com/v1/create-qr-code/?data=${qr_code}&size=200x200`
 
 
 	const generatePDFDoc = async () => {

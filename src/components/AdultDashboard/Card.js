@@ -18,8 +18,8 @@ function Card({ name, age, image, qr_code,  }) {
         <DownloadStemfest
 												status={true}
 												name={name}
-                        // qr_code={qr_code}
-                        imgSrc={imgSrc}
+                        qr_code={qr_code}
+                        // imgSrc={imgSrc}
 											/>
       </div>
     </div>
