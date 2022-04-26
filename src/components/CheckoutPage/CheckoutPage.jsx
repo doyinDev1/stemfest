@@ -35,7 +35,7 @@ const [type, setType] = useState([]);
       case 0:
         return <AddressForm formField={formField} setType={setType} />;
       case 1:
-        return <PaymentForm setChild={setChild}  />;
+        return <PaymentForm setChild={setChild} type={type} />;
       case 2:
         return <ReviewOrder setAdultDetails={setAdultDetails} />;
       default:
@@ -80,7 +80,7 @@ const myObj = {
     child
 }
   const FinalSubmit = () => {
-    // console.log(myObj,'post values');
+    console.log(myObj,'post values');
 
 
     axios

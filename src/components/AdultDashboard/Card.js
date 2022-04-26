@@ -19,7 +19,7 @@ function Card({ name, age, image, qr_code,  }) {
 												status={true}
 												name={name}
                         qr_code={qr_code}
-                        imgSrc={imgSrc}
+                        // imgSrc={imgSrc}
 											/>
       </div>
     </div>

@@ -119,7 +119,7 @@ const AdultDashboard = () => {
                           <p>
                             Thank you {data.adultDetails?.name} for registering
                             for Stem fest 2022. We're looking forward to seeing
-                            you on 02-May-2022 at Aso Rock, Abuja. You will soon
+                            you on 02-May-2022. You will soon
                             recieve an email confirming your registration from
                             registration@9ijakids.com. Please Check your
                             junk/spam folder and add this to your safe sender's

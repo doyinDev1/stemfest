@@ -8,9 +8,15 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 // import BulkUploadModal from './BulkUploadModal';
-// import BulkUploadModal from '../../CreateUsers/BulkUploadModal'
+import BulkUploadModal from '../../CreateUsers/BulkUploadModal'
+import { useFormikContext } from 'formik';
+import classes from './paymentform.module.css';
+export default function PaymentForm({ setChild, type }) {
 
-export default function PaymentForm({ setChild }) {
+  const { values: formValues } = useFormikContext();
+  const bulk = {
+    ...formValues, type
+  }
   const [validatingFile, setValidatingFile] = useState(false);
 	const [validationErrors, setValidationErrors] = useState([]);
 	const [showModal, setShowModal] = useState(false);
@@ -64,7 +70,7 @@ export default function PaymentForm({ setChild }) {
                   justifyContent: "center",
                 }}
               >
-<div className="wholeDiv" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+<div className={classes.wholeDiv}>
 
 
 
@@ -89,7 +95,7 @@ export default function PaymentForm({ setChild }) {
                     }}
                   />
                 </div>
-                <div className="textField" style={{ paddingBottom: "20px" , paddingLeft: '20px', width: '200px'}}>
+                <div className={classes.textField} >
                   <FormControl fullWidth >
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
@@ -110,7 +116,7 @@ export default function PaymentForm({ setChild }) {
                   </FormControl>
                 </div>
 
-                <div className="textField" style={{ paddingBottom: "20px" , paddingLeft: '20px', width: '200px'}}>
+                <div className={classes.textField}>
                   <FormControl fullWidth >
                     <InputLabel id="demo-simple-select-label">
                       Gender
@@ -139,7 +145,7 @@ export default function PaymentForm({ setChild }) {
                   style={{
                     marginLeft: "10px",
                     width: "200px",
-                    display: "inline-block",
+                    display:  'flex',
                   }}
                 >
                   {kidsList.length !== 1 && (
@@ -170,13 +176,13 @@ export default function PaymentForm({ setChild }) {
 
         <Grid item xs={12} md={6}>
         <div className="ImportBtn">
-				<button onClick={() => setShowModal(true)}>Bulk Upload Users</button>
+				<Button onClick={() => setShowModal(true)} variant="contained">Bulk Upload Kids</Button>
 			</div> 
         </Grid>
         <Grid item xs={12} md={6}></Grid>
       </Grid>
       {setChild(kidsList)}
-      {/* <BulkUploadModal
+      <BulkUploadModal
 				showModal={showModal}
 				hideModal={onHide}
 				validatingFile={validatingFile}
@@ -185,8 +191,8 @@ export default function PaymentForm({ setChild }) {
 				setValidatingFile={setValidatingFile}
 				setValidatedData={setValidatedData}
 				setValidationErrors={setValidationErrors}
-
-			/> */}
+        bulk={bulk}
+			/>
     </React.Fragment>
   );
 }
