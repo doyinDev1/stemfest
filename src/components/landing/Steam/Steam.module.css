@@ -1,11 +1,15 @@
 .steam {
-  min-width: 100vw;
-  min-height: 100vh;
-  background: url("../../../images/assets/bg5.png") round;
-  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../images/assets/bg3.png") no-repeat;
+  background-size: 100% 100%;
   background-position: center;
-  padding: 20vh 10vw 0;
+  padding: 30vh 10vw 0;
   color: var(--blue);
+  position: relative;
+  z-index: 9;
+
+  margin-top: -22vh;
 }
 .steam h2 {
   max-width: 600px;

@@ -1,7 +1,7 @@
 .footer {
-  background: url("../../../images/assets/bg6.png") round;
+  background: url("../../../images/assets/bg9.png") no-repeat;
   padding-top: 150px;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   color: white;
 }

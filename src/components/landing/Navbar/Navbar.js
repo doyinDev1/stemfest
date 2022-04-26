@@ -4,7 +4,7 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 
 export default (props) => {
   return (
-    <Navbar className={style.navbar} expand="sm" collapseOnSelect>
+    <Navbar className={style.navbars} expand="sm" collapseOnSelect>
       <Container className={style.left}>
         <Navbar.Brand href="#home" className={style.logo}>
           Brand link

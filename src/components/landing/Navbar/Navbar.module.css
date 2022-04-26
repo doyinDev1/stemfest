@@ -1,5 +1,5 @@
-.navbar {
-  padding: 20px;
+.navbars {
+  padding: 40px 20px;
 }
 .left {
   flex: 0.4;
@@ -16,8 +16,15 @@
   justify-content: space-between;
   font-weight: 700;
 }
-
+@media screen and (max-width: 1024px) {
+  .navlinks {
+    font-size: 13px;
+  }
+}
 @media screen and (max-width: 500px) {
+  .navbars {
+    padding: 0.5rem;
+  }
   .logo {
     left: 50%;
     top: 25px;

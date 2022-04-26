@@ -1,10 +1,13 @@
 .speakers {
-  min-height: 100vh;
-  min-width: 100vw;
-  background: url("../../../images/assets/bg7.png") round;
-  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../images/assets/bg4.png") no-repeat;
+  background-size: 100% 100%;
   background-position: center;
-  padding-top: 20vh;
+  padding-top: 10vh;
+  margin-top: -5vh;
+  position: relative;
+  z-index: 9;
   color: var(--blue);
 }
 .speakers h2 {

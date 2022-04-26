@@ -1,10 +1,14 @@
 .about {
+  position: relative;
+  z-index: 9;
   min-width: 100vw;
-  min-height: 100vh;
-  background: url("../../../images/assets/bg2.png") round;
-  background-size: cover;
+  height: 100vh;
+  max-height: 1000px;
+  background: url("../../../images/assets/bg2.png") no-repeat;
+  background-size: 100% 100%;
   background-position: center;
-  padding: 20vh 10vw 0;
+  padding: 150px 10vw 0;
+  margin-top: -50px;
   color: var(--blue);
 }
 .about h2 {
