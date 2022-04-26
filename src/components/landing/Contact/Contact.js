@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Contact.module.css";
 function Contact() {
   return (
-    <div className={style.contact}>
+    <div className={style.contact} id="contact">
       <div className={style.form}>
         <h2>Contact</h2>
         <p>

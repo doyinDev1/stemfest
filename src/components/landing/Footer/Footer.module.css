@@ -19,14 +19,15 @@
 .news form {
   display: flex;
   align-items: center;
+  background-color: transparent !important;
 }
 .news input {
-  background-color: transparent;
+  background-color: transparent !important;
   border: 1px solid white;
   color: white;
 }
 .news input[type="submit"] {
-  background-color: white;
+  background-color: white !important;
   color: var(--blue);
   padding: 10px 20px;
   margin: 0;

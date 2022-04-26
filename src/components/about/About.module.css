@@ -1,0 +1,35 @@
+.about {
+  background: url("../../images/assets/about.png") no-repeat;
+  background-position: center !important;
+  background-size: cover !important;
+  padding: 100px 50px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content {
+  margin-left: 30px;
+}
+.flex p {
+  max-width: 1000px;
+  line-height: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .about {
+    background: url("../../images/assets/about-small.png") no-repeat;
+    padding: 100px 5vw;
+  }
+  .flex {
+    flex-direction: column-reverse;
+  }
+  .flex p {
+    max-width: 1000px;
+    line-height: 40px;
+  }
+  .flex h2 {
+    text-align: center;
+  }
+}
