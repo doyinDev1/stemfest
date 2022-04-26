@@ -1,7 +1,7 @@
-.sponsor {
-  height: 60vh;
+.partner {
+  height: 70vh;
   width: 100vw;
-  background: url("../../../images/assets/bg6.png") no-repeat;
+  background: url("../../../images/assets/bg8.png") no-repeat;
   background-size: 100% 100%;
   background-position: center;
   padding-top: 20vh;
@@ -10,9 +10,10 @@
   z-index: 9;
   color: var(--blue);
 }
-.sponsor h2 {
+.partner h2 {
   text-align: center;
   color: white;
+  margin-bottom: 20px;
 }
 .cards {
   display: flex;

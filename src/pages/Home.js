@@ -8,7 +8,8 @@ import Steam from "../components/landing/Steam/Steam";
 import Speakers from "../components/landing/Speakers/Speakers";
 import Schedule from "../components/landing/Schedule/Schedule";
 import Navbar from "../components/landing/Navbar/Navbar";
-import Sponsors from "../components/landing/Sponsors";
+import Sponsor from "../components/landing/Sponsor/Sponsor";
+import Partner from "../components/landing/Partner/Partner";
 
 import homeImg from "../images/assets/Supergirls.png";
 import awsImg from "../images/assets/amazon.png";
@@ -38,8 +39,9 @@ const Home = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, commodi alias adipisci dolores incidunt vel aut qui ab ipsa vitae ut delectus dolor obcaecati atque?"
         />
         <Schedule />
-
+        <Sponsor />
         <Contact />
+        <Partner />
         <Footer />
       </div>
 

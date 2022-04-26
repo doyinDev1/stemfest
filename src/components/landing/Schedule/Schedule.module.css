@@ -9,6 +9,7 @@
   margin-top: -10vh;
   position: relative;
   z-index: 9;
+  color: white;
 }
 .schedule h2 {
   text-align: center;
@@ -24,6 +25,10 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
+  color: var(--blue);
+}
+.flex ul {
+  padding-left: 0;
 }
 .time {
   padding: 20px;
