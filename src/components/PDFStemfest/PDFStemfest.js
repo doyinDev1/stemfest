@@ -31,7 +31,7 @@ const PDFStemfest = ({name, qr_code, imgSrc}) => {
 					<View style={{ flex: 1 }}>
 
 					  <Image
-					src={imgSrc2}
+					src={imgSrc}
 					style={styles.imageT}
 				/>
 					  <View style={{

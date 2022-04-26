@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 // import BulkUploadModal from './BulkUploadModal';
 import BulkUploadModal from '../../CreateUsers/BulkUploadModal'
 import { useFormikContext } from 'formik';
-
+import classes from './paymentform.module.css';
 export default function PaymentForm({ setChild, type }) {
 
   const { values: formValues } = useFormikContext();
@@ -70,7 +70,7 @@ export default function PaymentForm({ setChild, type }) {
                   justifyContent: "center",
                 }}
               >
-<div className="wholeDiv" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+<div className={classes.wholeDiv}>
 
 
 
@@ -95,7 +95,7 @@ export default function PaymentForm({ setChild, type }) {
                     }}
                   />
                 </div>
-                <div className="textField" style={{ paddingBottom: "20px" , paddingLeft: '20px', width: '200px'}}>
+                <div className={classes.textField} >
                   <FormControl fullWidth >
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
@@ -116,7 +116,7 @@ export default function PaymentForm({ setChild, type }) {
                   </FormControl>
                 </div>
 
-                <div className="textField" style={{ paddingBottom: "20px" , paddingLeft: '20px', width: '200px'}}>
+                <div className={classes.textField}>
                   <FormControl fullWidth >
                     <InputLabel id="demo-simple-select-label">
                       Gender
@@ -145,7 +145,7 @@ export default function PaymentForm({ setChild, type }) {
                   style={{
                     marginLeft: "10px",
                     width: "200px",
-                    display: "inline-block",
+                    display:  'flex',
                   }}
                 >
                   {kidsList.length !== 1 && (
@@ -176,7 +176,7 @@ export default function PaymentForm({ setChild, type }) {
 
         <Grid item xs={12} md={6}>
         <div className="ImportBtn">
-				<Button onClick={() => setShowModal(true)} variant="contained">Bulk Upload Users</Button>
+				<Button onClick={() => setShowModal(true)} variant="contained">Bulk Upload Kids</Button>
 			</div> 
         </Grid>
         <Grid item xs={12} md={6}></Grid>

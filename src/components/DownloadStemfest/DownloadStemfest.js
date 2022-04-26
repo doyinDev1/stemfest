@@ -12,7 +12,7 @@ const DownloadStemfest = ({ status, name , qr_code, imgSrc }) => {
 
 	const generatePDFDoc = async () => {
 		setDownloading(true);
-		const blob = await pdf(<PDFStemfest name={name} qr_code={qr_code} imgSrc={imgSrc}  />).toBlob();
+		const blob = await pdf(<PDFStemfest name={name}  imgSrc={imgSrc}  />).toBlob();
 		saveAs(blob, `${name} Stemfest Badge.pdf`); 
 		setDownloading(false);
 	};

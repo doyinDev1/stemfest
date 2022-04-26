@@ -7,18 +7,20 @@ import AdultLogin from "./pages/AdultLogin";
 import { Toaster } from "react-hot-toast";
 import AdultDashboard from "./pages/AdultDashboard";
 import Stemfest from './components/StemLogin/Stemfest'
+import Register2 from './pages/Register2'
 function App() {
   return (
     <>
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/admin-login" element={<Login />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
-          <Route exact path="/adult-login" element={<AdultLogin />} />
+          {/* <Route exact path="/adult-login" element={<AdultLogin />} /> */}
           <Route exact path="/adult-dashboard" element={<AdultDashboard />} />
           <Route exact path="/login" element={<Stemfest />} />
+          <Route path="/register" element={<Register2 />} />
 
         </Routes>
       </Router>
