@@ -239,7 +239,7 @@ const BulkUploadModal = (props) => {
 				</div>
 				<Accordion>
 					<Accordion.Item eventKey="0">
-						<Accordion.Header className={classes.Header}>Import Users</Accordion.Header>
+						<Accordion.Header className={classes.Header}>Import Kids</Accordion.Header>
 						<Accordion.Body className={classes.CourseContainer} style={{ padding: '0px' }}>
 							<form className={classes.Form}>
 								<div className={classes.InputContainer}>
