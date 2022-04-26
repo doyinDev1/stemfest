@@ -1,12 +1,15 @@
 import "../styles/Home.css";
 
-import About from "../components/landing/About";
-import Agenda from "../components/landing/Agenda";
-import Header from "../components/landing/Header";
-import Services from "../components/landing/Services";
-import Speakers from "../components/landing/Speakers";
-import Navbar from "../components/landing/Navbar";
-import Sponsors from "../components/landing/Sponsors";
+import About from "../components/landing/About/About";
+import Contact from "../components/landing/Contact/Contact";
+import Footer from "../components/landing/Footer/Footer";
+import Header from "../components/landing/Header/Header";
+import Steam from "../components/landing/Steam/Steam";
+import Speakers from "../components/landing/Speakers/Speakers";
+import Schedule from "../components/landing/Schedule/Schedule";
+import Navbar from "../components/landing/Navbar/Navbar";
+import Sponsor from "../components/landing/Sponsor/Sponsor";
+import Partner from "../components/landing/Partner/Partner";
 
 import homeImg from "../images/assets/Supergirls.png";
 import awsImg from "../images/assets/amazon.png";
@@ -16,27 +19,18 @@ const Home = () => {
       <div className="home__Top">
         <Navbar />
         <Header
-          header="Welcome to our school"
-          title="A brighter Future <h2 class='text-yellow'>for your kids</h2>"
-          image={homeImg}
+          title="Prepare your Kids for the future"
           about="
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
-          link="/login"
-          linkText="Enrol Now"
+       It's never too early to introduce your kids to STEAM. This can help pique their curiosity about these areas as they grow older"
         />
         <About
-          header="About our school"
-          title="<h2 class='text-deep'>Guide The Young </h2> <h2 class='text-yellow'>Generation to Success</h2>"
-          image={homeImg}
+          title="A day of learning and fun for the kids"
           about="
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
-          link="/login"
-          linkText="<a class='bg-yellow text-white p-4'>Subscribe Now</a>"
+        STEAM learning is fun! This event promises to give them a chanceto explore, discover and learn"
         />
-        <Services
-          title="We Provide The <h1 class='text-yellow text-[32px]'> Main Kids Activities </h1> "
-          header="Why choose us"
-          about="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro corporis mollitia aliquid? Corrupti, laboriosam."
+        <Steam
+          title="With STEAM the possibilities are endless "
+          about="STEAM has been proven to help ddevelop life long skills such as critical thinking, problem solving."
         />
         <Speakers
           title="Our <span class='text-yellow'> Courses</span>"
@@ -44,45 +38,18 @@ const Home = () => {
           about="
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, commodi alias adipisci dolores incidunt vel aut qui ab ipsa vitae ut delectus dolor obcaecati atque?"
         />
+        <Schedule />
+        <Sponsor />
+        <Contact />
+        <Partner />
+        <Footer />
       </div>
 
-      <div className="agendas">
-        <Agenda
-          date="1:45 PM - 2:15 PM"
-          title="Grow Better: AN Overview of HubSpot's Marketing Hub"
-          about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
-          name="Christine Georghiou"
-          job="Snr Prodduct Marketing Manager"
-          work="Hubspot"
-          role="Speaker"
-          image={homeImg}
-        />
-        <Agenda
-          date="1:45 PM - 2:15 PM"
-          title="Grow Better: AN Overview of HubSpot's Marketing Hub"
-          about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
-          name="Christine Georghiou"
-          job="Snr Prodduct Marketing Manager"
-          work="Hubspot"
-          role="Speaker"
-          image={homeImg}
-        />
-        <Agenda
-          date="1:45 PM - 2:15 PM"
-          title="Grow Better: AN Overview of HubSpot's Marketing Hub"
-          about="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, earum unde consequuntur eaque commodi minus hic! Expedita non consectetur dignissimos quisquam voluptatem enim voluptatum dolore fugit, laboriosam illo. Modi, maiores!"
-          name="Christine Georghiou"
-          job="Snr Prodduct Marketing Manager"
-          work="Hubspot"
-          role="Speaker"
-          image={homeImg}
-        />
-      </div>
-      <Sponsors
+      {/* <Sponsors
         title="2021 Sponsors"
         email="Please get in touch with growevents@gmail.com"
         images={[awsImg, awsImg, awsImg, awsImg, awsImg]}
-      />
+      /> */}
     </div>
   );
 };

@@ -7,6 +7,10 @@
   --blue: #134c72;
   --black: #030000;
   --light-grey: #aab0bb;
+  --red: red;
+  --light-green: green;
+  --gold: gold;
+  --button-blue: rgb(87, 87, 201);
 }
 
 *,
