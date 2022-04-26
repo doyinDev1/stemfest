@@ -1,9 +1,9 @@
 .partner {
-  height: 70vh;
+  min-height: 70vh;
   width: 100vw;
   background: url("../../../images/assets/bg8.png") no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: 100% 100% !important;
+  background-position: center !important;
   padding-top: 20vh;
   margin-top: -10vh;
   position: relative;
@@ -23,4 +23,14 @@
 }
 .cards img {
   margin: 0px 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .partner {
+    background: url("../../../images/assets/bg8-small.png") no-repeat;
+    padding: 100px;
+  }
+  .cards img {
+    padding-bottom: 30px;
+  }
 }

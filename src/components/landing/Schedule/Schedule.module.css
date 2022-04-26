@@ -1,9 +1,9 @@
 .schedule {
   background: url("../../../images/assets/bg5.png") no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: 100% 100% !important;
+  background-position: center !important;
   padding: 20vh 0px 0px;
 
   margin-top: -10vh;
@@ -45,7 +45,10 @@
 
 @media screen and (max-width: 500px) {
   .schedule {
+    margin-top: -85px;
+    padding: 107px 0px;
     background-repeat: no-repeat;
+    background: url("../../../images/assets/bg5-small.png") no-repeat;
   }
   .schedule h2 {
     font-size: 2rem;

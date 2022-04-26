@@ -8,7 +8,7 @@
   min-width: 100vw;
   height: 100vh;
   max-height: 900px;
-  padding: 100px 10vw 0;
+  padding: 10vh 10vw 0;
   color: white;
 }
 .header h2 {
@@ -45,11 +45,12 @@
 }
 @media screen and (max-width: 500px) {
   .header {
-    background: url("../../../images/assets/bg11-small.png") round;
+    background: url("../../../images/assets/bg1-small.png") round;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 50px;
+    min-height: 700px;
   }
   .header h2 {
     text-align: center;

@@ -1,9 +1,9 @@
 .sponsor {
-  height: 60vh;
+  min-height: 60vh;
   width: 100vw;
   background: url("../../../images/assets/bg6.png") no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: 100% 100% !important;
+  background-position: center !important;
   padding-top: 20vh;
   margin-top: -10vh;
   position: relative;
@@ -22,4 +22,11 @@
 }
 .cards img {
   margin: 0px 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .sponsor {
+    padding: 20px 0px 100px;
+    background: url("../../../images/assets/bg6-small.png") no-repeat;
+  }
 }

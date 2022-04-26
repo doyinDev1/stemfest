@@ -1,8 +1,8 @@
 .footer {
   background: url("../../../images/assets/bg9.png") no-repeat;
   padding-top: 100px;
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: 100% 100% !important;
+  background-position: center !important;
   color: white;
   margin-top: -10vh;
   position: relative;
@@ -33,6 +33,9 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .footer {
+    margin-top: -100px;
+  }
   .cards {
     flex-wrap: wrap;
   }
@@ -40,6 +43,7 @@
 
 @media screen and (max-width: 500px) {
   .footer {
+    background: url("../../../images/assets/bg9-small.png") no-repeat;
     padding: 50px 10vw;
     background-repeat: no-repeat;
   }
