@@ -1,11 +1,11 @@
 .sponsor {
-  min-height: 60vh;
+  min-height: 600px;
   width: 100vw;
   background: url("../../../images/assets/bg6.png") no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding-top: 20vh;
-  margin-top: -10vh;
+  padding: 150px 0px 50px;
+  margin-top: -80px;
   position: relative;
   z-index: 9;
   color: var(--blue);

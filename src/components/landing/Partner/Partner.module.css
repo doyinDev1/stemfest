@@ -1,11 +1,11 @@
 .partner {
-  min-height: 70vh;
   width: 100vw;
   background: url("../../../images/assets/bg8.png") no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding-top: 20vh;
-  margin-top: -10vh;
+  padding: 350px 0px 150px;
+
+  margin-top: -170px;
   position: relative;
   z-index: 9;
   color: var(--blue);
@@ -23,6 +23,7 @@
 }
 .cards img {
   margin: 0px 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 500px) {

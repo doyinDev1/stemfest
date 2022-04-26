@@ -51,6 +51,7 @@
     background-size: cover;
     padding-top: 50px;
     min-height: 700px;
+    height: inherit;
   }
   .header h2 {
     text-align: center;

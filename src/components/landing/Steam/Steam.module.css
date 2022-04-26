@@ -1,15 +1,15 @@
 .steam {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 762px;
   background: url("../../../images/assets/bg3.png") no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding: 30vh 10vw 0;
+  padding: 150px 10vw 0;
   color: var(--blue);
   position: relative;
   z-index: 9;
 
-  margin-top: -22vh;
+  margin-top: -150px;
 }
 .steam h2 {
   max-width: 600px;
@@ -21,6 +21,11 @@
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: white;
+}
+@media screen and (max-width: 1200px) {
+  .steam {
+    background: url("../../../images/assets/bg3-mid.png") no-repeat;
+  }
 }
 
 @media screen and (max-width: 500px) {

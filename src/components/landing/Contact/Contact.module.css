@@ -1,11 +1,11 @@
 .contact {
   background: url("../../../images/assets/bg7.png") no-repeat;
-  min-height: 100vh;
+  min-height: 762px;
   min-width: 100vw;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding: 20vh 10vw;
-  margin-top: -15vh;
+  padding: 120px 10vw;
+  margin-top: -100px;
   position: relative;
   z-index: 9;
 }

@@ -1,12 +1,12 @@
 .schedule {
   background: url("../../../images/assets/bg5.png") no-repeat;
-  min-height: 100vh;
+  min-height: 700px;
   width: 100vw;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding: 20vh 0px 0px;
+  padding: 150px 0px 0px;
 
-  margin-top: -10vh;
+  margin-top: -100px;
   position: relative;
   z-index: 9;
   color: white;
