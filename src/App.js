@@ -6,8 +6,10 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdultLogin from "./pages/AdultLogin";
 import { Toaster } from "react-hot-toast";
 import AdultDashboard from "./pages/AdultDashboard";
-import Stemfest from './components/StemLogin/Stemfest'
-import Register2 from './pages/Register2'
+import Stemfest from "./components/StemLogin/Stemfest";
+import Register2 from "./pages/Register2";
+import About from "./pages/About";
+import Reason from "./pages/Reason";
 function App() {
   return (
     <>
@@ -21,7 +23,8 @@ function App() {
           <Route exact path="/adult-dashboard" element={<AdultDashboard />} />
           <Route exact path="/login" element={<Stemfest />} />
           <Route path="/register" element={<Register2 />} />
-
+          <Route path="/about" element={<About />} />
+          <Route path="/reason" element={<Reason />} />
         </Routes>
       </Router>
       <div>

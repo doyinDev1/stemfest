@@ -8,7 +8,7 @@ import spons4 from "../../../images/assets/spons4.png";
 import spons5 from "../../../images/assets/spons5.png";
 function Sponsor() {
   return (
-    <div className={style.sponsor}>
+    <div className={style.sponsor} id="sponsor">
       <h2>Our Sponsors</h2>
       <div className={style.cards}>
         <img src={spons1} alt="" />

@@ -26,7 +26,7 @@ function Footer() {
 
         <div className={style.news}>
           <h3>Subscribe to our newsletter</h3>
-          <form action="">
+          <form action="" className={style.form}>
             <input type="email" placeholder="Email Address" />
             <input type="submit" value="Ok" />
           </form>
