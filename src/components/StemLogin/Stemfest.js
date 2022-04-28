@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Config } from '../../Config/Config'
 import toast from "react-hot-toast";
 import { Spinner, Button } from "react-bootstrap";
-
+import Navbar from '../landing/Navbar/Navbar'
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required("Email is required"),
 	password: Yup.string().required("Password is required"),
@@ -58,6 +58,8 @@ const Stemfest = () => {
 		
 
   return (
+    <>
+    <Navbar/>
     <div className={classes.image}>
       <div className={classes.overlay}>
         <section>
@@ -142,7 +144,8 @@ const Stemfest = () => {
           </div>
         </section>
       </div>
-    </div>
+    </div> 
+    </>
   );
 };
 

@@ -7,10 +7,18 @@ import AdultLogin from "./pages/AdultLogin";
 import { Toaster } from "react-hot-toast";
 import AdultDashboard from "./pages/AdultDashboard";
 import Stemfest from "./components/StemLogin/Stemfest";
-import Register2 from "./pages/Register2";
+import Register2 from "./pages/Register2";<<<<<<< main
+10
+ 
+
 import About from "./pages/About";
 import Reason from "./pages/Reason";
+
+import ReactGA from 'react-ga'
+
 function App() {
+  ReactGA.initialize('UA-104094700-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <>
       <Router>

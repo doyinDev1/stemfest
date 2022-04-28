@@ -26,6 +26,7 @@ export default (props) => {
               Sponsors
             </Nav.Link>
             <Nav.Link href="#contact" className={style.link}>
+
               Contact Us
             </Nav.Link>
             <Nav.Link href="/login" className={style.link}>
