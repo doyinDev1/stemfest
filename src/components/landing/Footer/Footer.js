@@ -4,33 +4,35 @@ function Footer() {
   return (
     <div className={style.footer}>
       <div className={style.cards}>
-        <img src={logo} alt="" className={style.logo} />
+        <a href="/">
+          <img src={logo} alt="" className={style.logo} />
+        </a>
         <div className={style.links}>
           <ul>
             <li>
-              <a href="#">About Us</a>
-              <a href="">Contact</a>
-              <a href=""> Terms & Conditions</a>
+              <a href="/about">About Us</a>
+              <a href="/reason"> Why Us</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
         <div className={style.links}>
           <ul>
             <li>
-              <a href="#">Facebook</a>
-              <a href="">Twitter</a>
-              <a href=""> Instagram</a>
+              <a href="https://facebook.com/9ijakids">Facebook</a>
+              <a href="https://twitter.com/9ijakids">Twitter</a>
+              <a href="https://linkedin/company/9ijakids"> Instagram</a>
             </li>
           </ul>
         </div>
 
-        <div className={style.news}>
+        {/* <div className={style.news}>
           <h3>Subscribe to our newsletter</h3>
           <form action="" className={style.form}>
             <input type="email" placeholder="Email Address" />
             <input type="submit" value="Ok" />
           </form>
-        </div>
+        </div> */}
 
         <div className={style.address}>41, ladipo Labinjo Street</div>
       </div>

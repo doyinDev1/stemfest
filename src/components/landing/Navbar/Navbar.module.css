@@ -12,13 +12,12 @@
   position: absolute;
   left: 10%;
 }
-.logo img {
-  /* max-height: 200px; */
-}
+
 .navlinks {
   width: 100%;
   justify-content: space-between;
   font-weight: 700;
+  margin-top: 30px;
 }
 @media screen and (max-width: 1024px) {
   .navlinks {
