@@ -7,9 +7,7 @@ import AdultLogin from "./pages/AdultLogin";
 import { Toaster } from "react-hot-toast";
 import AdultDashboard from "./pages/AdultDashboard";
 import Stemfest from "./components/StemLogin/Stemfest";
-import Register2 from "./pages/Register2";<<<<<<< main
-10
- 
+import Register2 from "./pages/Register2";
 
 import About from "./pages/About";
 import Reason from "./pages/Reason";
