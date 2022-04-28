@@ -30,7 +30,7 @@ const Home = () => {
         />
         <Steam
           title="With STEAM the possibilities are endless "
-          about="STEAM has been proven to help ddevelop life long skills such as critical thinking, problem solving."
+          about="STEAM has been proven to help develop life long skills such as critical thinking, problem solving."
         />
         <Speakers
           title="Our <span class='text-yellow'> Courses</span>"
@@ -39,7 +39,7 @@ const Home = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, commodi alias adipisci dolores incidunt vel aut qui ab ipsa vitae ut delectus dolor obcaecati atque?"
         />
         <Schedule />
-        <Sponsor />
+        {/* <Sponsor /> */}
         <Contact />
         <Partner />
         <Footer />

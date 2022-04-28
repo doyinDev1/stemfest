@@ -4,7 +4,9 @@ function Schedule() {
   return (
     <div className={style.schedule}>
       <h2> FunFest Schedule</h2>
-      <div className={style.flex}>
+
+      <div className={style.soon}> Coming Soon</div>
+      {/* <div className={style.flex}>
         <div className={style.left}>
           <h3>Friday, 29th July</h3>
           <ul>
@@ -65,7 +67,7 @@ function Schedule() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
