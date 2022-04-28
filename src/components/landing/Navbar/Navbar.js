@@ -8,7 +8,7 @@ export default (props) => {
   return (
     <Navbar className={style.navbars} expand="sm" collapseOnSelect>
       <Container className={style.left}>
-        <Navbar.Brand href="#home" className={style.logo}>
+        <Navbar.Brand href="/" className={style.logo}>
           <img src={logoIcon} className={style.logoIcon} />
         </Navbar.Brand>
       </Container>
@@ -16,22 +16,22 @@ export default (props) => {
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
           <Nav className={style.navlinks}>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/about" className={style.link}>
               About Us
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/reason" className={style.link}>
               Why Attend
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="#sponsor" className={style.link}>
               Sponsors
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="#contact" className={style.link}>
               Contact Us
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/login" className={style.link}>
               Login
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/register" className={style.link}>
               Register
             </Nav.Link>
           </Nav>

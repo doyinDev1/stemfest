@@ -24,6 +24,8 @@
 .cards img {
   margin: 0px 30px;
   padding-bottom: 30px;
+  width: 261px;
+  height: 291px;
 }
 
 @media screen and (max-width: 500px) {

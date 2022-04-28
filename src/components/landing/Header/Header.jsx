@@ -9,8 +9,8 @@ function Header({ title, about }) {
       <p>{about}</p>
 
       <div className={style.links}>
-        <Link to="/">Individual Registration</Link>
-        <Link to="/">School Registration</Link>
+        <Link to="/register">Individual Registration</Link>
+        <Link to="/register">School Registration</Link>
       </div>
     </div>
   );
