@@ -59,7 +59,7 @@ const AdultDashboard = () => {
         <>
         {console.log(data)}
         
-        <Navbar/>
+        {/* <Navbar/> */}
           <div className="adultDashboard">
             <div className={classes.image}>
               <div className={classes.overlay}>

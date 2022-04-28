@@ -1,7 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Font, Image, Canvas } from '@react-pdf/renderer';
 // import Lato from '../../assets/fonts/Lato-Black.ttf';
 // import LeagueSpartan from '../../assets/fonts/leaguespartan-bold.ttf';
-import { QRCodeCanvas } from 'qrcode.react'
 // Font.register({
 // 	family: 'LeagueSpartan',
 // 	format: 'truetype',

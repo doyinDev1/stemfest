@@ -24,7 +24,7 @@ function Register2() {
                       </div>
                       <div className={classes.IImages2}>
                       <img
-                      style={{transform: 'scale(1.7)'}}
+                      style={{transform: 'scale(1.3)'}}
                         className={classes.Leftimg}
                         src="https://res.cloudinary.com/naijakids/image/upload/v1650921630/Web_1920_4_1_1_bptqg4.png"
                         alt="stemfest"
