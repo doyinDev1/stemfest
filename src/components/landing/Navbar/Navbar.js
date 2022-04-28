@@ -16,22 +16,22 @@ export default (props) => {
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
           <Nav className={style.navlinks}>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/" className={style.link}>
               About Us
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/" className={style.link}>
               Why Attend
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/" className={style.link}>
               Sponsors
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/" className={style.link}>
               Contact Us
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/login" className={style.link}>
               Login
             </Nav.Link>
-            <Nav.Link href="#speaker" className={style.link}>
+            <Nav.Link href="/register" className={style.link}>
               Register
             </Nav.Link>
           </Nav>
