@@ -21,20 +21,20 @@ function Footer() {
             <li>
               <a href="https://facebook.com/9ijakids">Facebook</a>
               <a href="https://twitter.com/9ijakids">Twitter</a>
-              <a href="https://linkedin/company/9ijakids"> Instagram</a>
+              <a href="https://instagram.com/9ijakids"> Instagram</a>
             </li>
           </ul>
         </div>
 
-        {/* <div className={style.news}>
+        <div className={style.news}>
           <h3>Subscribe to our newsletter</h3>
           <form action="" className={style.form}>
             <input type="email" placeholder="Email Address" />
             <input type="submit" value="Ok" />
           </form>
-        </div> */}
+        </div>
 
-        <div className={style.address}>41, ladipo Labinjo Street</div>
+        <div className={style.address}>41, ladipo Labinjo Street, Surulere</div>
       </div>
     </div>
   );

@@ -9,12 +9,12 @@ import { useNavigate } from "react-router-dom";
 import { Config } from "../Config/Config";
 import toast from "react-hot-toast";
 import { Spinner, Button } from "react-bootstrap";
+import Navbar from "../components/landing/Navbar/Navbar";
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required"),
   password: Yup.string().required("Password is required"),
 
 });
-
 function AdultLogin() {
   const [loading, setLoading] = useState(false);
   const router = useNavigate();
@@ -60,6 +60,7 @@ function AdultLogin() {
 
   return (
     <>
+    <Navbar/>
       <div className={classes.image}>
         <div className={classes.overlay}>
           <div className={classes.LoginTypem}>
