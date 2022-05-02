@@ -58,7 +58,7 @@ const AdminSummary = () => {
 	
 			setData2(res.data);
 			setLoading2(false);
-			// console.log(res.data, "data2")
+			console.log(res.data, "data2")
 		  })
 		  .catch((err) => {
 			  console.log(err, 'err')
@@ -142,8 +142,9 @@ const AdminSummary = () => {
 			<SummaryHeader
 				data={data}
 				error={''}
-				status={''}
+				status={loading}
 			/>
+			<h2>Adult Summary</h2>
 
 <Table  hover responsive className={classes.Table}>
 <thead>
@@ -154,14 +155,16 @@ const AdminSummary = () => {
 								</tr>
 								</thead>
 								<tbody>
-								{/* {data2?.adults?.map((user) => (
+								{data2?.adults?.map((user) => (
 										 <tr key={user.name}>
 											{header.map((key) => (
 												<td key={user[key]}>{user[key]}</td>
 											))}
 										</tr> 
-										console.log(user)
-									))} */}
+									))}
+								 {loading2 === true && <Spinner size="sm" animation="border" />} 
+
+    
 </tbody>
 
 </Table>
@@ -216,7 +219,7 @@ const AdminSummary = () => {
 										</tr>
 									))} */}
 								{/* {loading2 === true && <Loader />} */}
-								{/* {loading2 === true && <Spinner size="sm" animation="border" />} */}
+								{/* {loading2 === true && } */}
 								
 							{/* </tbody> */}
 						{/* </Table> */}

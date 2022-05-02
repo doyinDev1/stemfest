@@ -17,7 +17,7 @@ Font.register({
 	src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
 });
 
-const PDFStemfest = ({name, imgSrc}) => {
+const PDFStemfest = ({name, imgSrc, qr_code}) => {
 
 	// const imgSrc2 = `http://api.qrserver.com/v1/create-qr-code/?data=${qr_code}&size=200x200`
 
@@ -30,7 +30,7 @@ const PDFStemfest = ({name, imgSrc}) => {
 					<View style={{ flex: 1 }}>
 
 					  <Image
-					src={imgSrc}
+					src={qr_code}
 					style={styles.imageT}
 				/>
 					  <View style={{

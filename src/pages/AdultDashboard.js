@@ -126,7 +126,7 @@ const AdultDashboard = () => {
                             the email in your inbox and add this to your
                             safe sender's list. (registration@9ijakids.com)
                           </p>
-{/* {console.log(data)} */}
+{console.log(data)}
                           <div className="adultDashboard__Cards">
                             {data?.children?.map((child, index) => {
                               return (
