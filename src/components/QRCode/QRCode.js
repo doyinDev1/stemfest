@@ -13,44 +13,44 @@ const QRCode = ({ data, status }) => {
 		<div className={classes.SummaryHeader}>
 			<SummaryCards
 				color="#003883"
-				stats="901"
+				stats={data?.parent_attendance_count}
 				title="Scanned"
-				label="Paents"
+				label="Parents"
 				icon={<FamilyRestroomIcon htmlColor="#003883" style={{ height: '2rem', width: '2rem' }} />}
-				loading={status === 'loading'}
+				loading={status === true}
 			/>
 			<SummaryCards
 				color="#003883"
-				stats="3986"
+				stats={data?.child_attendance_count}
 				title="Scanned"
 				label="Children"
 
 				icon={
 					<ManIcon htmlColor="#003883" style={{ height: '2rem', width: '2rem' }} />
 				}
-				loading={status === 'loading'}
+				loading={status === true}
 			/>
 			<SummaryCards
 				color="#b5d334"
-				stats="1000"
+				stats={data?.school_attendance_count}
 				title="Scanned"
 				label="Schools"
 
 				icon={
 					<SchoolIcon htmlColor="#003883" style={{ height: '2rem', width: '2rem' }} />
 				}
-				loading={status === 'loading'}
+				loading={status === true}
 			/>
 			<SummaryCards
 				color="#b5d334"
-				stats="25"
+				stats={data?.child_attendance_count ? data?.child_attendance_count : "22" }
 				title="Scanned"
 				label="Teachers"
 
 				icon={
 					<LibraryBooksOutlinedIcon htmlColor="#003883" style={{ height: '2rem', width: '2rem' }} />
 				}
-				loading={status === 'loading'}
+				loading={status === true}
 			/>
 		
 		</div>
