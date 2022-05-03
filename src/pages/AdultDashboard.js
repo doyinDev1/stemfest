@@ -76,11 +76,10 @@ const AdultDashboard = () => {
                         </div>
                         <div className={classes.MainTopText}>
                           <p>
-                          Thank you for registering for STEAM Fest 2022. 
-                          We are looking forward to seeing you on July 30th, 
-                          2022 at Victoria Island, Lagos. 
-                          You will soon receive an email confirming your 
-                          registration.Please, check your spam/ promotions email if you do not see the email in your inbox.
+                          Thank you for registering for STEAM Fest 2022. We are looking
+                           forward to seeing you at the STEAM Fest in Victoria Island, Lagos.
+You will soon receive an email confirming your registration.
+Please, check your spam/ promotions email if you do not see the email in your inbox.
                           </p>
                         </div>
                         <div className={classes.MainBottomText}>

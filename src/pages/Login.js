@@ -9,6 +9,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { Config } from '../../Config/Config';
 // import Loader from '../Loader/Loader';
+import { Spinner , Button} from "react-bootstrap";
+
 // import SpinnerCustom from '../CommonForm/SpinnerCustom/SpinnerCustom';
 import toast from "react-hot-toast";
 import { Config } from "../Config/Config";
@@ -93,7 +95,7 @@ function Login() {
                     />
                     <br />
                     <div className={classes.sign}>
-                      {/* {!loading ? ( */}
+                    {!loading ? (
                         <button
                           type="submit"
                           className={classes.btn_login}
@@ -101,14 +103,22 @@ function Login() {
                         >
                           SIGN IN
                         </button>
-                      {/* ) : ( */}
-                        {/* <> */}
-                          {/* <div className={classes.loginLoading}> */}
-                            {/* <SpinnerCustom /> */}
-                            {/* {""} */}
-                          {/* </div> */}
-                        {/* </> */}
-                      {/* )} */}
+                      ) : (
+                        <>
+                          <div className={classes.loginLoading}>
+                            <Button variant="primary" disabled>
+                              <Spinner
+                                as="span"
+                                animation="grow"
+                                size="sm"
+                                role="status"
+                                aria-hidden="true"
+                              />
+                              Loading...
+                            </Button>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </form>
                 </div>
