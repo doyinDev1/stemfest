@@ -40,7 +40,7 @@ const Home = () => {
         />
         <Schedule />
         {/* <Sponsor /> */}
-        <Contact />
+        {/* <Contact /> */}
         <Partner />
         <Footer />
       </div>

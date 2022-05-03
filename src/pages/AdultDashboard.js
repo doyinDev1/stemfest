@@ -12,6 +12,7 @@ import toast from "react-hot-toast";
 import SpinnerCustom from "../components/SpinnerCustom/SpinnerCustom";
 import DownloadStemfest from '../components/DownloadStemfest/DownloadStemfest'
 // import DownloadStemfest from '../components/DownloadStemfest/DownloadStemfest'
+import Navbar from '../components/landing/Navbar/Navbar'
 const AdultDashboard = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({});
@@ -57,6 +58,8 @@ const AdultDashboard = () => {
       ) : (
         <>
         {console.log(data)}
+        
+        {/* <Navbar/> */}
           <div className="adultDashboard">
             <div className={classes.image}>
               <div className={classes.overlay}>
@@ -73,21 +76,18 @@ const AdultDashboard = () => {
                         </div>
                         <div className={classes.MainTopText}>
                           <p>
-                            Thank you for registering for Steam fest 2022. We're
-                            looking forward to seeing you on 02-May-2022 at Aso
-                            Rock, Abuja. You will soon recieve an email
-                            confirming your registration from
-                            registration@9ijakids.com. Please Check your
-                            junk/spam folder and add this to your safe sender's
-                            list.
+                          Thank you for registering for STEAM Fest 2022. We are looking
+                           forward to seeing you at the STEAM Fest in Victoria Island, Lagos.
+You will soon receive an email confirming your registration.
+Please, check your spam/ promotions email if you do not see the email in your inbox.
                           </p>
                         </div>
                         <div className={classes.MainBottomText}>
                           <h3>Print Your Badge </h3>
                           <p>
-                            Please ensure you download and print your QR code
-                            before coming to the event. Dont forget to put on
-                            your nose mask for entry too.
+                          Please ensure you download and print your 
+                          QR code before coming to the event as this 
+                          would serve as your access into the event.Also, don't forget to put on your nose mask to gain access into the event.
                           </p>
                           {/* <Button
                             variant="primary"
@@ -118,14 +118,14 @@ const AdultDashboard = () => {
                           </div>
                           <p>
                             Thank you {data.adultDetails?.name} for registering
-                            for Stem fest 2022. We're looking forward to seeing
-                            you on 02-May-2022. You will soon
-                            recieve an email confirming your registration from
-                            registration@9ijakids.com. Please Check your
-                            junk/spam folder and add this to your safe sender's
-                            list.
+                            for Stem fest 2022. We're looking forward to seeing you on the 30th of July, 2022 at Victoria Island, Lagos.
+                            Please, find your QR code pass below.
+                            You will receive an email confirming your registration,
+                            please check your spam/ promotions email if you do not see
+                            the email in your inbox and add this to your
+                            safe sender's list. (registration@9ijakids.com)
                           </p>
-{/* {console.log(data)} */}
+{console.log(data)}
                           <div className="adultDashboard__Cards">
                             {data?.children?.map((child, index) => {
                               return (

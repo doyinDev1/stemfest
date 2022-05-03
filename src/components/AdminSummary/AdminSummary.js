@@ -17,6 +17,9 @@ const AdminSummary = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
+	const [loading2, setLoading2] = useState(false);
+
+	const [data2, setData2] = useState({});
 
 
 	useEffect(() => {
@@ -32,7 +35,8 @@ const AdminSummary = () => {
 		  },
 		};
 		setLoading(true);
-	
+		setLoading2(true);
+
 		axios
 		  .get(`${Config.url.API_URL}/admin/summary`, config)
 		  .then((res) => {
@@ -46,6 +50,22 @@ const AdminSummary = () => {
 			const errMsg = err?.message || "Failed to Load !";
 			toast.error(errMsg);
 		  });
+
+		  axios
+		  .get(`${Config.url.API_URL}/admin/users-data`, config)
+		  .then((res) => {
+			if (res.data?.error?.length) throw new Error(res.data.error[0]);
+	
+			setData2(res.data);
+			setLoading2(false);
+			console.log(res.data, "data2")
+		  })
+		  .catch((err) => {
+			  console.log(err, 'err')
+			const errMsg = err?.message || "Failed to Load2 !";
+			toast.error(errMsg);
+		  });
+
 	  }, []);
 	
 
@@ -53,23 +73,17 @@ const AdminSummary = () => {
 
 
 	const header = [
-		'employee_id',
-		'name',
 		'email',
-		'course_completed',
-		'location',
-		'grade',
-		// 'gender',
-		// 'division',
+		'name',
+		'number_of_children',
+		'phone',
+		
 	];
 	const tProperties = [
-		'employee_id',
+		'email',
 		'name',
-		'grade',
-		'course_completed',
-		'gender',
-		'location',
-		'division',
+		'number_of_children',
+		'phone',
 	];
 // TODAYYY
 
@@ -128,39 +142,66 @@ const AdminSummary = () => {
 			<SummaryHeader
 				data={data}
 				error={''}
-				status={''}
+				status={loading}
 			/>
-			
-			 {/* <div className={classes.AdminCourseSummary}>
+			<h2>Adult Summary</h2>
+
+<Table  hover responsive className={classes.Table}>
+<thead>
+<tr>
+									{header.map((n) => (
+										<th key={n}> {n.split('_').join(' ')} </th>
+									))}
+								</tr>
+								</thead>
+								<tbody>
+								{data2?.adults?.map((user) => (
+										 <tr key={user.name}>
+											{header.map((key) => (
+												<td key={user[key]}>{user[key]}</td>
+											))}
+										</tr> 
+									))}
+								 {loading2 === true && <Spinner size="sm" animation="border" />} 
+
+    
+</tbody>
+
+</Table>
+
+			{/* {console.log(data2?.adults[0].email, "data2")} */}
+			{/* <h1>{data2?.adults[1].email}</h1> */}
+{/* 			
+			 <div className={classes.AdminCourseSummary}>
 				
-			// 	<div className={classes.CourseSummaryContent}>
-			// 		<h3>Course 1 Summary</h3>
-			// 		<SummaryChart />
-			// 		<h5 className={classes.TableMarker}>User Summary</h5>
-			// 		<div className={classes.TableMarkerDiv}>
-			// 			<h4 className={classes.TableHeadText}>User Summary </h4>
-			// 			<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
-			// 				{' '}
-			// 				Count: {5}
-			// 			</h4>
-			// 		</div>
-			// 		 <div className={classes.TableWrapper}>
-			// 			<div className={classes.TableExtras}>
-			// 				<div className={classes.TableInputs}> */}
+				<div className={classes.CourseSummaryContent}>
+					<h3>Course 1 Summary</h3>
+					<SummaryChart />
+					<h5 className={classes.TableMarker}>User Summary</h5>
+					<div className={classes.TableMarkerDiv}>
+						<h4 className={classes.TableHeadText}>User Summary </h4>
+						<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
+							{' '}
+							Count: {5}
+						</h4>
+					</div>
+					 <div className={classes.TableWrapper}>
+						<div className={classes.TableExtras}>
+							<div className={classes.TableInputs}> */}
 								{/* <input
 									type="search"
 									placeholder="Search"
 									 onChange={(e) => setSearchTerm(e.target.value)}
 								/> */}
-								{/* {userSummaryFetching && <Spinner size="sm" animation="border" />} */}
+								{/* {loading2 === true && <Spinner size="sm" animation="border" />} */}
 								{/* <button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
 									Export to CSV
 								</button>
-							</div> */}
+							</div>
 
-							{/* <div className={classes.TableInputs}></div>  */}
-						 {/* </div>  */}
-						{/* <Table hover responsive className={classes.Table}>
+							<div className={classes.TableInputs}></div> 
+						 </div> 
+						<Table hover responsive className={classes.Table}>
 							<thead>
 								<tr>
 									{header.map((n) => (
@@ -169,17 +210,19 @@ const AdminSummary = () => {
 								</tr>
 							</thead>
 							<tbody>
-								{Array.isArray(userSummaryData?.userSummary) &&
-									userSummaryData?.userSummary.map((user) => (
-										<tr key={user.employee_id}>
+								{data2?.adults &&
+									data2?.adults.map((user, index) => (
+										<tr key={index}>
 											{header.map((key) => (
 												<td key={user[key]}>{user[key]}</td>
 											))}
 										</tr>
-									))}
-								{(userSummaryStatus === 'loading' || userSummaryFetching) && <Loader />}
-							</tbody>
-						</Table> */}
+									))} */}
+								{/* {loading2 === true && <Loader />} */}
+								{/* {loading2 === true && } */}
+								
+							{/* </tbody> */}
+						{/* </Table> */}
 						 {/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
 							<PaginationButtons
 								setPage={setPage}
@@ -197,9 +240,10 @@ const AdminSummary = () => {
 							dataLimit={10}
 							pageLimit={5}
 						/> */}
-				{/* // 	</div>
-				//  </div> 
-			//  </div>  */}
+				
+			{/* </div>
+			</div> 
+			</div>  */}
 	</section>
 	);
 };

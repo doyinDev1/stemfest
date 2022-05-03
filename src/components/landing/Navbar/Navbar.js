@@ -22,10 +22,11 @@ export default (props) => {
             <Nav.Link href="/reason" className={style.link}>
               Why Attend
             </Nav.Link>
-            <Nav.Link href="#sponsor" className={style.link}>
+            <Nav.Link href="/" className={style.link}>
               Sponsors
             </Nav.Link>
-            <Nav.Link href="#contact" className={style.link}>
+            <Nav.Link href="/" className={style.link}>
+
               Contact Us
             </Nav.Link>
             <Nav.Link href="/login" className={style.link}>

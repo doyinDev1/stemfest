@@ -5,7 +5,7 @@ import avatar1 from "../../../images/assets/avatar1.png";
 import girl from "../../../images/assets/girl.png";
 import pink from "../../../images/assets/pink-guy.png";
 import thin from "../../../images/assets/thin-girl.png";
-import sil from "../../../images/assets/sil.png";
+import sil from "../../../images/assets/sil2.png";
 function Speakers() {
   return (
     <div className={style.speakers}>
@@ -29,23 +29,23 @@ function Speakers() {
         </div> */}
         <div className={style.card}>
           <img src={sil} alt="avatar" />
-          <p> Lorem ipsum</p>
+          <p> Speaker 1</p>
         </div>
         <div className={style.card}>
           <img src={sil} alt="avatar" />
-          <p> Lorem ipsum</p>
+          <p> Speaker 2</p>
         </div>
         <div className={style.card}>
           <img src={sil} alt="avatar" />
-          <p> Lorem ipsum</p>
+          <p> Speaker 3</p>
         </div>
         <div className={style.card}>
           <img src={sil} alt="avatar" />
-          <p> Lorem ipsum</p>
+          <p> Speaker 4</p>
         </div>
         <div className={style.card}>
           <img src={sil} alt="avatar" />
-          <p> Lorem ipsum</p>
+          <p> Speaker 5</p>
         </div>
       </div>
     </div>

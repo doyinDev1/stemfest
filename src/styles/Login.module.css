@@ -94,7 +94,7 @@
     padding: 10px 10px;
     font-family: "Rubik";
     font-weight: 300;
-  
+    border: 1px solid black;
   }
   input[type="password"] {
     background: #fff;

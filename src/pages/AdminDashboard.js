@@ -14,7 +14,7 @@ import { AdminReports } from '../components/AdminReports/AdminReports';
 import AdminSummary from '../components/AdminSummary/AdminSummary'
 import QRCode from '../components/QRCode/QRCode'
 import QRPage from '../components/QRPage/QRPage';
-
+import ChildrenInfo from '../components/ChildrenInfo/ChildrenInfo'
 
 
 const AdminDashboard = () => {
@@ -38,48 +38,20 @@ const AdminDashboard = () => {
 			icon: <HomeIcon />,
 			page: < AdminSummary />,
 		},
-		// {
-		// 	id: 1,
-		// 	icon: <SchoolIcon/>,
-		// 	title: 'Registration',
-		// 	page: < AdminSummary />,
-		// },
-		// {
-		// 	id: 2,
-		// 	icon: <ManIcon />,
-		// 	title: 'Adults',
-		// 	page: < AdminSummary />,
-		// },
-		// {
-		// 	id: 3,
-		// 	icon: <FamilyRestroomIcon />,
-		// 	title: 'Children',
-		// 	page: < AdminSummary />,
-		// },
+	
 		{
-			id: 4,
+			id: 1,
+			icon: <FamilyRestroomIcon />,
+			title: 'Children Information',
+			page: < ChildrenInfo />,
+		},
+		{
+			id: 2,
 			icon: <QrCodeIcon />,
-			title: 'QR Codes',
+			title: 'Event Attendance',
 			page: <QRPage />,
 		},
-		{
-			id: 5,
-			icon: <AdminPanelSettingsIcon/>,
-			title: 'Event Attendance',
-			page: < AdminSummary />,
-		},
-		// {
-		// 	id: 6,
-		// 	icon: <EventNoteIcon />,
-		// 	title: 'Admin',
-		// 	page: < AdminSummary />,
-		// },
-		// {
-		// 	id: 7,
-		// 	icon: <SettingsIcon />,
-		// 	title: 'Settings',
-		// 	page: < AdminSummary />,
-		// },
+	
 	];
 	return (
 		<>

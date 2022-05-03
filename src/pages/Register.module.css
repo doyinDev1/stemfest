@@ -4,7 +4,12 @@
     background-color: #75D6F3;
 
   }
-  
+  .IImages2{
+    max-width: 614px;
+    width: 500px;
+    padding-top: 150px;
+    padding-left: 39px;
+  }
   
   .overlay {
       width: 100vw;
