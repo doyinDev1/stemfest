@@ -24,7 +24,7 @@ const Home = () => {
        It's never too early to introduce your kids to STEAM. This can help pique their curiosity about these areas as they grow older"
         />
         <About
-          title="A day of learning and fun for the kids"
+          title="A day of fun and learning for the kids"
           about="
         STEAM learning is fun! This event promises to give them a chanceto explore, discover and learn"
         />

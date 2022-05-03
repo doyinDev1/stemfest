@@ -34,7 +34,12 @@ function Footer() {
           </form>
         </div> */}
 
-        <div className={style.address}>41, ladipo Labinjo Street</div>
+        <div className={style.address}>
+          <p>41, Ladipo Labinjo Street Off</p>
+          <p>Bode Thomas Street</p>
+          <p>Surulere, Lagos</p>
+          <p>+44 345 678 903</p>
+        </div>
       </div>
     </div>
   );

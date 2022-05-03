@@ -6,7 +6,7 @@ import logoIcon from "../../../images/assets/logo-2.png";
 
 export default (props) => {
   return (
-    <Navbar className={style.navbars} expand="sm" collapseOnSelect>
+    <Navbar className={style.navbars} expand="lg" collapseOnSelect>
       <Container className={style.left}>
         <Navbar.Brand href="/" className={style.logo}>
           <img src={logoIcon} className={style.logoIcon} />

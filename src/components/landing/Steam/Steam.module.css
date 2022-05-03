@@ -4,15 +4,15 @@
   background: url("../../../images/assets/bg3.png") no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding: 150px 10vw 0;
-  color: var(--blue);
+  padding: 250px 10vw 0;
+  color: white;
   position: relative;
   z-index: 9;
 
   margin-top: -150px;
 }
 .steam h2 {
-  max-width: 600px;
+  max-width: 50%;
   font-size: 3.5rem;
   margin-bottom: 30px;
 }
@@ -39,9 +39,11 @@
   .steam h2 {
     text-align: center;
     font-size: 2rem;
-    line-height: 3.5rem;
+    line-height: 2rem;
+    max-width: 100%;
   }
   .steam p {
+    max-width: 100%;
     font-size: 1rem;
     text-align: center;
   }
