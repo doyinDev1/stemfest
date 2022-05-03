@@ -1,6 +1,7 @@
 .navbars {
   padding: 30px 20px !important;
   z-index: 12;
+  font-family: "Suez one";
 }
 .left {
   flex: 0.4;
@@ -11,20 +12,48 @@
 .logo {
   position: absolute;
   left: 10%;
+  top: 5px;
 }
 
 .navlinks {
   width: 100%;
   justify-content: space-between;
-  font-weight: 700;
   margin-top: 30px;
+  /* max-width: 900px; */
 }
-@media screen and (max-width: 1024px) {
-  .navlinks {
-    font-size: 13px;
+.link {
+  color: #707070 !important;
+  font-size: 25px;
+}
+.link:hover {
+  color: #d92b58 !important;
+}
+@media screen and (max-width: 1400px) {
+  .left {
+    flex: 0.3;
+  }
+  .right {
+    flex: 0.7;
+  }
+  .logo {
+    left: 5%;
+    max-width: 300px;
+  }
+  .link {
+    font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1132px) {
+  .link {
+    font-size: 1rem;
+  }
+}
+/* @media screen and (max-width: 991px) {
+  .logo {
+    left: 50%;
+  }
+} */
+@media screen and (max-width: 991px) {
   .navbars {
     padding: 0.5rem;
   }
@@ -32,6 +61,9 @@
     left: 50%;
     top: 25px;
     transform: translate(-50%, 0px);
+  }
+  .logoIcon {
+    max-height: 120px;
   }
   .navlinks {
     flex-direction: column;

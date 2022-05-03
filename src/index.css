@@ -11,6 +11,8 @@
   --light-green: green;
   --gold: gold;
   --button-blue: rgb(87, 87, 201);
+  --lemon: #d3d93c;
+  --wine: #f32a39;
 }
 
 *,
@@ -47,12 +49,7 @@ p {
   position: relative;
   z-index: 2;
 }
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 800 !important;
-}
+
 p {
   font-weight: 400;
 }

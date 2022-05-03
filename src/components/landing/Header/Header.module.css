@@ -6,20 +6,23 @@
   position: relative;
   z-index: 10;
   min-width: 100vw;
-  height: 100vh;
-  max-height: 900px;
-  padding: 250px 10vw 0;
+
+  min-height: 990px;
+  padding: 120px 10vw 0;
   color: white;
+
+  font-family: "Suez One", serif;
 }
 .header h2 {
-  max-width: 600px;
-  font-size: 3.5rem;
-  line-height: 4.5rem;
-  margin-bottom: 30px;
+  max-width: 55%;
+  font-size: 5.5rem;
+  font-weight: 400 !important;
+  line-height: 7.5rem;
+  margin-bottom: 20px;
 }
 .header p {
-  max-width: 600px;
-  font-size: 1.5rem;
+  max-width: 55%;
+  font-size: 2rem;
   margin-bottom: 30px;
 }
 .links {
@@ -27,21 +30,53 @@
 }
 .header a {
   color: white;
-  background-color: var(--red);
+  background-color: var(--wine);
   padding: 10px 50px;
   border-radius: 10px;
   max-width: 200px;
   text-align: center;
   font-size: 15px;
+  text-transform: uppercase;
+  transition: transform 300ms ease-in-out;
 }
 
 .header a:nth-child(2) {
   margin-left: 30px;
-  background-color: var(--light-green);
+  background-color: var(--lemon);
 }
 .header a:hover {
   color: inherit;
   transform: scale(1.1);
+}
+@media screen and (max-width: 1680px) {
+  .header h2 {
+    font-size: 4.5rem;
+    line-height: 6.5rem;
+  }
+  .header p {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .header {
+    padding-top: 100px;
+  }
+  .header h2 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+  .header p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .header h2 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .header p {
+    font-size: 1.4rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .header {
@@ -55,13 +90,15 @@
   }
   .header h2 {
     text-align: center;
+    max-width: 100%;
     font-size: 2rem;
     line-height: 3.5rem;
   }
   .header p {
+    max-width: 100%;
     text-align: center;
     font-size: 1rem;
-    min-height: 30vh;
+    margin-bottom: 305px;
   }
   .links {
     flex-direction: column;
@@ -70,7 +107,6 @@
     margin-inline: auto;
   }
   .header a:nth-child(2) {
-    margin-top: 20px;
-    margin-inline: auto;
+    margin: 20px auto;
   }
 }

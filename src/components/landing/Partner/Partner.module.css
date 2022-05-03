@@ -14,6 +14,7 @@
   text-align: center;
   color: white;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 .cards {
   display: flex;
@@ -35,5 +36,7 @@
   }
   .cards img {
     padding-bottom: 30px;
+    width: 184px;
+    height: 184px;
   }
 }
