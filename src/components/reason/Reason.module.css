@@ -8,11 +8,15 @@
 }
 .flex {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 0px 5vw;
 }
 .content {
-  margin-left: 80px;
+  flex: 0.5;
+}
+.image {
+  flex: 0.5;
 }
 .flex h2 {
   font-size: 5rem;
@@ -54,7 +58,7 @@
     font-size: 2rem;
   }
   .content {
-    margin-left: 0;
+    margin-right: 0;
   }
   .flex img {
     max-width: 100%;

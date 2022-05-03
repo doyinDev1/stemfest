@@ -5,7 +5,9 @@ function Reason() {
   return (
     <div className={style.about}>
       <div className={style.flex}>
-        <img src={artistImg} alt="" />
+        <div className={style.image}>
+          <img src={artistImg} alt="" />
+        </div>
         <div className={style.content}>
           <h2> Why Attend</h2>
           <p>
