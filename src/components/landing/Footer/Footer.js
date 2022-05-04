@@ -12,7 +12,7 @@ function Footer() {
             <li>
               <a href="/about">About Us</a>
               <a href="/reason"> Why Us</a>
-              <a href="#contact">Contact</a>
+              {/* <a href="#contact">Contact</a> */}
             </li>
           </ul>
         </div>
@@ -27,11 +27,13 @@ function Footer() {
         </div>
 
         <div className={style.news}>
-          <h3>Subscribe to our newsletter</h3>
-          <form action="" className={style.form}>
+          <p>For updates on the STEAM Fun Fest event suscribe to <span><a href="https://t.me/+B3jIp1KP4qE0MDk8">here</a> </span> </p>
+
+          
+          {/* <form action="" className={style.form}>
             <input type="email" placeholder="Email Address" />
             <input type="submit" value="Ok" />
-          </form>
+          </form> */}
         </div>
 
 
