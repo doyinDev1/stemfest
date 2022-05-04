@@ -146,6 +146,13 @@ const AdminSummary = () => {
 			/>
 			<h2>Adult Summary</h2>
 
+			{/* <div className={classes.TableMarkerDiv}>
+						<h4 className={classes.TableHeadText}>User Summary </h4>
+						<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
+							{' '}
+							Count: {data2?.adults.length}
+						</h4>
+					</div> */}
 <Table  hover responsive className={classes.Table}>
 <thead>
 <tr>
