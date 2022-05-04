@@ -27,15 +27,10 @@ function Footer() {
         </div>
 
         <div className={style.news}>
-          <p>For updates on the STEAM Fun Fest event suscribe to <span><a href="https://t.me/+B3jIp1KP4qE0MDk8">here</a> </span> </p>
-
-          
-          {/* <form action="" className={style.form}>
-            <input type="email" placeholder="Email Address" />
-            <input type="submit" value="Ok" />
-          </form> */}
+          <a href="https://t.me/+B3jIp1KP4qE0MDk8" className={style.subscribe}>
+            <h3>Subscribe to our newsletter</h3>
+          </a>
         </div>
-
 
         <div className={style.address}>
           <p>41, Ladipo Labinjo Street Off</p>
@@ -43,7 +38,6 @@ function Footer() {
           <p>Surulere, Lagos</p>
           <p>+44 345 678 903</p>
         </div>
-
       </div>
     </div>
   );

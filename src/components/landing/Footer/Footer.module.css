@@ -39,6 +39,9 @@
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
+.subscribe:hover {
+  color: var(--wine);
+}
 
 @media screen and (max-width: 1400px) {
   .footer {
