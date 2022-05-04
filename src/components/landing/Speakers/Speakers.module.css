@@ -24,6 +24,7 @@
 }
 .speakers .card {
   margin-right: 30px;
+  margin-bottom: 30px;
   padding: 50px 50px 120px;
   cursor: pointer;
   position: relative;
