@@ -13,3 +13,9 @@ p {
   font-family: "Suez One", serif;
   font-weight: 400;
 }
+.home__Accordion {
+  background-image: url("../images/assets/bg4.png");
+  background-size: cover;
+  padding: 100px 40px 150px;
+  margin-top: -40px;
+}
