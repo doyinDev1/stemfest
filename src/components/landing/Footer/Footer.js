@@ -12,7 +12,7 @@ function Footer() {
             <li>
               <a href="/about">About Us</a>
               <a href="/reason"> Why Us</a>
-              <a href="#contact">Contact</a>
+              {/* <a href="#contact">Contact</a> */}
             </li>
           </ul>
         </div>
@@ -36,7 +36,7 @@ function Footer() {
           <p>41, Ladipo Labinjo Street Off</p>
           <p>Bode Thomas Street</p>
           <p>Surulere, Lagos</p>
-          <p>+44 345 678 903</p>
+          <p>08034021007</p>
         </div>
       </div>
     </div>

@@ -13,79 +13,62 @@ import { Spinner, Table } from 'react-bootstrap';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
-const AdminSummary = () => {
+const ErrorLogs = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
-	const [loading2, setLoading2] = useState(false);
 
-	const [data2, setData2] = useState({});
 
 
 	useEffect(() => {
 		// get User info 
 		const UserInfo = JSON.parse(sessionStorage.getItem("sfAdmin"));
-	// get token from User info here
+		// get token from User info here
 		const token = UserInfo.data.token;
 		// config here for axios authorization
 		// console.log(token)
 		const config = {
-		  headers: {
-			Authorization: `Bearer ${token}`,
-		  },
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
 		};
 		setLoading(true);
-		setLoading2(true);
 
 		axios
-		  .get(`${Config.url.API_URL}/admin/summary`, config)
-		  .then((res) => {
-			if (res.data?.error?.length) throw new Error(res.data.error[0]);
-	
-			setData(res.data);
-			setLoading(false);
-			// console.log(res.data, "data")
-		  })
-		  .catch((err) => {
-			const errMsg = err?.message || "Failed to Load !";
-			toast.error(errMsg);
-		  });
+			.get(`${Config.url.API_URL}/admin/login-log`, config)
+			.then((res) => {
+				if (res.data?.error?.length) throw new Error(res.data.error[0]);
 
-		  axios
-		  .get(`${Config.url.API_URL}/admin/users-data`, config)
-		  .then((res) => {
-			if (res.data?.error?.length) throw new Error(res.data.error[0]);
-	
-			setData2(res.data);
-			setLoading2(false);
-			console.log(res.data, "data2")
-		  })
-		  .catch((err) => {
-			  console.log(err, 'err')
-			const errMsg = err?.message || "Failed to Load2 !";
-			toast.error(errMsg);
-		  });
+				setData(res.data);
+				setLoading(false);
+				// console.log(res.data, "data")
+			})
+			.catch((err) => {
+				const errMsg = err?.message || "Failed to Load !";
+				toast.error(errMsg);
+			});
 
-	  }, []);
-	
+
+
+	}, []);
+
 
 
 
 
 	const header = [
 		'email',
-		'name',
-		'number_of_children',
-		'phone',
+		'password',
+		'status',
 		
+
 	];
 	const tProperties = [
 		'email',
-		'name',
-		'number_of_children',
-		'phone',
+		'password',
+		'status',
 	];
-// TODAYYY
+	// TODAYYY
 
 	// const adminInfo =
 	// 	typeof sessionStorage !== undefined
@@ -138,47 +121,35 @@ const AdminSummary = () => {
 
 	return (
 		<section className={classes.SummarySection}>
-			<h2>Registration Summary</h2>
-			<SummaryHeader
-				data={data}
-				error={''}
-				status={loading}
-			/>
-			<h2>Adult Summary</h2>
+			
+			<h2>Error Logs</h2>
 
-			{/* <div className={classes.TableMarkerDiv}>
-						<h4 className={classes.TableHeadText}>User Summary </h4>
-						<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
-							{' '}
-							Count: {data2?.adults.length}
-						</h4>
-					</div> */}
-<Table  hover responsive className={classes.Table}>
-<thead>
-<tr>
-									{header.map((n) => (
-										<th key={n}> {n.split('_').join(' ')} </th>
-									))}
-								</tr>
-								</thead>
-								<tbody>
-								{data2?.adults?.map((user) => (
-										 <tr key={user.name}>
-											{header.map((key) => (
-												<td key={user[key]}>{user[key]}</td>
-											))}
-										</tr> 
-									))}
-								 {loading2 === true && <Spinner size="sm" animation="border" />} 
+			<Table hover responsive className={classes.Table}>
+				<thead>
+					<tr>
+						{header.map((n) => (
+							<th key={n}> {n.split('_').join(' ')} </th>
+						))}
+					</tr>
+				</thead>
+				<tbody>
+					{data?.log?.map((user) => (
+						<tr key={user.email}>
+							{header.map((key) => (
+								<td key={user[key]}>{user[key]}</td>
+							))}
+						</tr>
+					))}
+					{loading === true && <Spinner size="sm" animation="border" />}
 
-    
-</tbody>
 
-</Table>
+				</tbody>
+
+			</Table>
 
 			{/* {console.log(data2?.adults[0].email, "data2")} */}
 			{/* <h1>{data2?.adults[1].email}</h1> */}
-{/* 			
+			{/* 			
 			 <div className={classes.AdminCourseSummary}>
 				
 				<div className={classes.CourseSummaryContent}>
@@ -195,13 +166,13 @@ const AdminSummary = () => {
 					 <div className={classes.TableWrapper}>
 						<div className={classes.TableExtras}>
 							<div className={classes.TableInputs}> */}
-								{/* <input
+			{/* <input
 									type="search"
 									placeholder="Search"
 									 onChange={(e) => setSearchTerm(e.target.value)}
 								/> */}
-								{/* {loading2 === true && <Spinner size="sm" animation="border" />} */}
-								{/* <button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
+			{/* {loading2 === true && <Spinner size="sm" animation="border" />} */}
+			{/* <button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
 									Export to CSV
 								</button>
 							</div>
@@ -225,12 +196,12 @@ const AdminSummary = () => {
 											))}
 										</tr>
 									))} */}
-								{/* {loading2 === true && <Loader />} */}
-								{/* {loading2 === true && } */}
-								
-							{/* </tbody> */}
-						{/* </Table> */}
-						 {/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
+			{/* {loading2 === true && <Loader />} */}
+			{/* {loading2 === true && } */}
+
+			{/* </tbody> */}
+			{/* </Table> */}
+			{/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
 							<PaginationButtons
 								setPage={setPage}
 								lastPage={userSummaryData?.lastPage}
@@ -238,8 +209,8 @@ const AdminSummary = () => {
 							/>
 						)}  */}
 
-						{/* Paginated Table div */}
-						{/* <PaginatedTable
+			{/* Paginated Table div */}
+			{/* <PaginatedTable
 							usersData={userSummary.data}
 							check={userSummary.data !== null}
 							header={header}
@@ -247,12 +218,12 @@ const AdminSummary = () => {
 							dataLimit={10}
 							pageLimit={5}
 						/> */}
-				
+
 			{/* </div>
 			</div> 
 			</div>  */}
-	</section>
+		</section>
 	);
 };
 
-export default AdminSummary;
+export default ErrorLogs;
