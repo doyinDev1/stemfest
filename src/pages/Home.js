@@ -26,7 +26,7 @@ const Home = () => {
         <About
           title="A day of fun and learning for the kids"
           about="
-        STEAM learning is fun! This event promises to give them a chanceto explore, discover and learn"
+        STEAM learning is fun! This event promises to give them a chance to explore, discover and learn"
         />
         <Steam
           title="With STEAM the possibilities are endless "

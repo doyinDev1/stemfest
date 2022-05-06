@@ -15,8 +15,8 @@ import AdminSummary from '../components/AdminSummary/AdminSummary'
 import QRCode from '../components/QRCode/QRCode'
 import QRPage from '../components/QRPage/QRPage';
 import ChildrenInfo from '../components/ChildrenInfo/ChildrenInfo'
-
-
+import ReportIcon from '@mui/icons-material/Report';
+import ErrorLogs from '../components/ErrorLogs/ErrorLogs';
 const AdminDashboard = () => {
 	const [isOpen, setIsOpen] = useState(true);
 
@@ -50,6 +50,12 @@ const AdminDashboard = () => {
 			icon: <QrCodeIcon />,
 			title: 'Event Attendance',
 			page: <QRPage />,
+		},
+		{
+			id: 2,
+			icon: < ReportIcon />,
+			title: 'Error Logs',
+			page: <ErrorLogs />,
 		},
 	
 	];
