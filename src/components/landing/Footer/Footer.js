@@ -19,9 +19,11 @@ function Footer() {
         <div className={style.links}>
           <ul>
             <li>
+              <a href="https://wa.me/+2349033854783"> WhatsApp</a>
               <a href="https://facebook.com/9ijakids">Facebook</a>
               <a href="https://twitter.com/9ijakids">Twitter</a>
               <a href="https://instagram.com/9ijakids"> Instagram</a>
+
             </li>
           </ul>
         </div>
