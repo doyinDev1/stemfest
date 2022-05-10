@@ -9,13 +9,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Config } from "../Config/Config";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
 import SpinnerCustom from "../components/SpinnerCustom/SpinnerCustom";
 import DownloadStemfest from '../components/DownloadStemfest/DownloadStemfest'
 // import DownloadStemfest from '../components/DownloadStemfest/DownloadStemfest'
-import Navbar from '../components/landing/Navbar/Navbar'
 const AdultDashboard = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({});
+  const router = useNavigate();
+
   useEffect(() => {
     
 
@@ -42,7 +45,9 @@ const AdultDashboard = () => {
       })
       .catch((err) => {
         const errMsg = err?.message || "Failed to Register!";
-        toast.error(errMsg);
+        toast.error('Kindly Sign In');
+        router("/login");
+
       });
   }, []);
 
@@ -89,6 +94,7 @@ Please, check your spam/ promotions email if you do not see the email in your in
                           QR code before coming to the event as this 
                           would serve as your access into the event.Also, don't forget to put on your nose mask to gain access into the event.
                           </p>
+                          <h5>Your Unique ID: {data?.adultDetails?.unique_id}</h5>
                           {/* <Button
                             variant="primary"
                             style={{
@@ -102,6 +108,7 @@ Please, check your spam/ promotions email if you do not see the email in your in
                           status={true}
                           name={data?.adultDetails?.name}
                           qr_code={data?.adultDetails?.qr_code}
+                          unique_id={data?.adultDetails?.unique_id}
 
                           />
                         </div>
@@ -136,6 +143,7 @@ Please, check your spam/ promotions email if you do not see the email in your in
                                     name={child.name}
                                     age={child.age_range}
                                     qr_code={child.qr_code}
+                                    unique_id={child.unique_id}
                                   />
                                 </>
                               );
