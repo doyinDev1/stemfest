@@ -6,14 +6,13 @@ import { useState } from 'react';
 import classes from './DownloadStemfest.module.css';
 import PDFStemfest from '../PDFStemfest/PDFStemfest';
 
-const DownloadStemfest = ({ status, name , qr_code }) => {
+const DownloadStemfest = ({ status, name , qr_code, unique_id }) => {
 	const [downloading, setDownloading] = useState(false);
-	const imgSrc = `https://api.qrserver.com/v1/create-qr-code/?data=test&size=200x200`
-console.log(imgSrc)
+	
 
 	const generatePDFDoc = async () => {
 		setDownloading(true);
-		const blob = await pdf(<PDFStemfest name={name}  imgSrc={imgSrc} qr_code={qr_code} />).toBlob();
+		const blob = await pdf(<PDFStemfest name={name}  qr_code={qr_code} unique_id={unique_id} />).toBlob();
 		saveAs(blob, `${name} Stemfest Badge.pdf`); 
 		setDownloading(false);
 	};
