@@ -19,7 +19,10 @@ function Accordion({ summary, detail }) {
         >
           {summary}
         </AccordionSummary>
-        <AccordionDetails className={style.details}>{detail}</AccordionDetails>
+        <AccordionDetails
+          className={style.details}
+          dangerouslySetInnerHTML={{ __html: detail }}
+        ></AccordionDetails>
       </Accord>
     </div>
   );
