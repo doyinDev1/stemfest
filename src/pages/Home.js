@@ -30,11 +30,13 @@ const Home = () => {
         <About
           title="A day of fun and learning for the kids"
           about="
-        STEAM learning is fun! This event promises to give them a chance to explore, discover and learn"
+          STEAM learning is fun! This event promises to give children between 6- 13 years, a chance to explore, discover and learn about STEAM
+          "
         />
         <Steam
           title="With STEAM the possibilities are endless "
-          about="STEAM has been proven to help develop life long skills such as critical thinking, problem solving."
+          about="STEAM is an interdisciplinary approach to learning that integrates Science, Technology, Engineering, Arts and and Mathematics as access points for guiding student inquiry, dialogue, and critical thinking. The end results are students who take thoughtful risks, engage in experiential learning and persist in problem-solving. 
+          "
         />
         <Speakers
           title="Our <span class='text-yellow'> Courses</span>"
