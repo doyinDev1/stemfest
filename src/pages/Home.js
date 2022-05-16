@@ -35,7 +35,7 @@ const Home = () => {
         />
         <Steam
           title="With STEAM the possibilities are endless "
-          about="STEAM is an interdisciplinary approach to learning that integrates Science, Technology, Engineering, Arts and and Mathematics as access points for guiding student inquiry, dialogue, and critical thinking. The end results are students who take thoughtful risks, engage in experiential learning and persist in problem-solving. 
+          about="STEAM is an interdisciplinary approach to learning that integrates Science, Technology, Engineering, Arts and and Mathematics as access points for guiding student inquiry, dialogue, and critical thinking. 
           "
         />
         <Speakers

@@ -16,7 +16,10 @@ import ReactPixel from 'react-facebook-pixel';
 
 function App() {
   // Google Analytics goes here
+  
   ReactGA.initialize('UA-104094700-1');
+  // test  ReactGA.initialize('UA-191374128-1');
+
   ReactGA.pageview(window.location.pathname + window.location.search);
 
   // Pixel implementation 
