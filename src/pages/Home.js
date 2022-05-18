@@ -11,9 +11,12 @@ import Navbar from "../components/landing/Navbar/Navbar";
 import Sponsor from "../components/landing/Sponsor/Sponsor";
 import Partner from "../components/landing/Partner/Partner";
 import Accordion from "../components/landing/Accordion/Accordion";
+import Venue from "../components/landing/Venue/Venue";
 
 import homeImg from "../images/assets/Supergirls.png";
 import awsImg from "../images/assets/amazon.png";
+import AboutPage from "../components/about/About";
+import Reason from "../components/reason/Reason";
 
 import { faq as faqData } from "../data/faq";
 
@@ -27,6 +30,9 @@ const Home = () => {
           about="
        It's never too early to introduce your kids to STEAM. This can help pique their curiosity about these areas as they grow older"
         />
+        <div className="home__About">
+          <AboutPage />
+        </div>
         <About
           title="A day of fun and learning for the kids"
           about="
@@ -38,6 +44,8 @@ const Home = () => {
           about="STEAM is an interdisciplinary approach to learning that integrates Science, Technology, Engineering, Arts and and Mathematics as access points for guiding student inquiry, dialogue, and critical thinking.
           "
         />
+        <Reason />
+
         <Speakers
           title="Our <span class='text-yellow'> Courses</span>"
           header="Playing is learning"

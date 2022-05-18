@@ -6,17 +6,32 @@
   padding: 150px 50px;
   color: #415aa6;
 }
+
+.title {
+  text-align: center;
+}
+.summary {
+  width: 80%;
+  max-width: 1300px;
+  margin: 20px auto;
+}
 .flex {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   padding: 0px 5vw;
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .content {
   flex: 0.5;
 }
+.details {
+  text-align: center;
+}
 .image {
-  flex: 0.5;
+  margin-right: 10px;
 }
 .flex h2 {
   font-size: 5rem;

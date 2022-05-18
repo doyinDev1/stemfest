@@ -1,0 +1,40 @@
+.venue {
+  padding: 30px;
+  min-height: 700px;
+  /* background-color: aqua; */
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  color: red;
+}
+.date {
+  margin-right: 30px;
+  font-size: 3rem;
+}
+.icon {
+  width: 117px;
+  height: 117px;
+}
+.day {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.day_text {
+  font-size: 12px;
+  max-width: 200px;
+}
+.venue_image {
+  max-width: 815px;
+}
+.others {
+  justify-content: space-evenly;
+}
+.extra {
+  text-align: center;
+  font-size: 3rem;
+  margin: 10px 20px;
+}
