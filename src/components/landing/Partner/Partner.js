@@ -3,6 +3,7 @@ import style from "./Partner.module.css";
 import naijaIcon from "../../../images/assets/9ijakids.png";
 import edufunIcon from "../../../images/assets/edufun.png";
 import stemIcon from "../../../images/assets/stem.png";
+import sabiIcon from "../../../images/assets/sabiteach.png";
 function Partner() {
   return (
     <div className={style.partner}>
@@ -11,6 +12,7 @@ function Partner() {
         <img src={naijaIcon} alt="" />
         <img src={edufunIcon} alt="" />
         <img src={stemIcon} alt="" />
+        <img src={sabiIcon} alt="" />
       </div>
     </div>
   );
