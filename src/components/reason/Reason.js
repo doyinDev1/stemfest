@@ -17,7 +17,7 @@ function Reason() {
       <div className={style.flex}>
         <div className={style.details}>
           <div>
-            <h4>STEAM EXHIBITION</h4>
+            <h4 className={style.header}>STEAM EXHIBITION</h4>
             <p>
               Over 60 vendors providing interactive experiences in STEAM
               including science experience, robotics, AR/VR, IoT, 3D printing,
@@ -25,7 +25,7 @@ function Reason() {
             </p>
           </div>
           <div>
-            <h4>STEAM LAB</h4>
+            <h4 className={style.header}>STEAM LAB</h4>
             <p>
               This section involves a one-hour class where children have
               hands-on experience learning coding, robotics, design with Canva,
@@ -39,7 +39,7 @@ function Reason() {
         </div>
         <div className={style.details}>
           <div>
-            <h4>STEAM Masterclass</h4>
+            <h4 className={style.header}>SSTEAM Masterclass</h4>
             <p>
               Parents and their children will have an opportunity to attend
               specially designed seminars/master classes covering STEAM careers,
@@ -48,7 +48,7 @@ function Reason() {
           </div>
           <p></p>
           <div>
-            <h4>FUN ZONE</h4>
+            <h4 className={style.header}>FUN ZONE</h4>
             <p>
               Children can play and win in the fun zone which will include
               digital games, games arcade, and lots more

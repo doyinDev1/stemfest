@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import About from "../components/landing/About/About";
 import Contact from "../components/landing/Contact/Contact";
 import Footer from "../components/landing/Footer/Footer";
+import Faq from "../components/landing/Faq/Faq";
 import Header from "../components/landing/Header/Header";
 import Steam from "../components/landing/Steam/Steam";
 import Speakers from "../components/landing/Speakers/Speakers";
@@ -53,14 +54,15 @@ const Home = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, commodi alias adipisci dolores incidunt vel aut qui ab ipsa vitae ut delectus dolor obcaecati atque?"
         />
         <Schedule />
+        <Faq data={faqData} />
         {/* <Sponsor /> */}
         {/* <Contact /> */}
         <Partner />
-        <div className="home__Accordion">
+        {/* <div className="home__Accordion">
           {faqData.map(({ summary, detail }, index) => (
             <Accordion detail={detail} summary={summary} />
           ))}
-        </div>
+        </div> */}
 
         <Footer />
       </div>

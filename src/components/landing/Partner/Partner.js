@@ -7,12 +7,32 @@ import sabiIcon from "../../../images/assets/sabiteach.png";
 function Partner() {
   return (
     <div className={style.partner}>
-      <h2>Our Partners</h2>
-      <div className={style.cards}>
-        <img src={naijaIcon} alt="" />
-        <img src={edufunIcon} alt="" />
-        <img src={stemIcon} alt="" />
-        <img src={sabiIcon} alt="" />
+      <div className="cards">
+        <h2>Our Partners</h2>
+        <div className={style.cards}>
+          <img src={naijaIcon} alt="" />
+          <img src={edufunIcon} alt="" />
+          <img src={stemIcon} alt="" />
+          <img src={sabiIcon} alt="" />
+        </div>
+      </div>
+      <div className="cards">
+        <h2>Our Partners</h2>
+        <div className={style.cards}>
+          <img src={naijaIcon} alt="" />
+          <img src={edufunIcon} alt="" />
+          <img src={stemIcon} alt="" />
+          <img src={sabiIcon} alt="" />
+        </div>
+      </div>
+      <div className="cards">
+        <h2>Our Partners</h2>
+        <div className={style.cards}>
+          <img src={naijaIcon} alt="" />
+          <img src={edufunIcon} alt="" />
+          <img src={stemIcon} alt="" />
+          <img src={sabiIcon} alt="" />
+        </div>
       </div>
     </div>
   );

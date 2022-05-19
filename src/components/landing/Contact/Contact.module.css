@@ -1,9 +1,9 @@
 .contact {
   background: url("../../../images/assets/bg7.png") no-repeat;
-  min-height: 762px;
-  min-width: 100vw;
   background-size: 100% 100% !important;
   background-position: center !important;
+  min-height: 762px;
+  min-width: 100vw;
   padding: 120px 10vw;
   margin-top: -100px;
   position: relative;

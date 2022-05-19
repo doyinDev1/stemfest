@@ -9,6 +9,7 @@
 
 .title {
   text-align: center;
+  color: var(--deep-blue);
 }
 .summary {
   width: 80%;
@@ -16,7 +17,6 @@
   margin: 20px auto;
 }
 .flex {
-  display: flex;
   flex-direction: row-reverse;
   align-items: center;
   padding: 0px 5vw;
@@ -77,5 +77,10 @@
   }
   .flex img {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .flex {
+    grid-template-columns: 1fr;
   }
 }

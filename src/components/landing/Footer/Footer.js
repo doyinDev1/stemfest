@@ -23,7 +23,6 @@ function Footer() {
               <a href="https://facebook.com/9ijakids">Facebook</a>
               <a href="https://twitter.com/9ijakids">Twitter</a>
               <a href="https://instagram.com/9ijakids"> Instagram</a>
-
             </li>
           </ul>
         </div>
@@ -39,6 +38,9 @@ function Footer() {
           <p>Bode Thomas Street</p>
           <p>Surulere, Lagos</p>
           <p>08034021007</p>
+          <br />
+          <p>Website designed by Waaki Creative</p>
+          <p> +234 802 893 6065</p>
         </div>
       </div>
     </div>
