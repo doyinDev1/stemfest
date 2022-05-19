@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Schedule.module.css";
+import { scheduleLeft, scheduleRight } from "../../../data/schedule.js";
 function Schedule() {
   return (
     <div className={style.schedule}>
@@ -9,60 +10,22 @@ function Schedule() {
       <div className={style.flex}>
         <div className={style.left}>
           <ul>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
+            {scheduleLeft.map(({ time, event }, index) => (
+              <li>
+                <p className={style.time}>{time}</p>
+                <p className={style.event}>{event}</p>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={style.right}>
           <ul>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
-            <li>
-              {" "}
-              <p className={style.time}>11am</p>
-              <p>Event Starts</p>
-            </li>
+            {scheduleRight.map(({ time, event }, index) => (
+              <li>
+                <p className={style.time}>{time}</p>
+                <p className={style.event}>{event}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -49,6 +49,11 @@
   background-color: var(--green);
   color: var(--deep-blue);
   border-radius: 20px;
+  width: 139px;
+  text-align: center;
+}
+.event {
+  max-width: 420px;
 }
 
 @media screen and (max-width: 1400px) {

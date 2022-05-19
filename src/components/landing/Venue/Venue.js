@@ -7,7 +7,7 @@ import locationIcon from "../../../images/assets/location.png";
 function Venue() {
   return (
     <div className={style.venue}>
-      <div className={style.flex}>
+      <div className={style.dateImage}>
         <div className={style.date}>
           <div className={style.day}>
             <img src={dayIcon} alt="calendar" className={style.icon} />
@@ -19,9 +19,12 @@ function Venue() {
           </div>
           <div className={style.day}>
             <img src={locationIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>
-              Location Landmark Center, Victoria Island, Lagos
-            </p>
+            <div className={style.day_text}>
+              <p>Location</p>
+              <p className={style.location}>
+                Landmark Center, Victoria Island, Lagos
+              </p>
+            </div>
           </div>
         </div>
         <div className={style.venue_image}>

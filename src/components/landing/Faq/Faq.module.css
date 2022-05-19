@@ -4,11 +4,11 @@
   background: url("../../../images/assets/contact-bg.png") no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;
-  height: 1000px;
+  min-height: 1000px;
   color: var(--deep-blue);
-  margin-top: -180px;
+  margin-top: -170px;
   z-index: 9;
-  padding-top: 150px;
+  padding-top: 160px;
   position: relative;
 }
 .title {
@@ -40,7 +40,6 @@
     background-position: center !important;
     min-height: 1062px;
     height: auto;
-    border: 2px solid seagreen;
     margin-top: -288px;
     padding-top: 239px;
     padding-bottom: 178px;

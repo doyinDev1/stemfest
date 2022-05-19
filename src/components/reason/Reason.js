@@ -14,11 +14,11 @@ function Reason() {
         Intelligence and the Internet of Things comprising four(4) key area:
       </p>
 
-      <div className={style.flex}>
+      <div className={style.body}>
         <div className={style.details}>
           <div>
             <h4 className={style.header}>STEAM EXHIBITION</h4>
-            <p>
+            <p className={style.words}>
               Over 60 vendors providing interactive experiences in STEAM
               including science experience, robotics, AR/VR, IoT, 3D printing,
               Esports, and creative arts
@@ -26,7 +26,7 @@ function Reason() {
           </div>
           <div>
             <h4 className={style.header}>STEAM LAB</h4>
-            <p>
+            <p className={style.words}>
               This section involves a one-hour class where children have
               hands-on experience learning coding, robotics, design with Canva,
               animation, science experiments, etc
@@ -40,16 +40,16 @@ function Reason() {
         <div className={style.details}>
           <div>
             <h4 className={style.header}>SSTEAM Masterclass</h4>
-            <p>
+            <p className={style.words}>
               Parents and their children will have an opportunity to attend
               specially designed seminars/master classes covering STEAM careers,
               education and technology trends.
             </p>
           </div>
-          <p></p>
+
           <div>
             <h4 className={style.header}>FUN ZONE</h4>
-            <p>
+            <p className={style.words}>
               Children can play and win in the fun zone which will include
               digital games, games arcade, and lots more
             </p>

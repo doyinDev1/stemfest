@@ -44,13 +44,15 @@ export const faq = [
     </ul>
     `,
   },
-  {
-    summary: `How can I attend the event as an individual?`,
-    detail: `To be a part of this event as an individual, you have to register for the event here <a href="/register">STEAMFEST (9ijakids.com)</a>`,
-  },
+
   {
     summary: `How can I attend the event as a school?`,
     detail: `To be a part of this event as a school, you have to register for the event here <a href="/register">STEAMFEST (9ijakids.com)</a>`,
+  },
+
+  {
+    summary: `How can I become involved as a Sponsor`,
+    detail: `To become a Sponsor for STEAMFest 2022, please contact the events team on <a href="mailto:steamfest@9ijakids.com"> steamfest@9ijakids.com. </a>`,
   },
   {
     summary: `	How can I participate as an Exhibitor or Vendor?`,
@@ -61,8 +63,8 @@ export const faq = [
     detail: `To become a volunteer for STEAMFest 2022, please contact the events team on <a href="mailto:steamfest@9ijakids.com"> steamfest@9ijakids.com. </a>`,
   },
   {
-    summary: `How can I become involved as a Sponsor`,
-    detail: `To become a Sponsor for STEAMFest 2022, please contact the events team on <a href="mailto:steamfest@9ijakids.com"> steamfest@9ijakids.com. </a>`,
+    summary: `How can I attend the event as an individual?`,
+    detail: `To be a part of this event as an individual, you have to register for the event here <a href="/register">STEAMFEST (9ijakids.com)</a>`,
   },
   {
     summary: `	How can I learn more about STEAMFest 2022?`,

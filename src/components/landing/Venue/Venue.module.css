@@ -3,12 +3,17 @@
   min-height: 700px;
   /* background-color: aqua; */
 }
-.flex {
+
+.flex,
+.dateImage {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
-  color: red;
+  color: var(--pink);
+}
+.dateImage {
+  justify-content: space-evenly;
 }
 .date {
   margin-right: 30px;
@@ -21,15 +26,19 @@
 .day {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 .day_text {
-  font-size: 12px;
+  font-size: 1.2rem;
   max-width: 200px;
 }
 .venue_image {
-  max-width: 815px;
+  max-width: 515px;
 }
+.venue_image img {
+  max-width: 100%;
+}
+
 .others {
   justify-content: space-evenly;
 }

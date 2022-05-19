@@ -4,34 +4,44 @@ import naijaIcon from "../../../images/assets/9ijakids.png";
 import edufunIcon from "../../../images/assets/edufun.png";
 import stemIcon from "../../../images/assets/stem.png";
 import sabiIcon from "../../../images/assets/sabiteach.png";
+import { partner, sponsor, media } from "../../../data/partner.js";
 function Partner() {
   return (
     <div className={style.partner}>
-      <div className="cards">
+      <div className={style.partnerCard}>
         <h2>Our Partners</h2>
         <div className={style.cards}>
-          <img src={naijaIcon} alt="" />
-          <img src={edufunIcon} alt="" />
-          <img src={stemIcon} alt="" />
-          <img src={sabiIcon} alt="" />
+          {partner.map((partner, index) => {
+            return (
+              <div className={style.card} key={index}>
+                <img src={partner} alt="partner" />
+              </div>
+            );
+          })}
         </div>
       </div>
-      <div className="cards">
-        <h2>Our Partners</h2>
+      <div className={style.partnerCard}>
+        <h2>Sponsor</h2>
         <div className={style.cards}>
-          <img src={naijaIcon} alt="" />
-          <img src={edufunIcon} alt="" />
-          <img src={stemIcon} alt="" />
-          <img src={sabiIcon} alt="" />
+          {sponsor.map((sponsor, index) => {
+            return (
+              <div className={style.card} key={index}>
+                <img src={sponsor} alt="partner" />
+              </div>
+            );
+          })}
         </div>
       </div>
-      <div className="cards">
-        <h2>Our Partners</h2>
+      <div className={style.partnerCard}>
+        <h2>Media</h2>
         <div className={style.cards}>
-          <img src={naijaIcon} alt="" />
-          <img src={edufunIcon} alt="" />
-          <img src={stemIcon} alt="" />
-          <img src={sabiIcon} alt="" />
+          {media.map((media, index) => {
+            return (
+              <div className={style.card} key={index}>
+                <img src={media} alt="partner" />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
