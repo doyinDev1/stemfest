@@ -3,7 +3,7 @@ import style from "./About.module.css";
 import aboutImg from "../../images/assets/about-img.png";
 function About() {
   return (
-    <div className={style.about}>
+    <div className={style.about} id="about-page">
       <div className={style.flex}>
         <img src={aboutImg} alt="" />
         <div className={style.content}>

@@ -1,34 +1,62 @@
 import React from "react";
 import style from "./Reason.module.css";
 import artistImg from "../../images/assets/artist.png";
+import Venue from "../landing/Venue/Venue";
 function Reason() {
   return (
-    <div className={style.about}>
-      <div className={style.flex}>
+    <div className={style.about} id="reason">
+      <h2 className={style.title}> Why Attend</h2>
+      <p className={style.summary}>
+        This year, the STEAM Fun Fest is going physical, scheduled for Saturday
+        23rd July 2022 at Landmark Center, Victoria Island, Lagos. Our theme,
+        “STEAM From Classroom to the Real World”, will be exploring various
+        aspects of STEAM including Robotics, Augmented Reality, Artificial
+        Intelligence and the Internet of Things comprising four(4) key area:
+      </p>
+
+      <div className={style.body}>
+        <div className={style.details}>
+          <div>
+            <h4 className={style.header}>STEAM EXHIBITION</h4>
+            <p className={style.words}>
+              Over 60 vendors providing interactive experiences in STEAM
+              including science experience, robotics, AR/VR, IoT, 3D printing,
+              Esports, and creative arts
+            </p>
+          </div>
+          <div>
+            <h4 className={style.header}>STEAM LAB</h4>
+            <p className={style.words}>
+              This section involves a one-hour class where children have
+              hands-on experience learning coding, robotics, design with Canva,
+              animation, science experiments, etc
+            </p>
+          </div>
+        </div>
+
         <div className={style.image}>
           <img src={artistImg} alt="" />
         </div>
-        <div className={style.content}>
-          <h2> Why Attend</h2>
-          <p>
-            The STEAM Fun Fest is an opportunity for children to explore
-            Science, Technology, Engineering, Arts and Math (STEAM) with the
-            hope of inspiring future generations in Nigeria.{" "}
-          </p>
-          <p>
-            In 2021, 9ijakids collaborating with STEAM METS and Edufun Technik
-            Hub launched the first edition- A virtual STEAM Festival for
-            children between the ages of 7 and 13.{" "}
-          </p>
-          <p>
-            Following on from last year’s successful programme, this second
-            edition, aims to spark children’s love for STEAM and also enlighten
-            parents of opportunities in STEAM. The two day event programme will
-            feature seasoned speakers, career talks, workshops, fun activities,
-            games and interactive science learning opportunities.
-          </p>
+        <div className={style.details}>
+          <div>
+            <h4 className={style.header}>SSTEAM Masterclass</h4>
+            <p className={style.words}>
+              Parents and their children will have an opportunity to attend
+              specially designed seminars/master classes covering STEAM careers,
+              education and technology trends.
+            </p>
+          </div>
+
+          <div>
+            <h4 className={style.header}>FUN ZONE</h4>
+            <p className={style.words}>
+              Children can play and win in the fun zone which will include
+              digital games, games arcade, and lots more
+            </p>
+          </div>
         </div>
       </div>
+      <Venue />
     </div>
   );
 }

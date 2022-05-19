@@ -1,14 +1,17 @@
 .partner {
   width: 100vw;
-  background: url("../../../images/assets/bg8.png") no-repeat;
+  background: url("../../../images/assets/partners-bg.png") no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;
-  padding: 350px 0px 150px;
+  padding: 100px 0px 150px;
 
-  margin-top: -170px;
   position: relative;
   z-index: 9;
   color: var(--blue);
+}
+.partnerCard {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .partner h2 {
   text-align: center;
@@ -18,25 +21,41 @@
 }
 .cards {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .cards img {
-  margin: 0px 30px;
-  padding-bottom: 30px;
-  width: 261px;
-  height: 291px;
+  width: 225px;
+  height: 225px;
+}
+.card {
+  padding: 30px;
+  background-color: white;
+  border-radius: 25px;
+  margin: 40px;
 }
 
 @media screen and (max-width: 500px) {
   .partner {
     background: url("../../../images/assets/bg8-small.png") no-repeat;
     padding: 100px;
+    margin-top: -300px;
+    padding-top: 336px;
+  }
+  .header {
+    width: max-content;
+  }
+  .cards {
+    flex-wrap: wrap;
   }
   .cards img {
-    padding-bottom: 30px;
-    width: 184px;
-    height: 184px;
+    width: 100%;
+    height: auto;
+  }
+  .card {
+    width: 300px;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 30px;
   }
 }
