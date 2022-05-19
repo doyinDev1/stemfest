@@ -46,6 +46,7 @@
   .about {
     background: url("../../images/assets/about-small.png") no-repeat;
     padding: 50px 5vw;
+    margin-top: 0;
   }
   .flex {
     flex-direction: column-reverse;

@@ -50,30 +50,33 @@
 @media screen and (max-width: 500px) {
   .venue {
     padding: 30px 0px;
+    flex-direction: column-reverse;
   }
   .flex {
     flex-direction: column-reverse;
   }
+  .dateImage {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
   .date {
     margin-right: 0;
     margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    max-width: auto;
+    text-align: left;
   }
   .icon {
     height: 60px;
     width: 60px;
   }
   .day_text {
-    max-width: 100px;
-    text-align: center;
+    max-width: initial;
   }
   .day {
-    flex-direction: column;
   }
   .others {
     flex-direction: row;
+    padding: 0 5vw;
   }
   .extra {
     font-size: 0.8rem;

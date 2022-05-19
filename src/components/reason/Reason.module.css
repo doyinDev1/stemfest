@@ -97,4 +97,18 @@
   .flex {
     grid-template-columns: 1fr;
   }
+  .summary {
+    width: 100%;
+    text-align: center;
+  }
+  .body,
+  .details {
+    flex-wrap: wrap;
+  }
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .words {
+    height: auto;
+  }
 }

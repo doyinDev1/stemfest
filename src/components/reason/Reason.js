@@ -4,7 +4,7 @@ import artistImg from "../../images/assets/artist.png";
 import Venue from "../landing/Venue/Venue";
 function Reason() {
   return (
-    <div className={style.about}>
+    <div className={style.about} id="reason">
       <h2 className={style.title}> Why Attend</h2>
       <p className={style.summary}>
         This year, the STEAM Fun Fest is going physical, scheduled for Saturday

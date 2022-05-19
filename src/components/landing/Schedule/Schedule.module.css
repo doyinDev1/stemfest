@@ -68,6 +68,7 @@
     padding: 127px 0px;
     background-repeat: no-repeat;
     background: url("../../../images/assets/bg5-small.png") no-repeat;
+    text-align: center;
   }
   .schedule h2 {
     font-size: 2rem;

@@ -9,7 +9,7 @@ function Partner() {
   return (
     <div className={style.partner}>
       <div className={style.partnerCard}>
-        <h2>Our Partners</h2>
+        <h2 className={style.header}>Our Partners</h2>
         <div className={style.cards}>
           {partner.map((partner, index) => {
             return (
