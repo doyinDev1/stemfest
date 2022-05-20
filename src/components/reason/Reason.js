@@ -4,6 +4,7 @@ import artistImg from "../../images/assets/artist.png";
 import Venue from "../landing/Venue/Venue";
 function Reason() {
   return (
+    <section id="reason">
     <div className={style.about} id="reason">
       <h2 className={style.title}> Why Attend</h2>
       <p className={style.summary}>
@@ -58,6 +59,7 @@ function Reason() {
       </div>
       <Venue />
     </div>
+    </section>
   );
 }
 
