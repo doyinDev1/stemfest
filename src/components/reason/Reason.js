@@ -39,7 +39,7 @@ function Reason() {
         </div>
         <div className={style.details}>
           <div>
-            <h4 className={style.header}>SSTEAM Masterclass</h4>
+            <h4 className={style.header}>STEAM Masterclass</h4>
             <p className={style.words}>
               Parents and their children will have an opportunity to attend
               specially designed seminars/master classes covering STEAM careers,

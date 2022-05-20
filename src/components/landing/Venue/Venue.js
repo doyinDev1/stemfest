@@ -11,16 +11,15 @@ function Venue() {
         <div className={style.date}>
           <div className={style.day}>
             <img src={dayIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>Date</p>
+            <p className={style.day_text}>Saturday, 23rd July 2022</p>
           </div>
           <div className={style.day}>
             <img src={timeIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>Time</p>
+            <p className={style.day_text}>9 am to 6 pm</p>
           </div>
           <div className={style.day}>
             <img src={locationIcon} alt="calendar" className={style.icon} />
             <div className={style.day_text}>
-              <p>Location</p>
               <p className={style.location}>
                 Landmark Center, Victoria Island, Lagos
               </p>
