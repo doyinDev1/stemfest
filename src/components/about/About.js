@@ -20,12 +20,15 @@ function About() {
           </p>
           <p>
             Following on from last year’s successful programme, this second
-            edition, aims to spark children’s love for STEAM and also enlighten
-            parents of opportunities in STEAM.
+            edition with the theme. “STEAM: From Classroom to the Real World”
+            aims to spark children’s love for STEAM and enlighten parents about
+            opportunities in STEAM. The one-day event programme will feature
+            seasoned speakers, career talks, workshops, fun activities, games,
+            and interactive science learning opportunities.
           </p>
           <p>
-            The two day event programme will feature seasoned speakers, career
-            talks, workshops, fun activities, games and interactive science
+            The one-day event programme will feature seasoned speakers, career
+            talks, workshops, fun activities, games, and interactive science
             learning opportunities.
           </p>
         </div>

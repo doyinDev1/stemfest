@@ -6,47 +6,18 @@ import girl from "../../../images/assets/girl.png";
 import pink from "../../../images/assets/pink-guy.png";
 import thin from "../../../images/assets/thin-girl.png";
 import sil from "../../../images/assets/sil2.png";
+import { speaker } from "../../../data/speaker.js";
 function Speakers() {
   return (
     <div className={style.speakers}>
       <h2>Our Speakers</h2>
       <div className={style.cards}>
-        {/* <div className={style.card}>
-          <img src={avatar1} alt="avatar" />
-          <p> Lorem ipsum</p>
-        </div>
-        <div className={style.card}>
-          <img src={girl} alt="avatar" />
-          <p> Lorem ipsum</p>
-        </div>
-        <div className={style.card}>
-          <img src={pink} alt="avatar" />
-          <p> Lorem ipsum</p>
-        </div>
-        <div className={style.card}>
-          <img src={thin} alt="avatar" />
-          <p> Lorem ipsum</p>
-        </div> */}
-        <div className={style.card}>
-          <img src={sil} alt="avatar" />
-          <p> Speaker 1</p>
-        </div>
-        <div className={style.card}>
-          <img src={sil} alt="avatar" />
-          <p> Speaker 2</p>
-        </div>
-        <div className={style.card}>
-          <img src={sil} alt="avatar" />
-          <p> Speaker 3</p>
-        </div>
-        <div className={style.card}>
-          <img src={sil} alt="avatar" />
-          <p> Speaker 4</p>
-        </div>
-        <div className={style.card}>
-          <img src={sil} alt="avatar" />
-          <p> Speaker 5</p>
-        </div>
+        {speaker.map(({ image, name }, index) => (
+          <div className={style.card}>
+            <img src={image} alt="avatar" />
+            <p> {name}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

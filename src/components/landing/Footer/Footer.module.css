@@ -87,4 +87,7 @@
   .news input[type="submit"] {
     margin-left: 5px;
   }
+  .address {
+    font-size: 13px;
+  }
 }
