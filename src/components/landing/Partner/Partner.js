@@ -34,7 +34,7 @@ function Partner() {
           </div>
         </div>
         <div className={style.partnerCard}>
-          <h2>Our Media Partner</h2>
+          <h2>Our Media Partners</h2>
           <div className={style.cards}>
             {media.map(({ image, link }, index) => {
               return (
