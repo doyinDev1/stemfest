@@ -16,10 +16,15 @@ function Venue() {
           <div className={style.day}>
             <img src={timeIcon} alt="calendar" className={style.icon} />
             <p className={style.day_text}>9 am to 6 pm</p>
+
+
+          </div>
+
           </div>
           <div className={style.day}>
             <img src={locationIcon} alt="calendar" className={style.icon} />
             <div className={style.day_text}>
+
               <p className={style.location}>
                 Landmark Center, Victoria Island, Lagos
               </p>

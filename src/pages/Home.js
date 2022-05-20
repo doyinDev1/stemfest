@@ -31,9 +31,12 @@ const Home = () => {
           about="
        It's never too early to introduce your kids to STEAM. This can help pique their curiosity about these areas as they grow older"
         />
+            <section id="about">
+
         <div className="home__About">
           <AboutPage />
         </div>
+        </section>
         <About
           title="A day of fun and learning for the kids"
           about="
