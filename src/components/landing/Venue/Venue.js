@@ -12,7 +12,7 @@ function Venue() {
           <div className={style.day}>
             <img src={dayIcon} alt="calendar" className={style.icon} />
             <p className={style.day_text}>Date : </p>
-            <p className={style.day_text}> July 30th</p>
+            <p className={style.day_text}> July 23rd</p>
 
           </div>
           <div className={style.day}>

@@ -6,7 +6,7 @@ function Schedule() {
     <div className={style.schedule}>
       <h2 className={style.header}> FunFest Schedule</h2>
 
-      <h3 className={style.date}>SATURDAY, 30TH JULY</h3>
+      <h3 className={style.date}>SATURDAY, 23RD JULY</h3>
       <div className={style.flex}>
         <div className={style.left}>
           <ul>
