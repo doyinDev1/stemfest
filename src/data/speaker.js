@@ -1,6 +1,6 @@
 import speaker1 from "../images/speakers/Emmanuel-Oyelakin.jpg";
 import speaker2 from "../images/speakers/Eniola-Edun.jpg";
-import speaker3 from "../images/speakers/Hugo-Obi.jpg";
+import speaker3 from "../images/speakers/Hugo-Obi.png";
 import speaker4 from "../images/speakers/Martha-Alade.webp";
 import speaker5 from "../images/speakers/Oremeyi-Akah.jpg";
 import speaker6 from "../images/speakers/Tele-Aina.jpg";

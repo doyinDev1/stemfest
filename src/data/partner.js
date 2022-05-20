@@ -15,8 +15,8 @@ export const partner = [
   { image: partnerLogo4, link: "https://sabiteach.com/", name: "sabi teach" },
 ];
 export const sponsor = [
-  { image: sponsorLogo1, name: "", link: "" },
-  { image: sponsorLogo4, name: "", link: "" },
+  { image: sponsorLogo1, name: "steam", link: "https://steamuplagos.org/" },
+  { image: sponsorLogo4, name: "brick", link: "https://www.bricks4kidz.com/" },
 ];
 export const media = [
   { image: mediaLogo1, name: "Nimbuzz", link: "https://www.nimbus.com.ng/" },
