@@ -20,7 +20,7 @@
 .speakers .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .speakers .card {
   margin-right: 30px;
@@ -34,6 +34,7 @@
   max-width: 250px;
   border: 7px solid white;
   border-radius: 50px;
+  margin: 0 auto;
 }
 .card:hover {
   background-color: var(--wine);
@@ -58,8 +59,11 @@
 }
 .speakers .card p {
   text-align: center;
-  margin-top: 20px;
+  margin: 20px auto 0px;
+
   color: white;
+  max-width: 200px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1400px) {

@@ -8,47 +8,44 @@ import { partner, sponsor, media } from "../../../data/partner.js";
 function Partner() {
   return (
     <section id="sponsors">
-
-
-    
-    <div className={style.partner}>
-      <div className={style.partnerCard}>
-        <h2 className={style.header}>Our Partners</h2>
-        <div className={style.cards}>
-          {partner.map((partner, index) => {
-            return (
-              <div className={style.card} key={index}>
-                <img src={partner} alt="partner" />
-              </div>
-            );
-          })}
+      <div className={style.partner}>
+        <div className={style.partnerCard}>
+          <h2 className={style.header}>Our Partners</h2>
+          <div className={style.cards}>
+            {partner.map((partner, index) => {
+              return (
+                <a href={partner.link} className={style.card} key={index}>
+                  <img src={partner.image} alt="partner" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        <div className={style.partnerCard}>
+          <h2>Our Sponsors</h2>
+          <div className={style.cards}>
+            {sponsor.map(({ link, image }, index) => {
+              return (
+                <a href={image} className={style.card} key={index}>
+                  <img src={image} alt="partner" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        <div className={style.partnerCard}>
+          <h2>Our Media Partner</h2>
+          <div className={style.cards}>
+            {media.map(({ image, link }, index) => {
+              return (
+                <a href={link} className={style.card} key={index}>
+                  <img src={image} alt="partner" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
-      <div className={style.partnerCard}>
-        <h2>Our Sponsors</h2>
-        <div className={style.cards}>
-          {sponsor.map((sponsor, index) => {
-            return (
-              <div className={style.card} key={index}>
-                <img src={sponsor} alt="partner" />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className={style.partnerCard}>
-        <h2>Our Media Partner</h2>
-        <div className={style.cards}>
-          {media.map((media, index) => {
-            return (
-              <div className={style.card} key={index}>
-                <img src={media} alt="partner" />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
     </section>
   );
 }
