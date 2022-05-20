@@ -13,9 +13,9 @@ function Partner() {
         <div className={style.cards}>
           {partner.map((partner, index) => {
             return (
-              <div className={style.card} key={index}>
-                <img src={partner} alt="partner" />
-              </div>
+              <a href={`"/${index}"`} className={style.card} key={index}>
+                <img src={partner.image} alt="partner" />
+              </a>
             );
           })}
         </div>

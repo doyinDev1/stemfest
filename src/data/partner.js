@@ -6,6 +6,13 @@ import sponsorLogo1 from "../images/assets/sponsor-1.png";
 import sponsorLogo2 from "../images/assets/sponsor-2.png";
 import sponsorLogo3 from "../images/assets/sponsor-3.png";
 import sponsorLogo4 from "../images/assets/sponsor-4.png";
-export const partner = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4];
+import mediaLogo1 from "../images/assets/media-1.png";
+
+export const partner = [
+  { image: partnerLogo1, link: "" },
+  { image: partnerLogo2, link: "" },
+  { image: partnerLogo3, link: "" },
+  { image: partnerLogo4, link: "" },
+];
 export const sponsor = [sponsorLogo1, sponsorLogo2, sponsorLogo3, sponsorLogo4];
-export const media = [partnerLogo1];
+export const media = [mediaLogo1];

@@ -12,11 +12,12 @@ function Speakers() {
     <div className={style.speakers}>
       <h2>Our Speakers</h2>
       <div className={style.cards}>
-        {speaker.map(({ image, name }, index) => (
-          <div className={style.card}>
+        {speaker.map(({ image, name, link, designation }, index) => (
+          <a href={link} className={style.card}>
             <img src={image} alt="avatar" />
             <p> {name}</p>
-          </div>
+            <p> {designation}</p>
+          </a>
         ))}
       </div>
     </div>
