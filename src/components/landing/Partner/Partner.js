@@ -7,6 +7,10 @@ import sabiIcon from "../../../images/assets/sabiteach.png";
 import { partner, sponsor, media } from "../../../data/partner.js";
 function Partner() {
   return (
+    <section id="sponsors">
+
+
+    
     <div className={style.partner}>
       <div className={style.partnerCard}>
         <h2 className={style.header}>Our Partners</h2>
@@ -21,7 +25,7 @@ function Partner() {
         </div>
       </div>
       <div className={style.partnerCard}>
-        <h2>Sponsor</h2>
+        <h2>Our Sponsors</h2>
         <div className={style.cards}>
           {sponsor.map((sponsor, index) => {
             return (
@@ -33,7 +37,7 @@ function Partner() {
         </div>
       </div>
       <div className={style.partnerCard}>
-        <h2>Media</h2>
+        <h2>Our Media Partner</h2>
         <div className={style.cards}>
           {media.map((media, index) => {
             return (
@@ -45,6 +49,7 @@ function Partner() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

@@ -4,6 +4,7 @@ import artistImg from "../../images/assets/artist.png";
 import Venue from "../landing/Venue/Venue";
 function Reason() {
   return (
+    <section id="reason">
     <div className={style.about} id="reason">
       <h2 className={style.title}> Why Attend</h2>
       <p className={style.summary}>
@@ -39,7 +40,7 @@ function Reason() {
         </div>
         <div className={style.details}>
           <div>
-            <h4 className={style.header}>SSTEAM Masterclass</h4>
+            <h4 className={style.header}>STEAM Masterclass</h4>
             <p className={style.words}>
               Parents and their children will have an opportunity to attend
               specially designed seminars/master classes covering STEAM careers,
@@ -58,6 +59,7 @@ function Reason() {
       </div>
       <Venue />
     </div>
+    </section>
   );
 }
 
