@@ -15,7 +15,7 @@ function Venue() {
           </div>
           <div className={style.day}>
             <img src={timeIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>9 am to 6 pm</p>
+            <p className={style.day_text}>9 am</p>
           </div>
           <div className={style.day}>
             <img src={locationIcon} alt="calendar" className={style.icon} />
@@ -33,7 +33,7 @@ function Venue() {
       <div className={`${style.flex} ${style.others}`}>
         <div className={style.extra}>
           <p>7,500+</p>
-          <p>Companies</p>
+          <p>Attendees</p>
         </div>
         <div className={style.extra}>
           <p>20+</p>
