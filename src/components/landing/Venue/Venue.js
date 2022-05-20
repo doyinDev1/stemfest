@@ -15,16 +15,11 @@ function Venue() {
           </div>
           <div className={style.day}>
             <img src={timeIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>9 am to 6 pm</p>
-
-
-          </div>
-
+            <p className={style.day_text}>9 am</p>
           </div>
           <div className={style.day}>
             <img src={locationIcon} alt="calendar" className={style.icon} />
             <div className={style.day_text}>
-
               <p className={style.location}>
                 Landmark Center, Victoria Island, Lagos
               </p>
@@ -38,7 +33,7 @@ function Venue() {
       <div className={`${style.flex} ${style.others}`}>
         <div className={style.extra}>
           <p>7,500+</p>
-          <p>Companies</p>
+          <p>Attendance</p>
         </div>
         <div className={style.extra}>
           <p>20+</p>
@@ -50,7 +45,7 @@ function Venue() {
         </div>
         <div className={style.extra}>
           <p>5+</p>
-          <p>Masterclass</p>
+          <p>Masterclasses</p>
         </div>
       </div>
     </div>
