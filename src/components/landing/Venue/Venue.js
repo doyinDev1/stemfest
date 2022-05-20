@@ -11,15 +11,22 @@ function Venue() {
         <div className={style.date}>
           <div className={style.day}>
             <img src={dayIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>Saturday, 23rd July 2022</p>
+            <p className={style.day_text}>Date: <br/> Sat, 23rd July 2022</p>
+            <br/>
+
+            {/* <p className={style.day_text}> Sat, 23rd July 2022</p> */}
           </div>
           <div className={style.day}>
             <img src={timeIcon} alt="calendar" className={style.icon} />
-            <p className={style.day_text}>9 am</p>
+            <p className={style.day_text}>Time: <br/> 9am</p>
+
+            {/* <p className={style.day_text}> 9 am</p> */}
           </div>
           <div className={style.day}>
             <img src={locationIcon} alt="calendar" className={style.icon} />
             <div className={style.day_text}>
+            <p className={style.day_text}>Location:</p>
+
               <p className={style.location}>
                 Landmark Center, Victoria Island, Lagos
               </p>
@@ -45,7 +52,7 @@ function Venue() {
         </div>
         <div className={style.extra}>
           <p>5+</p>
-          <p>Masterclass</p>
+          <p>Masterclasses</p>
         </div>
       </div>
     </div>
