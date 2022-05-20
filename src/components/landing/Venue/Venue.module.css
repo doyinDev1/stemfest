@@ -47,6 +47,51 @@
   font-size: 3rem;
   margin: 10px 20px;
 }
+@media screen and (max-width: 1300px) {
+  .extra {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .extra {
+    font-size: 1.5rem;
+  }
+  .flex {
+    flex-direction: column-reverse;
+  }
+  .dateImage {
+    flex-direction: column-reverse;
+  }
+  .date {
+    margin-right: 0;
+    margin-top: 10px;
+    max-width: auto;
+    text-align: left;
+  }
+  .icon {
+    height: 60px;
+    width: 60px;
+  }
+  .day_text {
+    max-width: initial;
+    margin-bottom: 0;
+  }
+  .day {
+    max-width: 150px;
+  }
+  .others {
+    flex-direction: row;
+    padding: 15px 5vw 150px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .extra {
+    font-size: 1rem;
+  }
+  .day_text {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (max-width: 500px) {
   .venue {
     padding: 30px 0px;
@@ -62,8 +107,10 @@
   .date {
     margin-right: 0;
     margin-top: 10px;
-    max-width: auto;
     text-align: left;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
   .icon {
     height: 60px;
@@ -71,8 +118,11 @@
   }
   .day_text {
     max-width: initial;
+    font-size: 1.3rem;
+    padding-bottom: 0;
   }
   .day {
+    max-width: initial;
   }
   .others {
     flex-direction: row;
