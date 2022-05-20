@@ -9,10 +9,14 @@
   --light-grey: #aab0bb;
   --red: red;
   --light-green: green;
+
   --gold: gold;
   --button-blue: rgb(87, 87, 201);
   --lemon: #d3d93c;
   --wine: #f32a39;
+  --deep-blue: #415aa6;
+  --pink: #d92b58;
+  --green: #d3d93c;
 }
 
 *,
@@ -21,7 +25,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 
 img {
   max-width: 100%;

@@ -8,21 +8,23 @@
   background-size: cover;
   background-position: bottom;
   padding: 150px 0px 0px;
-  padding: 50px 0px 0px;
+  padding: 50px 0px 200px;
 
   margin-top: -100px;
   position: relative;
   z-index: 9;
   color: white;
 }
-.soon {
+
+/* .soon {
   min-height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-}
-.schedule h2 {
+} */
+.header,
+.date {
   text-align: center;
 }
 .flex {
@@ -36,16 +38,22 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
-  color: var(--blue);
+  color: #ffffff;
 }
 .flex ul {
   padding-left: 0;
 }
 .time {
   padding: 20px;
-  margin-right: 10px;
-  background-color: var(--light-green);
+  margin-right: 50px;
+  background-color: var(--green);
+  color: var(--deep-blue);
   border-radius: 20px;
+  width: 139px;
+  text-align: center;
+}
+.event {
+  max-width: 420px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -60,6 +68,7 @@
     padding: 127px 0px;
     background-repeat: no-repeat;
     background: url("../../../images/assets/bg5-small.png") no-repeat;
+    text-align: center;
   }
   .schedule h2 {
     font-size: 2rem;

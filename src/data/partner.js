@@ -1,0 +1,11 @@
+import partnerLogo1 from "../images/assets/partner-1.png";
+import partnerLogo2 from "../images/assets/partner-2.png";
+import partnerLogo3 from "../images/assets/partner-3.png";
+import partnerLogo4 from "../images/assets/partner-4.png";
+import sponsorLogo1 from "../images/assets/sponsor-1.png";
+import sponsorLogo2 from "../images/assets/sponsor-21.png";
+import sponsorLogo3 from "../images/assets/sponsor-31.png";
+import sponsorLogo4 from "../images/assets/sponsor-41.png";
+export const partner = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4];
+export const sponsor = [sponsorLogo1, sponsorLogo2, sponsorLogo3, sponsorLogo4];
+export const media = [partnerLogo1];
