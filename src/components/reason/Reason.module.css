@@ -55,7 +55,7 @@
   line-height: 45px;
   font-size: 25px;
   margin-bottom: 35px;
-  height: 226px;
+  min-height: 226px;
 }
 .header {
   color: var(--deep-blue);
