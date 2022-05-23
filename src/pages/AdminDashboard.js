@@ -17,6 +17,10 @@ import QRPage from '../components/QRPage/QRPage';
 import ChildrenInfo from '../components/ChildrenInfo/ChildrenInfo'
 import ReportIcon from '@mui/icons-material/Report';
 import ErrorLogs from '../components/ErrorLogs/ErrorLogs';
+import Sponsors from '../components/Sponsors/Sponsors';
+import Upload from '../components/SponsorUpload/Upload';
+import SearchAdult from '../components/SearchAdult/SearchAdult';
+import SearchChildren from '../components/SearchChildren/SearchChildren';
 const AdminDashboard = () => {
 	const [isOpen, setIsOpen] = useState(true);
 
@@ -52,7 +56,31 @@ const AdminDashboard = () => {
 			page: <QRPage />,
 		},
 		{
-			id: 2,
+			id: 3,
+			icon: <AdminPanelSettingsIcon />,
+			title: 'Sponsors',
+			page: <Sponsors />,
+		},
+		// {
+		// 	id: 4,
+		// 	icon: <SettingsIcon />,
+		// 	title: 'Upload Attendees',
+		// 	page: <Upload />,
+		// },
+		{
+			id: 5,
+			icon: < ReportIcon />,
+			title: 'Search Children',
+			page: <SearchChildren />,
+		},
+		{
+			id: 6,
+			icon: < ReportIcon />,
+			title: 'Search Adults',
+			page: <SearchAdult />,
+		},
+		{
+			id: 7,
 			icon: < ReportIcon />,
 			title: 'Error Logs',
 			page: <ErrorLogs />,

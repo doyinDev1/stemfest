@@ -13,12 +13,14 @@ import PaginationButtons from '../PaginationButtons/PaginationButtons';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
-const ChildrenInfo = () => {
+const SearchChildren = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
-     const [page, setPage] = useState(1);
-     const [lastPage, setLastPage] = useState(null);
+	const [page, setPage] = useState(1);
+	const [lastPage, setLastPage] = useState(null);
+	const [searchTerm, setSearchTerm] = useState('');
+	const [type, setType] = useState('children');
 
 
 	useEffect(() => {
@@ -36,105 +38,68 @@ const ChildrenInfo = () => {
 		setLoading(true);
 
 		axios
-			.get(`${Config.url.API_URL}/admin/users-data?page=${page}`, config)
+			.post(`${Config.url.API_URL}/admin/search-users-data?page=${page}`, {
+
+				search_param: searchTerm,
+				type: type,
+			}, config)
 			.then((res) => {
 				if (res.data?.error?.length) throw new Error(res.data.error[0]);
 
 				setData(res.data);
 				setLoading(false);
-				setLastPage(res.data?.data.children?.last_Page)
-				// console.log(res.data, "data")
+				setLastPage(res.data?.data.message?.last_Page)
+				console.log(res.data, "dataaaaaa")
+				console.log(res, "resdataaaaaa")
+
 			})
 			.catch((err) => {
 				const errMsg = err?.message || "Failed to Load !";
-				// toast.error(errMsg);
+				console.log(errMsg);
 			});
 
 
 
-	}, [page]);
-
-
-	// const [searchTerm, setSearchTerm] = useState('');
-
-// <input
-// 									type="search"
-// 									placeholder="Search"
-// 									onChange={(e) => setSearchTerm(e.target.value)}
-// 								/>
+	}, [searchTerm, page]);
 
 	const header = [
+		'user_id',
 		'age_range',
-		'child_name',
+		'name',
 		'gender',
-		'parent_name',
+		
+		'unique_id',
 
 	];
 	const tProperties = [
+		'user_id',
 		'age_range',
-		'child_name',
+		'name',
 		'gender',
-		'parent_name',
+		'age',
+		'unique_id',
 	];
-	// TODAYYY
 
-	// const adminInfo =
-	// 	typeof sessionStorage !== undefined
-	// 		? JSON.parse(sessionStorage.getItem('cpAdmin'))
-	// 		: { token: '' };
-
-	// const params = { token: adminInfo.token };
-
-	// const [page, setPage] = useState(1);
-	// const [searchTerm, setSearchTerm] = useState('');
-
-	// const {
-	// 	data: programSummaryData,
-	// 	status: programSummaryStatus,
-	// 	error: programSummaryError,
-	// } = useFetchProgramSummary();
-
-	// const {
-	// 	data: userSummaryData,
-	// 	status: userSummaryStatus,
-	// 	error: userSummaryError,
-	// 	isFetching: userSummaryFetching,
-	// } = useFetchUserSummary(page, searchTerm);
-
-	// console.log(userSummaryData);
-
-	// useEffect(() => {
-	// 	async function getProgramSummary() {
-	// 		const [data, error] = await axiosFetcher(
-	// 			`${Config.url.API_URL}/admin/program-summary`,
-	// 			params,
-	// 			'POST'
-	// 		);
-	// 		setProgramSummary({ data, error });
-	// 	}
-
-	// 	async function getUserSummary() {
-	// 		const [data, error] = await axiosFetcher(
-	// 			`${Config.url.API_URL}/admin/user-summary`,
-	// 			params,
-	// 			'POST'
-	// 		);
-
-	// 		setUserSummary({ data: data.table, error });
-	// 	}
-
-	// 	getProgramSummary();
-	// 	getUserSummary();
-	// }, []);
 
 	return (
 		<section className={classes.SummarySection}>
-			
+
 			<h2>Children Summary</h2>
-			<h2  style={{ fontSize: '16px' }}>
-			{' '}
-			Count: {data?.children?.total}
-		</h2>
+			<h2 style={{ fontSize: '16px' }}>
+				{' '}
+				Count: {data?.message?.total}
+			</h2>
+ <div className={classes.TableWrapper}>
+ <div className={classes.TableExtras}>
+	 <div className={classes.TableInputs}> 
+			<input
+				type="search"
+				placeholder="Search"
+				onChange={(e) => setSearchTerm(e.target.value)}
+			/>
+</div>
+</div>
+</div>
 			<Table hover responsive className={classes.Table}>
 				<thead>
 					<tr>
@@ -144,14 +109,14 @@ const ChildrenInfo = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{data?.children?.data.map((user) => (
-						<tr key={user.child_name}>
+					{data?.message?.data?.map((user) => (
+						<tr key={user.id}>
 							{header.map((key) => (
 								<td key={user[key]}>{user[key]}</td>
 							))}
 						</tr>
 					))}
-					{loading === true && <Spinner size="sm" animation="border" />}
+					{/* {loading === true && <Spinner size="sm" animation="border" />} */}
 
 
 				</tbody>
@@ -213,13 +178,13 @@ const ChildrenInfo = () => {
 			{/* </tbody> */}
 			{/* </Table> */}
 			<PaginationButtons
-			setPage={setPage}
-			lastPage={data?.children?.last_page}
-			currentPage={data?.children?.current_page}
-		/>
-		{console.log(page, "page")}
-		{console.log(data?.children?.last_page, "lastpage")}
-		{console.log(data?.children?.current_page, "currentpage")}
+				setPage={setPage}
+				lastPage={data?.message?.last_page}
+				currentPage={data?.message?.current_page}
+			/>
+			{console.log(searchTerm, "page")}
+			{console.log(data, "lastpage")}
+			{console.log(data?.message?.current_page, "currentpage")}
 
 
 
@@ -240,4 +205,4 @@ const ChildrenInfo = () => {
 	);
 };
 
-export default ChildrenInfo;
+export default SearchChildren;

@@ -203,7 +203,7 @@
 
 .TableWrapper:hover {
 	/* border: 3px solid rgba(220, 134, 54, 0.462); */
-	border: 2px solid var(--color-blue);
+	border: 2px solid var(--blue);
 }
 
 .TableExtras {
@@ -239,7 +239,7 @@
 
 .TableInputs > input:focus {
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	border: 2px solid var(--color-secondary);
+	border: 2px solid var(--blue);
 }
 
 .TableInputs > button {
@@ -337,7 +337,7 @@
 	} */
 
 	.TableInputs > input {
-		width: 70%;
+		width: 100%;
 		margin-right: auto;
 	}
 

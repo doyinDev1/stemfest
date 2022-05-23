@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import SummaryHeader from './SummaryHeader';
+// import SummaryHeader from './SummaryHeader';
 import classes from '../../styles/AdminSummary.module.css';
 import globals from '../../styles/common.module.css';
-import SummaryChart from './SummaryChart';
+// import SummaryChart from './SummaryChart';
 import { Spinner, Table } from 'react-bootstrap';
 // import PaginatedTable from '../Pagination/PaginatedTable';
 // import { Config } from '../../Config/Config';
@@ -13,83 +13,78 @@ import PaginationButtons from '../PaginationButtons/PaginationButtons';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
-const AdminSummary = () => {
+const SearchAdult = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
-	const [loading2, setLoading2] = useState(false);
-
-	const [data2, setData2] = useState({});
 	const [page, setPage] = useState(1);
 	const [lastPage, setLastPage] = useState(null);
+	const [searchTerm, setSearchTerm] = useState('');
+	const [type, setType] = useState('adult');
 
 
 	useEffect(() => {
 		// get User info 
 		const UserInfo = JSON.parse(sessionStorage.getItem("sfAdmin"));
-	// get token from User info here
+		// get token from User info here
 		const token = UserInfo.data.token;
 		// config here for axios authorization
 		// console.log(token)
 		const config = {
-		  headers: {
-			Authorization: `Bearer ${token}`,
-		  },
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
 		};
 		setLoading(true);
-		setLoading2(true);
 
 		axios
-		  .get(`${Config.url.API_URL}/admin/summary`, config)
-		  .then((res) => {
-			if (res.data?.error?.length) throw new Error(res.data.error[0]);
-	
-			setData(res.data);
-			setLoading(false);
-			// console.log(res.data, "data")
-		  })
-		  .catch((err) => {
-			const errMsg = err?.message || "Failed to Load !";
-			// toast.error(errMsg);
-		  });
+		.post(`${Config.url.API_URL}/admin/search-users-data?page=${page}`, {
 
-		  axios
-		  .get(`${Config.url.API_URL}/admin/users-data?page=${page}`, config)
-		  .then((res) => {
-			if (res.data?.error?.length) throw new Error(res.data.error[0]);
-	
-			setData2(res.data);
-			setLoading2(false);
-			console.log(res.data, "data2")
-			setLastPage(res.data?.data.adults?.last_Page)
+			search_param: searchTerm,
+			type: type,
+		}, config)
+			.then((res) => {
+				if (res.data?.error?.length) throw new Error(res.data.error[0]);
 
-		  })
-		  .catch((err) => {
-			  console.log(err, 'err')
-			const errMsg = err?.message || "Failed to Load2 !";
-			// toast.error(errMsg);
-		  });
-
-	  }, [page]);
-	
+				setData(res.data);
+				setLoading(false);
+				setLastPage(res.data?.data.message?.last_Page)
+				// console.log(res.data, "data")
+			})
+			.catch((err) => {
+				const errMsg = err?.message || "Failed to Load !";
+				// toast.error(errMsg);
+			});
 
 
 
+	}, [searchTerm, page]);
+
+
+	// const [searchTerm, setSearchTerm] = useState('');
+
+// <input
+// 									type="search"
+// 									placeholder="Search"
+// 									onChange={(e) => setSearchTerm(e.target.value)}
+// 								/>
 
 	const header = [
-		'email',
-		'name',
-		'number_of_children',
-		'phone',
 		
+		'name',
+		'email',
+		'phone',
+		'number_of_children',
 	];
 	const tProperties = [
-		'email',
+		'user_id',
+		'age_range',
 		'name',
-		'number_of_children',
-		'phone',
+		'gender',
+		'age',
+		'unique_id',
 	];
-// TODAYYY
+	// TODAYYY
 
 	// const adminInfo =
 	// 	typeof sessionStorage !== undefined
@@ -142,50 +137,51 @@ const AdminSummary = () => {
 
 	return (
 		<section className={classes.SummarySection}>
-			<h2>Registration Summary</h2>
-			<SummaryHeader
-				data={data}
-				error={''}
-				status={loading}
-			/>
-			<h2>Adult Summary</h2>
-			<h2 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
+			
+			<h2>Children Summary</h2>
+			<h2  style={{ fontSize: '16px' }}>
 			{' '}
-			Count: {data2?.adults?.total}
+			Count: {data?.message?.total}
 		</h2>
-			{/* <div className={classes.TableMarkerDiv}>
-						<h4 className={classes.TableHeadText}>User Summary </h4>
-						<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
-							{' '}
-							Count: {data2?.adults.length}
-						</h4>
-					</div> */}
-<Table  hover responsive className={classes.Table}>
-<thead>
-<tr>
-									{header.map((n) => (
-										<th key={n}> {n.split('_').join(' ')} </th>
-									))}
-								</tr>
-								</thead>
-								<tbody>
-								{data2?.adults?.data.map((user) => (
-										 <tr key={user.name}>
-											{header.map((key) => (
-												<td key={user[key]}>{user[key]}</td>
-											))}
-										</tr> 
-									))}
-								 {loading2 === true && <Spinner size="sm" animation="border" />} 
 
-    
-</tbody>
+<div className={classes.TableWrapper}>
+<div className={classes.TableExtras}>
+	<div className={classes.TableInputs}> 
+		   <input
+			   type="search"
+			   placeholder="Search"
+			   onChange={(e) => setSearchTerm(e.target.value)}
+		   />
+</div>
+</div>
+</div>
 
-</Table>
+			<Table hover responsive className={classes.Table}>
+			<thead>
+				<tr>
+					{header.map((n) => (
+						<th key={n}> {n.split('_').join(' ')} </th>
+					))}
+				</tr>
+			</thead>
+			<tbody>
+				{data?.message?.data?.map((user) => (
+					<tr key={user.phone}>
+						{header.map((key) => (
+							<td key={user[key]}>{user[key]}</td>
+						))}
+					</tr>
+				))}
+				{/* {loading === true && <Spinner size="sm" animation="border" />} */}
+
+
+			</tbody>
+
+		</Table>
 
 			{/* {console.log(data2?.adults[0].email, "data2")} */}
 			{/* <h1>{data2?.adults[1].email}</h1> */}
-{/* 			
+			{/* 			
 			 <div className={classes.AdminCourseSummary}>
 				
 				<div className={classes.CourseSummaryContent}>
@@ -202,13 +198,13 @@ const AdminSummary = () => {
 					 <div className={classes.TableWrapper}>
 						<div className={classes.TableExtras}>
 							<div className={classes.TableInputs}> */}
-								{/* <input
+			{/* <input
 									type="search"
 									placeholder="Search"
 									 onChange={(e) => setSearchTerm(e.target.value)}
 								/> */}
-								{/* {loading2 === true && <Spinner size="sm" animation="border" />} */}
-								{/* <button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
+			{/* {loading2 === true && <Spinner size="sm" animation="border" />} */}
+			{/* <button className={classes.AddUsersButton} onClick={() => console.log('ello')}>
 									Export to CSV
 								</button>
 							</div>
@@ -232,26 +228,25 @@ const AdminSummary = () => {
 											))}
 										</tr>
 									))} */}
-								{/* {loading2 === true && <Loader />} */}
-								{/* {loading2 === true && } */}
-								
-							{/* </tbody> */}
-						{/* </Table> */}
+			{/* {loading2 === true && <Loader />} */}
+			{/* {loading2 === true && } */}
+
+			{/* </tbody> */}
+			{/* </Table> */}
+			<PaginationButtons
+				setPage={setPage}
+				lastPage={data?.message?.last_page}
+				currentPage={data?.message?.current_page}
+			/>
+			{console.log(searchTerm, "page")}
+			{console.log(data, "lastpage")}
+			{console.log(data?.message?.current_page, "currentpage")}
 
 
-<PaginationButtons
-	setPage={setPage}
-	lastPage={data2?.adults?.last_page}
-	currentPage={data2?.adults?.current_page}
-/>
 
 
-
-						 {/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
-						)}  */}
-
-						{/* Paginated Table div */}
-						{/* <PaginatedTable
+			{/* Paginated Table div */}
+			{/* <PaginatedTable
 							usersData={userSummary.data}
 							check={userSummary.data !== null}
 							header={header}
@@ -259,12 +254,12 @@ const AdminSummary = () => {
 							dataLimit={10}
 							pageLimit={5}
 						/> */}
-				
+
 			{/* </div>
 			</div> 
 			</div>  */}
-	</section>
+		</section>
 	);
 };
 
-export default AdminSummary;
+export default SearchAdult;
