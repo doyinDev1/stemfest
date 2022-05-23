@@ -13,13 +13,11 @@ import PaginationButtons from '../PaginationButtons/PaginationButtons';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
-const AdminSummary = () => {
+const Sponsors = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
-	const [loading2, setLoading2] = useState(false);
 
-	const [data2, setData2] = useState({});
 	const [page, setPage] = useState(1);
 	const [lastPage, setLastPage] = useState(null);
 
@@ -37,10 +35,9 @@ const AdminSummary = () => {
 		  },
 		};
 		setLoading(true);
-		setLoading2(true);
 
 		axios
-		  .get(`${Config.url.API_URL}/admin/summary`, config)
+		  .get(`${Config.url.API_URL}/admin/view-sponsors?page=${page}`, config)
 		  .then((res) => {
 			if (res.data?.error?.length) throw new Error(res.data.error[0]);
 	
@@ -53,23 +50,6 @@ const AdminSummary = () => {
 			// toast.error(errMsg);
 		  });
 
-		  axios
-		  .get(`${Config.url.API_URL}/admin/users-data?page=${page}`, config)
-		  .then((res) => {
-			if (res.data?.error?.length) throw new Error(res.data.error[0]);
-	
-			setData2(res.data);
-			setLoading2(false);
-			console.log(res.data, "data2")
-			setLastPage(res.data?.data.adults?.last_Page)
-
-		  })
-		  .catch((err) => {
-			  console.log(err, 'err')
-			const errMsg = err?.message || "Failed to Load2 !";
-			// toast.error(errMsg);
-		  });
-
 	  }, [page]);
 	
 
@@ -77,17 +57,14 @@ const AdminSummary = () => {
 
 
 	const header = [
-		'email',
 		'name',
-		'number_of_children',
-		'phone',
+		'access_code',
+		
 		
 	];
 	const tProperties = [
-		'email',
 		'name',
-		'number_of_children',
-		'phone',
+		'access_code',
 	];
 // TODAYYY
 
@@ -142,22 +119,17 @@ const AdminSummary = () => {
 
 	return (
 		<section className={classes.SummarySection}>
-			<h2>Registration Summary</h2>
-			<SummaryHeader
-				data={data}
-				error={''}
-				status={loading}
-			/>
-			<h2>Adult Summary</h2>
+			
+			<h2>Sponsors Details</h2>
 			<h2 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
 			{' '}
-			Count: {data2?.adults?.total}
+			Count: {data?.sponsors?.total}
 		</h2>
 			{/* <div className={classes.TableMarkerDiv}>
 						<h4 className={classes.TableHeadText}>User Summary </h4>
 						<h4 className={classes.TableHeadText} style={{ fontSize: '16px' }}>
 							{' '}
-							Count: {data2?.adults.length}
+							Count: {data?.adults.length}
 						</h4>
 					</div> */}
 <Table  hover responsive className={classes.Table}>
@@ -169,22 +141,22 @@ const AdminSummary = () => {
 								</tr>
 								</thead>
 								<tbody>
-								{data2?.adults?.data.map((user) => (
+								{data?.sponsors?.data.map((user) => (
 										 <tr key={user.name}>
 											{header.map((key) => (
 												<td key={user[key]}>{user[key]}</td>
 											))}
 										</tr> 
 									))}
-								 {loading2 === true && <Spinner size="sm" animation="border" />} 
+								 {loading === true && <Spinner size="sm" animation="border" />} 
 
     
 </tbody>
 
 </Table>
 
-			{/* {console.log(data2?.adults[0].email, "data2")} */}
-			{/* <h1>{data2?.adults[1].email}</h1> */}
+			{/* {console.log(data?.adults[0].email, "data")} */}
+			{/* <h1>{data?.adults[1].email}</h1> */}
 {/* 			
 			 <div className={classes.AdminCourseSummary}>
 				
@@ -224,8 +196,8 @@ const AdminSummary = () => {
 								</tr>
 							</thead>
 							<tbody>
-								{data2?.adults &&
-									data2?.adults.map((user, index) => (
+								{data?.adults &&
+									data?.adults.map((user, index) => (
 										<tr key={index}>
 											{header.map((key) => (
 												<td key={user[key]}>{user[key]}</td>
@@ -241,8 +213,8 @@ const AdminSummary = () => {
 
 <PaginationButtons
 	setPage={setPage}
-	lastPage={data2?.adults?.last_page}
-	currentPage={data2?.adults?.current_page}
+	lastPage={data?.sponsors?.last_page}
+	currentPage={data?.sponsors?.current_page}
 />
 
 
@@ -267,4 +239,4 @@ const AdminSummary = () => {
 	);
 };
 
-export default AdminSummary;
+export default Sponsors;

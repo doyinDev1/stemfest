@@ -82,7 +82,7 @@ const AdultDashboard = () => {
                         <div className={classes.MainTopText}>
                           <p>
                           Thank you for registering for STEAM Fest 2022. We are looking
-                           forward to seeing you at the STEAM Fest in Victoria Island, Lagos.
+                           forward to seeing you at the STEAM Fest at The Landmark Center, Victoria Island, Lagos.
 You will soon receive an email confirming your registration.
 Please, check your spam/ promotions email if you do not see the email in your inbox.
                           </p>
@@ -125,7 +125,7 @@ Please, check your spam/ promotions email if you do not see the email in your in
                           </div>
                           <p>
                             Thank you {data.adultDetails?.name} for registering
-                            for Stem fest 2022. We're looking forward to seeing you on the 30th of July, 2022 at Victoria Island, Lagos.
+                            for Stem fest 2022. We're looking forward to seeing you on the 23rd of July, 2022 at The Landmark Center, Victoria Island, Lagos.
                             Please, find your QR code pass below.
                             You will receive an email confirming your registration,
                             please check your spam/ promotions email if you do not see

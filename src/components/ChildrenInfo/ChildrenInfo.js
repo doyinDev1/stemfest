@@ -9,7 +9,7 @@ import { Spinner, Table } from 'react-bootstrap';
 // import { axiosFetcher } from '../../DataFetching/axiosFetcher';
 // import { useFetchProgramSummary, useFetchUserSummary } from '../../DataFetching/fetch';
 // import Loader from '../Loader/Loader';
-// import PaginationButtons from '../PaginationButtons/PaginationButtons';
+import PaginationButtons from '../PaginationButtons/PaginationButtons';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
@@ -17,7 +17,8 @@ const ChildrenInfo = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
-
+     const [page, setPage] = useState(1);
+     const [lastPage, setLastPage] = useState(null);
 
 
 	useEffect(() => {
@@ -35,22 +36,23 @@ const ChildrenInfo = () => {
 		setLoading(true);
 
 		axios
-			.get(`${Config.url.API_URL}/admin/users-data`, config)
+			.get(`${Config.url.API_URL}/admin/users-data?page=${page}`, config)
 			.then((res) => {
 				if (res.data?.error?.length) throw new Error(res.data.error[0]);
 
 				setData(res.data);
 				setLoading(false);
+				setLastPage(res.data?.data.children?.last_Page)
 				// console.log(res.data, "data")
 			})
 			.catch((err) => {
 				const errMsg = err?.message || "Failed to Load !";
-				toast.error(errMsg);
+				// toast.error(errMsg);
 			});
 
 
 
-	}, []);
+	}, [page]);
 
 
 
@@ -124,7 +126,10 @@ const ChildrenInfo = () => {
 		<section className={classes.SummarySection}>
 			
 			<h2>Children Summary</h2>
-
+			<h2  style={{ fontSize: '16px' }}>
+			{' '}
+			Count: {data?.children?.total}
+		</h2>
 			<Table hover responsive className={classes.Table}>
 				<thead>
 					<tr>
@@ -134,7 +139,7 @@ const ChildrenInfo = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{data?.children?.map((user) => (
+					{data?.children?.data.map((user) => (
 						<tr key={user.child_name}>
 							{header.map((key) => (
 								<td key={user[key]}>{user[key]}</td>
@@ -202,13 +207,16 @@ const ChildrenInfo = () => {
 
 			{/* </tbody> */}
 			{/* </Table> */}
-			{/* {userSummaryStatus === 'success' && userSummaryData?.userSummary?.length > 0 && (
-							<PaginationButtons
-								setPage={setPage}
-								lastPage={userSummaryData?.lastPage}
-								currentPage={page}
-							/>
-						)}  */}
+			<PaginationButtons
+			setPage={setPage}
+			lastPage={data?.children?.last_page}
+			currentPage={data?.children?.current_page}
+		/>
+		{console.log(page, "page")}
+		{console.log(data?.children?.last_page, "lastpage")}
+		{console.log(data?.children?.current_page, "currentpage")}
+
+
 
 			{/* Paginated Table div */}
 			{/* <PaginatedTable

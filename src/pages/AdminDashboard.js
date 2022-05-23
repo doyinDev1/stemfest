@@ -17,6 +17,7 @@ import QRPage from '../components/QRPage/QRPage';
 import ChildrenInfo from '../components/ChildrenInfo/ChildrenInfo'
 import ReportIcon from '@mui/icons-material/Report';
 import ErrorLogs from '../components/ErrorLogs/ErrorLogs';
+import Sponsors from '../components/Sponsors/Sponsors';
 const AdminDashboard = () => {
 	const [isOpen, setIsOpen] = useState(true);
 
@@ -52,7 +53,13 @@ const AdminDashboard = () => {
 			page: <QRPage />,
 		},
 		{
-			id: 2,
+			id: 3,
+			icon: <AdminPanelSettingsIcon />,
+			title: 'Sponsors',
+			page: <Sponsors />,
+		},
+		{
+			id: 4,
 			icon: < ReportIcon />,
 			title: 'Error Logs',
 			page: <ErrorLogs />,
