@@ -13,12 +13,14 @@ import PaginationButtons from '../PaginationButtons/PaginationButtons';
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Config } from '../../Config/Config'
-const ChildrenInfo = () => {
+const SearchAdult = () => {
 
 	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({});
-     const [page, setPage] = useState(1);
-     const [lastPage, setLastPage] = useState(null);
+	const [page, setPage] = useState(1);
+	const [lastPage, setLastPage] = useState(null);
+	const [searchTerm, setSearchTerm] = useState('');
+	const [type, setType] = useState('adult');
 
 
 	useEffect(() => {
@@ -36,13 +38,17 @@ const ChildrenInfo = () => {
 		setLoading(true);
 
 		axios
-			.get(`${Config.url.API_URL}/admin/users-data?page=${page}`, config)
+		.post(`${Config.url.API_URL}/admin/search-users-data?page=${page}`, {
+
+			search_param: searchTerm,
+			type: type,
+		}, config)
 			.then((res) => {
 				if (res.data?.error?.length) throw new Error(res.data.error[0]);
 
 				setData(res.data);
 				setLoading(false);
-				setLastPage(res.data?.data.children?.last_Page)
+				setLastPage(res.data?.data.message?.last_Page)
 				// console.log(res.data, "data")
 			})
 			.catch((err) => {
@@ -52,7 +58,7 @@ const ChildrenInfo = () => {
 
 
 
-	}, [page]);
+	}, [searchTerm, page]);
 
 
 	// const [searchTerm, setSearchTerm] = useState('');
@@ -64,17 +70,19 @@ const ChildrenInfo = () => {
 // 								/>
 
 	const header = [
-		'age_range',
-		'child_name',
-		'gender',
-		'parent_name',
-
+		
+		'name',
+		'email',
+		'phone',
+		'number_of_children',
 	];
 	const tProperties = [
+		'user_id',
 		'age_range',
-		'child_name',
+		'name',
 		'gender',
-		'parent_name',
+		'age',
+		'unique_id',
 	];
 	// TODAYYY
 
@@ -133,30 +141,43 @@ const ChildrenInfo = () => {
 			<h2>Children Summary</h2>
 			<h2  style={{ fontSize: '16px' }}>
 			{' '}
-			Count: {data?.children?.total}
+			Count: {data?.message?.total}
 		</h2>
+
+<div className={classes.TableWrapper}>
+<div className={classes.TableExtras}>
+	<div className={classes.TableInputs}> 
+		   <input
+			   type="search"
+			   placeholder="Search"
+			   onChange={(e) => setSearchTerm(e.target.value)}
+		   />
+</div>
+</div>
+</div>
+
 			<Table hover responsive className={classes.Table}>
-				<thead>
-					<tr>
-						{header.map((n) => (
-							<th key={n}> {n.split('_').join(' ')} </th>
+			<thead>
+				<tr>
+					{header.map((n) => (
+						<th key={n}> {n.split('_').join(' ')} </th>
+					))}
+				</tr>
+			</thead>
+			<tbody>
+				{data?.message?.data?.map((user) => (
+					<tr key={user.phone}>
+						{header.map((key) => (
+							<td key={user[key]}>{user[key]}</td>
 						))}
 					</tr>
-				</thead>
-				<tbody>
-					{data?.children?.data.map((user) => (
-						<tr key={user.child_name}>
-							{header.map((key) => (
-								<td key={user[key]}>{user[key]}</td>
-							))}
-						</tr>
-					))}
-					{loading === true && <Spinner size="sm" animation="border" />}
+				))}
+				{/* {loading === true && <Spinner size="sm" animation="border" />} */}
 
 
-				</tbody>
+			</tbody>
 
-			</Table>
+		</Table>
 
 			{/* {console.log(data2?.adults[0].email, "data2")} */}
 			{/* <h1>{data2?.adults[1].email}</h1> */}
@@ -213,13 +234,14 @@ const ChildrenInfo = () => {
 			{/* </tbody> */}
 			{/* </Table> */}
 			<PaginationButtons
-			setPage={setPage}
-			lastPage={data?.children?.last_page}
-			currentPage={data?.children?.current_page}
-		/>
-		{console.log(page, "page")}
-		{console.log(data?.children?.last_page, "lastpage")}
-		{console.log(data?.children?.current_page, "currentpage")}
+				setPage={setPage}
+				lastPage={data?.message?.last_page}
+				currentPage={data?.message?.current_page}
+			/>
+			{console.log(searchTerm, "page")}
+			{console.log(data, "lastpage")}
+			{console.log(data?.message?.current_page, "currentpage")}
+
 
 
 
@@ -240,4 +262,4 @@ const ChildrenInfo = () => {
 	);
 };
 
-export default ChildrenInfo;
+export default SearchAdult;
