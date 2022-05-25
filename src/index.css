@@ -18,6 +18,9 @@
   --pink: #d92b58;
   --green: #d3d93c;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 *,
 *::after,
@@ -27,7 +30,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 
 img {
   max-width: 100%;
