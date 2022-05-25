@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Config } from '../../Config/Config'
 import toast from "react-hot-toast";
 import { Spinner, Button } from "react-bootstrap";
@@ -15,7 +15,7 @@ const validationSchema = Yup.object().shape({
 	password: Yup.string().required("Password is required"),
   
   });
-const Stemfest = () => {
+const Resend = () => {
 	const [loading, setLoading] = useState(false);
 	const router = useNavigate();
 	const {
@@ -67,17 +67,17 @@ const Stemfest = () => {
             <div className={classes.body}>
               <section className={classes.login} id="login">
                 <div className={classes.head}>
-                  <h1 className={classes.company}>Sign In</h1>
+                  <h1 className={classes.company}>Resend Email</h1>
                 </div>
                 <div className={classes.form}>
                   <form
                     onSubmit={handleSubmit(onUserFormSubmit)}
                     className={classes.FormWidth}
                   >
-                    <label>Username</label>
+                    <label>Email:</label>
                     <input
                       type="email"
-                      placeholder="Email"
+                      placeholder="Enter Email"
                       className={classes.password}
                       id="email"
                       required
@@ -89,32 +89,16 @@ const Stemfest = () => {
 						</p>
 					  )}
                     <br />
-                    <label>Password</label>
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      className={classes.password}
-                      id="password"
-                      required
-					  {...register("password")}
-
-                    />
-					{errors.password && (
-                      <p className={classes.ErrorMsg}>
-                        {errors.password?.message}
-                      </p>
-                    )}
-                    <br />
+                
+                    <Link to="/login">Go back to Login</Link>
                     <div className={classes.sign}>
-{/* <Link to="/resend">Resend Login Details</Link> */}
-<br/>
 					{!loading ? (
                         <button
                           type="submit"
                           className={classes.btn_login}
                           id="do-login"
                         >
-                          SIGN IN
+                          RESEND LOGIN DETAILS
                         </button>
                       ) : (
                         <>
@@ -150,4 +134,4 @@ const Stemfest = () => {
   );
 };
 
-export default Stemfest;
+export default Resend;

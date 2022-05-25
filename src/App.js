@@ -13,6 +13,9 @@ import About from "./pages/About";
 import Reason from "./pages/Reason";
 import ReactGA from 'react-ga'
 import ReactPixel from 'react-facebook-pixel';
+import Resend from './components/StemLogin/Resend'
+import Sponsors from "./pages/Sponsors";
+import SponsorsDashboard from './pages/SponsorsDashboard'
 
 function App() {
   // Google Analytics goes here
@@ -47,6 +50,12 @@ ReactPixel.pageView();
           <Route path="/register" element={<Register2 />} />
           <Route path="/about" element={<About />} />
           <Route path="/reason" element={<Reason />} />
+          <Route path="/resend" element={<Resend />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/sponsors-dashboard" element={<SponsorsDashboard />} />
+
+
+          
         </Routes>
       </Router>
       <div>
