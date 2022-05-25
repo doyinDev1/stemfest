@@ -9,7 +9,10 @@ function Schedule() {
       <h3 className={style.date}>SATURDAY, 23RD JULY</h3>
       <div className={style.flex}>
         <div className={style.left}>
-          <ul>
+          <ul className={style.lists}>
+            <li className={style.box}>
+              <h4 className={style.class}> MASTERCLASS</h4>
+            </li>
             {scheduleLeft.map(({ time, event }, index) => (
               <li>
                 <p className={style.time}>{time}</p>
@@ -19,7 +22,10 @@ function Schedule() {
           </ul>
         </div>
         <div className={style.right}>
-          <ul>
+          <ul className={style.lists}>
+            <li className={style.box}>
+              <h4 className={style.class}>STEAM LAB</h4>
+            </li>
             {scheduleRight.map(({ time, event }, index) => (
               <li>
                 <p className={style.time}>{time}</p>
