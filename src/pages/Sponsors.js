@@ -19,7 +19,7 @@ const adminValidationSchema = Yup.object().shape({
   access_code: Yup.string().required("Access code is required"),
 });
 
-function Login() {
+function Sponsors() {
   const [loading, setLoading] = useState(false);
   // const navigate = useNavigate();
   const router = useNavigate();
@@ -38,16 +38,16 @@ function Login() {
     setLoading(true);
 
     axios
-    .post(`${Config.url.API_URL}/admin/login`, myFormData)
+    .post(`${Config.url.API_URL}/sponsor/login`, myFormData)
     .then((res) => {
       if (res.data?.error?.length) throw new Error(res.data.error[0]);
       const userData = JSON.stringify({
         data: res.data,
         
       });
-      sessionStorage.setItem("sfAdmin", userData);
+      sessionStorage.setItem("sfSponsor", userData);
       toast.success("Login Successfully");
-      router("/admin-dashboard");
+      router("/sponsors-dashboard");
     })
     .catch((err) => {
       const errMsg = err?.message || "Failed to Login!";
@@ -71,7 +71,7 @@ function Login() {
                   />
                 </div>
                 <div className={classes.head}>
-                  <h1 className={classes.company}>STEAMFEST</h1>
+                  <h1 className={classes.company}>SPONSORS LOGIN</h1>
                 </div>
                 <div className={classes.form}>
                   <form
@@ -81,7 +81,7 @@ function Login() {
                     <label htmlFor="access_code">Access Code:</label>
 						<br />
                     <input
-                      type="number"
+                      type="text"
                       placeholder="Access Code"
                       className={classes.password}
                       id="access_code"
@@ -126,4 +126,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Sponsors;
