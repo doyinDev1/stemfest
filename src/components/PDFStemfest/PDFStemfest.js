@@ -57,7 +57,22 @@ const PDFStemfest = ({name, qr_code, unique_id}) => {
 {`${name}`}					</Text>  
 					  
 					  </View>
-					  
+					  <Text
+                        style={{
+								color: '#000',
+								// marginVertical: 20,
+								marginBottom: -140,
+								// marginLeft: 250,
+								fontSize: 15,
+								fontFamily: 'Oswald',
+								textAlign: 'center',
+								fontWeight: '700',
+								display: "flex", 
+								alignSelf: "center",
+                               marginTop: 80,
+
+							}}
+                        >JULY 23, 2022 • LANDMARK CENTER, VICTORIA ISLAND, LAGOS </Text>
 						
 					</View>
 				</View>
@@ -76,7 +91,7 @@ const PDFStemfest = ({name, qr_code, unique_id}) => {
 UNIQUE ID: {`${unique_id}`}	
 			</Text>
 				<Image
-					src="https://res.cloudinary.com/naijakids/image/upload/v1650445787/stemfest_jp3yjx.png"
+					src="https://res.cloudinary.com/naijakids/image/upload/v1653479329/PicsArt_05-25-12.43.34_pu1ugr.png"
 					style={styles.image}
 				/>
 			</View>
