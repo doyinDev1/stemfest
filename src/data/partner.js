@@ -2,7 +2,7 @@ import partnerLogo1 from "../images/assets/partner-1.png";
 import partnerLogo2 from "../images/assets/partner-2.png";
 import partnerLogo3 from "../images/assets/partner-3.png";
 import partnerLogo4 from "../images/assets/partner-4.png";
-import sponsorLogo1 from "../images/assets/sponsor-1.png";
+import sponsorLogo1 from "../images/assets/steam-up.png";
 import schoolCompass from "../images/assets/sponsor-2.png";
 import sponsorLogo3 from "../images/assets/sponsor-3.png";
 import sponsorLogo4 from "../images/assets/sponsor-4.png";
